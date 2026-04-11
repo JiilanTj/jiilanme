@@ -1006,9 +1006,10 @@ const recentPosts = posts.slice(0, 3);
     }
 
     .stats-inner {
-      gap: var(--space-2);
-      flex-wrap: wrap;
-      justify-content: flex-start;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-3);
+      justify-items: center;
     }
 
     .stat-divider {
@@ -1016,7 +1017,17 @@ const recentPosts = posts.slice(0, 3);
     }
 
     .stat-item {
-      min-width: 80px;
+      min-width: unset;
+      width: 100%;
+      align-items: center;
+    }
+
+    .stat-number {
+      font-size: var(--text-2xl);
+    }
+
+    .stat-label {
+      font-size: 0.6rem;
     }
 
     .stack {
@@ -1025,7 +1036,17 @@ const recentPosts = posts.slice(0, 3);
 
     .stack-grid {
       grid-template-columns: 1fr;
-      gap: var(--space-3);
+      gap: var(--space-4);
+    }
+
+    .stack-group-title {
+      font-size: 0.7rem;
+      margin-bottom: var(--space-1);
+    }
+
+    .stack-tag {
+      font-size: 0.7rem;
+      padding: 6px 14px;
     }
 
     .featured {
@@ -1034,6 +1055,19 @@ const recentPosts = posts.slice(0, 3);
 
     .featured-grid {
       grid-template-columns: 1fr;
+      gap: var(--space-3);
+    }
+
+    .featured-card {
+      padding: var(--space-3);
+    }
+
+    .featured-title {
+      font-size: var(--text-base);
+    }
+
+    .featured-desc {
+      font-size: var(--text-xs);
     }
 
     .timeline {
@@ -1041,12 +1075,25 @@ const recentPosts = posts.slice(0, 3);
     }
 
     .timeline-item {
-      grid-template-columns: 48px 1fr;
+      grid-template-columns: 44px 1fr;
       gap: var(--space-2);
+      padding: var(--space-2) 0;
     }
 
     .timeline-item::before {
-      left: 56px;
+      left: 52px;
+    }
+
+    .timeline-year {
+      font-size: 0.65rem;
+    }
+
+    .timeline-title {
+      font-size: var(--text-xs);
+    }
+
+    .timeline-desc {
+      font-size: 0.65rem;
     }
 
     .faq {
@@ -1055,10 +1102,12 @@ const recentPosts = posts.slice(0, 3);
 
     .faq-question {
       font-size: var(--text-xs);
+      padding: var(--space-2) 0;
     }
 
     .faq-answer {
       font-size: var(--text-xs);
+      padding-bottom: var(--space-2);
     }
 
     .recent {
