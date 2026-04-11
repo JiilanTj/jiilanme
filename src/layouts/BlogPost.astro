@@ -7,12 +7,37 @@ interface Props {
   date: string;
   readTime: string;
   category: string;
+  description: string;
+  slug: string;
 }
 
-const { title, date, readTime, category } = Astro.props;
+const { title, date, readTime, category, description, slug } = Astro.props;
+
+const articleUrl = `https://jiilan.me/writing/${slug}`;
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": title,
+  "author": {
+    "@type": "Person",
+    "name": "Jiilan Nashrulloh Tanjung",
+    "url": "https://jiilan.me"
+  },
+  "datePublished": date,
+  "dateModified": date,
+  "description": description,
+  "url": articleUrl,
+  "publisher": {
+    "@type": "Person",
+    "name": "Jiilan Nashrulloh Tanjung"
+  },
+  "inLanguage": "en",
+  "about": [category]
+});
 ---
 
-<Layout title={`${title} — Jiilan Nashrulloh Tanjung`}>
+<Layout title={`${title} — Jiilan Nashrulloh Tanjung`} description={description} ogType="article">
+  <script type="application/ld+json" set:html={jsonLd} />
   <article class="post-page">
     <PostHeader title={title} date={date} readTime={readTime} category={category} />
 

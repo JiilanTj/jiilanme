@@ -21,6 +21,8 @@ const { post } = Astro.props;
   date={post.date}
   readTime={post.readTime}
   category={post.category}
+  description={post.description}
+  slug={post.slug}
 >
   <Fragment set:html={post.content} />
 </BlogPost>

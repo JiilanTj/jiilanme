@@ -1,0 +1,21 @@
+# Jiilan Nashrulloh Tanjung
+
+> Software Engineer, Physicist, and Researcher.
+> Writing about theoretical CS, physics, and systems engineering.
+
+## Writing
+- On the Computational Complexity of Quantum Error Correction: https://jiilan.me/writing/quantum-error-correction-complexity
+- Why Most Distributed Systems Papers Get Consistency Wrong: https://jiilan.me/writing/distributed-systems-consistency
+- The Geometry of Gradient Descent: https://jiilan.me/writing/geometry-gradient-descent
+- Notes on Compiler Correctness: https://jiilan.me/writing/compiler-correctness-notes
+- Information-Theoretic Limits of Lossless Compression: https://jiilan.me/writing/information-theory-compression
+
+## Pages
+- About: https://jiilan.me/about
+- Works: https://jiilan.me/works
+- Research & Papers: https://jiilan.me/research
+- Contact: https://jiilan.me/contacts
+
+## Contact
+- GitHub: https://github.com/JiilanTj
+- Email: jiilannashrulloh@gmail.com

@@ -4,6 +4,7 @@ export interface Post {
   readTime: string;
   slug: string;
   category: string;
+  description: string;
   content: string;
 }
 
@@ -14,6 +15,7 @@ export const posts: Post[] = [
     readTime: "12 min",
     slug: "quantum-error-correction-complexity",
     category: "Physics · CS Theory",
+    description: "Exploring the computational overhead of quantum error correction, the decoding problem as optimization, and why decoder complexity is the central bottleneck for fault-tolerant quantum computing.",
     content: `
       <p>Quantum error correction remains one of the most technically demanding problems at the intersection of physics and computer science. The fundamental challenge is not merely physical — it is computational.</p>
 
@@ -41,6 +43,7 @@ export const posts: Post[] = [
     readTime: "9 min",
     slug: "distributed-systems-consistency",
     category: "Systems Engineering",
+    description: "On the persistent confusion between consistency as a safety property and consistency as a liveness property, and why most systems that claim linearizability don't actually implement it.",
     content: `
       <p>There is a persistent confusion in the distributed systems literature between consistency as a safety property and consistency as a liveness property. This confusion leads to systems that claim strong guarantees while silently violating them under partition.</p>
 
@@ -67,6 +70,7 @@ export const posts: Post[] = [
     readTime: "15 min",
     slug: "geometry-gradient-descent",
     category: "Math · ML",
+    description: "Gradient descent understood as a dynamical system on a manifold. How loss landscape curvature, saddle points, and SGD noise geometry determine convergence and generalization.",
     content: `
       <p>Gradient descent is taught as an optimization algorithm. It is better understood as a dynamical system on a manifold. The geometry of the loss landscape determines not just whether the algorithm converges, but what it converges to and how it generalizes.</p>
 
@@ -94,6 +98,7 @@ export const posts: Post[] = [
     readTime: "7 min",
     slug: "compiler-correctness-notes",
     category: "Compilers",
+    description: "What compiler correctness means formally, the CompCert approach to verified compilation via simulation relations, and the economics of formal verification for safety-critical systems.",
     content: `
       <p>A compiler is a function from programs to programs. Correctness means the output program has the same observable behavior as the input program, for all possible inputs. This is a deceptively simple statement with deep consequences.</p>
 
@@ -120,6 +125,7 @@ export const posts: Post[] = [
     readTime: "11 min",
     slug: "information-theory-compression",
     category: "Information Theory",
+    description: "Shannon's source coding theorem as a hard boundary, the Kolmogorov connection, and why compression is the dual of prediction — a mathematical equivalence that drives modern neural compression.",
     content: `
       <p>Shannon's source coding theorem establishes a hard boundary: no lossless compression scheme can achieve an average code length shorter than the entropy of the source. This theorem is over seventy years old, and yet its implications are still being discovered.</p>
 
