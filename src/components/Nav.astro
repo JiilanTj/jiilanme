@@ -48,7 +48,12 @@ function isActive(href: string): boolean {
     z-index: 100;
     padding: var(--space-3) var(--space-6);
     background: var(--color-bg);
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color 300ms ease;
+  }
+
+  .nav.nav--scrolled {
+    border-bottom-color: var(--color-border);
   }
 
   .nav-inner {

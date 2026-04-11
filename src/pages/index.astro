@@ -29,6 +29,7 @@ const recentPosts = posts.slice(0, 3);
         <div class="photo-frame">
           <img src="/jiilan.png" alt="Jiilan Nashrulloh Tanjung" class="photo" width="400" height="400" />
           <div class="photo-glow"></div>
+          <div class="photo-glow-top"></div>
         </div>
       </div>
     </div>
@@ -355,7 +356,7 @@ const recentPosts = posts.slice(0, 3);
     height: 100%;
     object-fit: cover;
     object-position: center top;
-    filter: contrast(1.05) brightness(1.05);
+    filter: contrast(1.05) brightness(0.85) saturate(0.7);
   }
 
   .photo-glow {
@@ -363,9 +364,25 @@ const recentPosts = posts.slice(0, 3);
     bottom: 0;
     left: 0;
     right: 0;
-    height: 40%;
+    height: 50%;
     background: linear-gradient(to top, var(--color-bg) 0%, transparent 100%);
     pointer-events: none;
+    animation: glow-breathe 6s var(--ease-melancholy) infinite;
+  }
+
+  .photo-glow-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 25%;
+    background: linear-gradient(to bottom, var(--color-bg) 0%, transparent 100%);
+    pointer-events: none;
+  }
+
+  @keyframes glow-breathe {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
   }
 
   .hero-text-col {
@@ -376,8 +393,9 @@ const recentPosts = posts.slice(0, 3);
     font-family: var(--font-ui);
     font-size: var(--text-sm);
     color: var(--color-accent);
-    letter-spacing: 0.06em;
-    margin-bottom: var(--space-2);
+    opacity: 0.85;
+    letter-spacing: 0.12em;
+    margin-bottom: 20px;
   }
 
   .hero-headline {
@@ -386,8 +404,8 @@ const recentPosts = posts.slice(0, 3);
     font-weight: 400;
     color: var(--color-text);
     letter-spacing: -0.03em;
-    line-height: 1.1;
-    margin-bottom: var(--space-3);
+    line-height: 1.05;
+    margin-bottom: 30px;
   }
 
   .hero-bio {
@@ -408,32 +426,35 @@ const recentPosts = posts.slice(0, 3);
   .cta-primary {
     font-family: var(--font-ui);
     font-size: var(--text-sm);
-    color: var(--color-bg);
-    background: var(--color-accent);
-    padding: 10px 24px;
+    color: var(--color-accent);
+    background: rgba(122, 143, 173, 0.15);
+    border: 1px solid var(--color-accent);
+    padding: 12px 28px;
     border-radius: 4px;
-    letter-spacing: 0.02em;
-    transition: opacity var(--duration) var(--ease);
+    letter-spacing: 0.04em;
+    transition: background 180ms ease, border-color 180ms ease;
   }
 
   .cta-primary:hover {
-    opacity: 0.85;
+    background: rgba(122, 143, 173, 0.08);
+    border-color: #8da0be;
   }
 
   .cta-secondary {
     font-family: var(--font-ui);
     font-size: var(--text-sm);
-    color: var(--color-text-muted);
+    color: var(--color-text-ghost);
     letter-spacing: 0.02em;
-    padding: 10px 16px;
-    border: 1px solid var(--color-border);
+    padding: 12px 28px;
+    border: 1px solid #1c2030;
     border-radius: 4px;
-    transition: color var(--duration) var(--ease), border-color var(--duration) var(--ease);
+    background: transparent;
+    transition: color 180ms ease, border-color 180ms ease;
   }
 
   .cta-secondary:hover {
-    color: var(--color-text);
-    border-color: var(--color-text-muted);
+    color: var(--color-text-muted);
+    border-color: #2d3348;
   }
 
   /* ── Section Label ── */
@@ -450,7 +471,7 @@ const recentPosts = posts.slice(0, 3);
   .stats {
     max-width: var(--page-width);
     margin: 0 auto;
-    padding: var(--space-8) var(--space-6);
+    padding: var(--space-6) var(--space-6);
     border-top: 1px solid var(--color-border);
   }
 
@@ -465,12 +486,12 @@ const recentPosts = posts.slice(0, 3);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
+    gap: 5px;
   }
 
   .stat-number {
     font-family: var(--font-display);
-    font-size: var(--text-3xl);
+    font-size: var(--text-2xl);
     color: var(--color-accent);
     letter-spacing: -0.02em;
     line-height: 1;
@@ -486,8 +507,9 @@ const recentPosts = posts.slice(0, 3);
 
   .stat-divider {
     width: 1px;
-    height: 40px;
+    height: 24px;
     background: var(--color-border);
+    align-self: center;
   }
 
   /* ── Expertise ── */
