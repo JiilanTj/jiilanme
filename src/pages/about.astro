@@ -1,0 +1,78 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About — Jiilan Nashrulloh Tanjung">
+  <section class="about-page">
+    <h1 class="about-title">Jiilan</h1>
+
+    <div class="prose">
+      <h3>What I work on</h3>
+      <p>Systems at the boundary of theoretical and applied — distributed computing, computational physics, and the tooling that connects them. Most of my time goes to problems where the abstraction layers are leaking and someone needs to understand both the mathematics and the metal.</p>
+
+      <h3>Background</h3>
+      <p>Trained in physics, drawn to engineering. The combination means I think about invariants before implementations and entropy before optimization. I write software the way I write proofs: with the failure modes stated up front.</p>
+
+      <h3>Currently</h3>
+      <p>Investigating fault-tolerant quantum computing architectures. Building infrastructure that treats correctness as a non-negotiable constraint, not a nice-to-have.</p>
+
+      <h3>Contact</h3>
+      <p>
+        <a href="mailto:jiilan@example.com" class="contact-link">jiilan@example.com</a>
+        <br />
+        <a href="https://github.com/jiilan" class="contact-link" target="_blank" rel="noopener noreferrer">github.com/jiilan</a>
+      </p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .about-page {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: var(--space-12) var(--space-3);
+    padding-top: calc(var(--space-12) + 64px);
+    padding-bottom: var(--space-8);
+  }
+
+  .about-title {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    font-weight: 400;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: var(--space-6);
+  }
+
+  .contact-link {
+    color: var(--color-accent);
+    position: relative;
+  }
+
+  .contact-link::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--color-accent);
+    transition: width 200ms var(--ease);
+  }
+
+  .contact-link:hover::after {
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .about-page {
+      padding: var(--space-8) var(--space-3);
+      padding-top: calc(var(--space-8) + 64px);
+    }
+
+    .about-title {
+      font-size: var(--text-2xl);
+    }
+  }
+</style>

@@ -1,0 +1,86 @@
+---
+---
+
+<div class="cursor" id="custom-cursor"></div>
+
+<script>
+  const cursor = document.getElementById('custom-cursor') as HTMLElement | null;
+  if (cursor && window.matchMedia('(pointer: fine)').matches) {
+    let cx = -40;
+    let cy = -40;
+    let tx = -40;
+    let ty = -40;
+    let hovering = false;
+    let raf: number;
+
+    const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
+
+    const update = () => {
+      cx = lerp(cx, tx, 0.15);
+      cy = lerp(cy, ty, 0.15);
+      cursor.style.transform = `translate(${cx}px, ${cy}px)`;
+      raf = requestAnimationFrame(update);
+    };
+
+    document.addEventListener('mousemove', (e) => {
+      tx = e.clientX - 3;
+      ty = e.clientY - 3;
+    });
+
+    const interactiveSelector = 'a, button, [role="button"], input, textarea, select, label[for]';
+
+    document.addEventListener('mouseover', (e) => {
+      const target = e.target as Element;
+      if (target.closest(interactiveSelector)) {
+        if (!hovering) {
+          hovering = true;
+          cursor.classList.add('cursor--hover');
+        }
+      }
+    });
+
+    document.addEventListener('mouseout', (e) => {
+      const target = e.target as Element;
+      if (target.closest(interactiveSelector)) {
+        hovering = false;
+        cursor.classList.remove('cursor--hover');
+      }
+    });
+
+    document.addEventListener('mouseleave', () => {
+      cursor.style.opacity = '0';
+    });
+
+    document.addEventListener('mouseenter', () => {
+      cursor.style.opacity = '1';
+    });
+
+    raf = requestAnimationFrame(update);
+  }
+</script>
+
+<style>
+  .cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    border: 1px solid var(--color-accent);
+    background: transparent;
+    pointer-events: none;
+    z-index: 9999;
+    transition: background 150ms ease, opacity 200ms ease;
+    will-change: transform;
+  }
+
+  .cursor--hover {
+    background: rgba(200, 169, 126, 0.3);
+  }
+
+  @media (pointer: coarse) {
+    .cursor {
+      display: none;
+    }
+  }
+</style>

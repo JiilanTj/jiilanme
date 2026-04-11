@@ -1,0 +1,63 @@
+---
+import Layout from './Layout.astro';
+import PostHeader from '../components/PostHeader.astro';
+
+interface Props {
+  title: string;
+  date: string;
+  readTime: string;
+  category: string;
+}
+
+const { title, date, readTime, category } = Astro.props;
+---
+
+<Layout title={`${title} — Jiilan Nashrulloh Tanjung`}>
+  <article class="post-page">
+    <PostHeader title={title} date={date} readTime={readTime} category={category} />
+
+    <div class="prose">
+      <slot />
+    </div>
+
+    <hr class="post-end-rule" />
+
+    <a href="/writing" class="back-link">← All writing</a>
+  </article>
+</Layout>
+
+<style>
+  .post-page {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: var(--space-12) var(--space-3);
+    padding-top: calc(var(--space-12) + 64px);
+  }
+
+  .post-end-rule {
+    border: none;
+    height: 1px;
+    background: #1f1f1f;
+    margin: var(--space-8) 0 var(--space-4) 0;
+  }
+
+  .back-link {
+    font-family: var(--font-ui);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    transition: color var(--duration) var(--ease);
+    display: inline-block;
+    padding-bottom: var(--space-8);
+  }
+
+  .back-link:hover {
+    color: var(--color-text);
+  }
+
+  @media (max-width: 768px) {
+    .post-page {
+      padding: var(--space-6) var(--space-2);
+      padding-top: calc(var(--space-8) + 64px);
+    }
+  }
+</style>

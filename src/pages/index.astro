@@ -1,11 +1,468 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import PostCard from '../components/PostCard.astro';
+import { posts } from '../data/posts';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const recentPosts = posts.slice(0, 3);
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Jiilan Nashrulloh Tanjung">
+
+  <!-- ═══ HERO: Photo + Identity ═══ -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text-col">
+        <p class="hero-greeting">Jiilan Nashrulloh Tanjung</p>
+        <h1 class="hero-headline">Software Engineer,<br />Physicist &amp; Researcher</h1>
+        <p class="hero-bio">
+          I operate at the boundary where theoretical physics meets systems engineering.
+          Most of my work involves problems where the abstraction layers are leaking —
+          where you need to understand both the mathematics and the metal to make progress.
+        </p>
+        <div class="hero-cta">
+          <a href="/writing" class="cta-primary">Read my writing</a>
+          <a href="/about" class="cta-secondary">More about me</a>
+        </div>
+      </div>
+
+      <div class="hero-photo-col">
+        <div class="photo-frame">
+          <img src="/jiilan.png" alt="Jiilan Nashrulloh Tanjung" class="photo" width="400" height="400" />
+          <div class="photo-glow"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ WHAT I DO: Expertise Areas ═══ -->
+  <section class="expertise">
+    <div class="expertise-inner">
+      <span class="section-label">WHAT I WORK ON</span>
+
+      <div class="expertise-grid">
+        <div class="expertise-card">
+          <span class="expertise-number">01</span>
+          <h3 class="expertise-title">Systems Engineering</h3>
+          <p class="expertise-desc">
+            Distributed systems, fault tolerance, and infrastructure
+            where correctness is a hard constraint, not an aspiration.
+          </p>
+        </div>
+
+        <div class="expertise-card">
+          <span class="expertise-number">02</span>
+          <h3 class="expertise-title">Computational Physics</h3>
+          <p class="expertise-desc">
+            Quantum error correction, simulation methods, and the computational
+            complexity of physical systems.
+          </p>
+        </div>
+
+        <div class="expertise-card">
+          <span class="expertise-number">03</span>
+          <h3 class="expertise-title">Research &amp; Theory</h3>
+          <p class="expertise-desc">
+            Information theory, compiler correctness, and mathematical
+            foundations of machine learning.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PHILOSOPHY: How I Think ═══ -->
+  <section class="philosophy">
+    <div class="philosophy-inner">
+      <span class="section-label">HOW I THINK</span>
+      <blockquote class="philosophy-quote">
+        "I think about invariants before implementations and entropy before optimization.
+        I write software the way I write proofs: with the failure modes stated up front."
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ═══ RECENT WRITING ═══ -->
+  <section class="recent">
+    <div class="recent-inner">
+      <div class="recent-header">
+        <span class="section-label">RECENT WRITING</span>
+        <a href="/writing" class="all-writing-link">All writing →</a>
+      </div>
+
+      <div class="post-list">
+        {recentPosts.map((post, i) => (
+          <PostCard
+            title={post.title}
+            date={post.date}
+            readTime={post.readTime}
+            slug={post.slug}
+            index={i}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CURRENTLY ═══ -->
+  <section class="currently">
+    <div class="currently-inner">
+      <span class="section-label">CURRENTLY</span>
+      <p class="currently-text">
+        Investigating fault-tolerant quantum computing architectures.
+        Building infrastructure that treats correctness as a non-negotiable constraint.
+      </p>
+      <div class="currently-links">
+        <a href="mailto:jiilan@example.com" class="contact-link">jiilan@example.com</a>
+        <span class="link-sep">·</span>
+        <a href="https://github.com/jiilan" class="contact-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </section>
+
 </Layout>
+
+<style>
+  /* ── Hero ── */
+  .hero {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: var(--space-8) var(--space-6) 0;
+    padding-top: calc(var(--space-12) + 64px);
+  }
+
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: var(--space-8);
+    align-items: center;
+  }
+
+  .hero-photo-col {
+    position: relative;
+  }
+
+  .photo-frame {
+    position: relative;
+    width: 100%;
+    max-width: 280px;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+
+  .photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    filter: contrast(1.05) brightness(1.05);
+  }
+
+  .photo-glow {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    background: linear-gradient(to top, var(--color-bg) 0%, transparent 100%);
+    pointer-events: none;
+  }
+
+  .hero-text-col {
+    max-width: 600px;
+  }
+
+  .hero-greeting {
+    font-family: var(--font-ui);
+    font-size: var(--text-sm);
+    color: var(--color-accent);
+    letter-spacing: 0.06em;
+    margin-bottom: var(--space-2);
+  }
+
+  .hero-headline {
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    font-weight: 400;
+    color: var(--color-text);
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: var(--space-3);
+  }
+
+  .hero-bio {
+    font-family: var(--font-mono);
+    font-size: var(--text-base);
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    max-width: 520px;
+    margin-bottom: var(--space-4);
+  }
+
+  .hero-cta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+  }
+
+  .cta-primary {
+    font-family: var(--font-ui);
+    font-size: var(--text-sm);
+    color: var(--color-bg);
+    background: var(--color-accent);
+    padding: 10px 24px;
+    border-radius: 4px;
+    letter-spacing: 0.02em;
+    transition: opacity var(--duration) var(--ease);
+  }
+
+  .cta-primary:hover {
+    opacity: 0.85;
+  }
+
+  .cta-secondary {
+    font-family: var(--font-ui);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    letter-spacing: 0.02em;
+    padding: 10px 16px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    transition: color var(--duration) var(--ease), border-color var(--duration) var(--ease);
+  }
+
+  .cta-secondary:hover {
+    color: var(--color-text);
+    border-color: var(--color-text-muted);
+  }
+
+  /* ── Section Label ── */
+  .section-label {
+    font-family: var(--font-ui);
+    font-size: var(--text-xs);
+    color: var(--color-text-ghost);
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: var(--space-4);
+  }
+
+  /* ── Expertise ── */
+  .expertise {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: var(--space-12) var(--space-6) 0;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .expertise-inner {
+    max-width: var(--page-width);
+  }
+
+  .expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+  }
+
+  .expertise-card {
+    padding: var(--space-3);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    transition: border-color var(--duration-md) var(--ease);
+  }
+
+  .expertise-card:hover {
+    border-color: var(--color-accent);
+  }
+
+  .expertise-number {
+    font-family: var(--font-ui);
+    font-size: var(--text-xs);
+    color: var(--color-accent);
+    letter-spacing: 0.08em;
+    display: block;
+    margin-bottom: var(--space-2);
+  }
+
+  .expertise-title {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 400;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+    margin-bottom: var(--space-1);
+  }
+
+  .expertise-desc {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+
+  /* ── Philosophy ── */
+  .philosophy {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: var(--space-12) var(--space-6);
+  }
+
+  .philosophy-inner {
+    max-width: var(--content-width);
+  }
+
+  .philosophy-quote {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    color: var(--color-text);
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    border-left: 2px solid var(--color-accent);
+    padding-left: var(--space-3);
+    font-style: italic;
+  }
+
+  /* ── Recent Writing ── */
+  .recent {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 0 var(--space-6) var(--space-8);
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--space-8);
+  }
+
+  .recent-inner {
+    max-width: var(--page-width);
+  }
+
+  .recent-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-4);
+  }
+
+  .recent-header .section-label {
+    margin-bottom: 0;
+  }
+
+  .post-list {
+    max-width: var(--content-width);
+  }
+
+  .all-writing-link {
+    font-family: var(--font-ui);
+    font-size: var(--text-sm);
+    color: var(--color-accent);
+    letter-spacing: 0.04em;
+    transition: opacity var(--duration) var(--ease);
+  }
+
+  .all-writing-link:hover {
+    opacity: 0.8;
+  }
+
+  /* ── Currently ── */
+  .currently {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: var(--space-8) var(--space-6) var(--space-12);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .currently-inner {
+    max-width: var(--content-width);
+  }
+
+  .currently-text {
+    font-family: var(--font-mono);
+    font-size: var(--text-base);
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin-bottom: var(--space-3);
+  }
+
+  .currently-links {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+  }
+
+  .contact-link {
+    font-family: var(--font-ui);
+    font-size: var(--text-sm);
+    color: var(--color-accent);
+    position: relative;
+    transition: opacity var(--duration) var(--ease);
+  }
+
+  .contact-link:hover {
+    opacity: 0.8;
+  }
+
+  .link-sep {
+    font-family: var(--font-ui);
+    font-size: var(--text-xs);
+    color: var(--color-text-ghost);
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 768px) {
+    .hero {
+      padding: var(--space-6) var(--space-3) 0;
+      padding-top: calc(var(--space-8) + 64px);
+    }
+
+    .hero-inner {
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
+      text-align: center;
+    }
+
+    .hero-photo-col {
+      display: flex;
+      justify-content: center;
+    }
+
+    .photo-frame {
+      max-width: 200px;
+    }
+
+    .hero-text-col {
+      max-width: none;
+    }
+
+    .hero-bio {
+      max-width: none;
+    }
+
+    .hero-headline {
+      font-size: var(--text-3xl);
+    }
+
+    .hero-cta {
+      justify-content: center;
+    }
+
+    .expertise {
+      padding: var(--space-8) var(--space-3) 0;
+    }
+
+    .expertise-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-3);
+    }
+
+    .philosophy {
+      padding: var(--space-8) var(--space-3);
+    }
+
+    .recent {
+      padding: var(--space-6) var(--space-3) var(--space-6);
+    }
+
+    .currently {
+      padding: var(--space-6) var(--space-3) var(--space-8);
+    }
+  }
+</style>

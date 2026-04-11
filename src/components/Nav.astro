@@ -1,0 +1,97 @@
+---
+---
+
+<nav class="nav" id="site-nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">JNT</a>
+    <div class="nav-links">
+      <a href="/writing" class="nav-link">writing</a>
+      <span class="nav-sep">·</span>
+      <a href="/about" class="nav-link">about</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const nav = document.getElementById('site-nav');
+  if (nav) {
+    let scrolled = false;
+    const onScroll = () => {
+      const shouldShow = window.scrollY > 60;
+      if (shouldShow !== scrolled) {
+        scrolled = shouldShow;
+        nav.classList.toggle('nav--scrolled', scrolled);
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
+</script>
+
+<style>
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: var(--space-3) var(--space-6);
+    border-bottom: 1px solid transparent;
+    transition: border-color var(--duration-md) var(--ease);
+  }
+
+  .nav--scrolled {
+    border-bottom-color: var(--color-border-2);
+  }
+
+  .nav-inner {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    font-family: var(--font-ui);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-accent);
+    letter-spacing: 0.08em;
+    transition: opacity var(--duration) var(--ease);
+  }
+
+  .nav-logo:hover {
+    opacity: 0.8;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+  }
+
+  .nav-link {
+    font-family: var(--font-ui);
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    letter-spacing: 0.06em;
+    transition: color var(--duration) var(--ease);
+  }
+
+  .nav-link:hover {
+    color: var(--color-text);
+  }
+
+  .nav-sep {
+    font-family: var(--font-ui);
+    font-size: var(--text-xs);
+    color: var(--color-text-ghost);
+    user-select: none;
+  }
+
+  @media (max-width: 768px) {
+    .nav {
+      padding: var(--space-2) var(--space-3);
+    }
+  }
+</style>

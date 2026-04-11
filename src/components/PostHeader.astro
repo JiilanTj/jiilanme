@@ -1,0 +1,72 @@
+---
+interface Props {
+  title: string;
+  date: string;
+  readTime: string;
+  category: string;
+}
+
+const { title, date, readTime, category } = Astro.props;
+
+const formattedDate = new Date(date).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<header class="post-header">
+  <h1 class="post-title">{title}</h1>
+  <div class="post-meta">
+    <span>{formattedDate}</span>
+    <span class="meta-sep">·</span>
+    <span>{readTime}</span>
+    <span class="meta-sep">·</span>
+    <span>{category}</span>
+  </div>
+  <hr class="post-rule" />
+</header>
+
+<style>
+  .post-header {
+    margin-bottom: var(--space-6);
+  }
+
+  .post-title {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    font-weight: 400;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: var(--space-2);
+  }
+
+  .post-meta {
+    font-family: var(--font-ui);
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    letter-spacing: 0.06em;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .meta-sep {
+    color: var(--color-text-ghost);
+  }
+
+  .post-rule {
+    border: none;
+    height: 1px;
+    background: var(--color-border);
+    margin-top: var(--space-4);
+  }
+
+  @media (max-width: 768px) {
+    .post-title {
+      font-size: var(--text-2xl);
+    }
+  }
+</style>

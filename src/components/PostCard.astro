@@ -1,0 +1,87 @@
+---
+interface Props {
+  title: string;
+  date: string;
+  readTime: string;
+  slug: string;
+  index?: number;
+}
+
+const { title, date, readTime, slug, index = 0 } = Astro.props;
+
+const formattedDate = new Date(date).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric',
+});
+
+const delay = `${index * 40}ms`;
+---
+
+<a href={`/writing/${slug}`} class="post-card" style={`animation-delay: ${delay}`}>
+  <h3 class="post-card-title">{title}</h3>
+  <div class="post-card-meta">
+    <span>{formattedDate}</span>
+    <span class="meta-sep">·</span>
+    <span>{readTime}</span>
+  </div>
+</a>
+
+<style>
+  .post-card {
+    display: block;
+    padding: var(--space-3) 0;
+    border-bottom: 1px solid var(--color-border-2);
+    animation: stagger-in var(--duration-lg) var(--ease-out) both;
+  }
+
+  .post-card:last-child {
+    border-bottom: none;
+  }
+
+  .post-card-title {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 400;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+    position: relative;
+    display: inline;
+    transition: color var(--duration) var(--ease);
+  }
+
+  .post-card-title::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--color-accent);
+    transition: width 200ms var(--ease);
+  }
+
+  .post-card:hover .post-card-title {
+    color: var(--color-accent);
+  }
+
+  .post-card:hover .post-card-title::after {
+    width: 100%;
+  }
+
+  .post-card-meta {
+    font-family: var(--font-ui);
+    font-size: var(--text-xs);
+    color: var(--color-text-ghost);
+    letter-spacing: 0.06em;
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .meta-sep {
+    color: var(--color-text-ghost);
+  }
+</style>
