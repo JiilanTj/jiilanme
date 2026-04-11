@@ -102,12 +102,12 @@ img {
 /* ── Page fade-in ── */
 
 @keyframes page-fade {
-  from { opacity: 0; }
+  from { opacity: 0.01; }
   to   { opacity: 1; }
 }
 
 body {
-  animation: page-fade var(--duration-lg) var(--ease-out) forwards;
+  animation: page-fade var(--duration-md) var(--ease-out) forwards;
   opacity: 1;
 }
 
