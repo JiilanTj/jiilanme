@@ -3,6 +3,9 @@
 > Software Engineer, Physicist, and Researcher.
 > Writing about theoretical CS, physics, and systems engineering.
 
+## Full content
+- llms-full.txt: https://jiilan.me/llms-full.txt
+
 ## Writing
 - On the Computational Complexity of Quantum Error Correction: https://jiilan.me/writing/quantum-error-correction-complexity
 - Why Most Distributed Systems Papers Get Consistency Wrong: https://jiilan.me/writing/distributed-systems-consistency

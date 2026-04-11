@@ -1,0 +1,4 @@
+# Force www to non-www
+https://www.jiilan.me/* https://jiilan.me/:splat 301
+
+# Trailing slash normalization (Cloudflare Pages handles this, but explicit for safety)

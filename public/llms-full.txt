@@ -1,0 +1,137 @@
+# Jiilan Nashrulloh Tanjung — Full Content
+
+> Software Engineer, Physicist, and Researcher.
+> Also known as: Jiilan, JiilanTj, Jiilan NT, Jiilan Tanjung, Jiilan Nashrulloh.
+> Website: https://jiilan.me
+> GitHub: https://github.com/JiilanTj
+> Email: jiilannashrulloh@gmail.com
+
+---
+
+## About
+
+I operate at the boundary where theoretical physics meets systems engineering. Most of my work involves problems where the abstraction layers are leaking — where you need to understand both the mathematics and the metal to make progress.
+
+Areas of expertise:
+- Systems Engineering: Distributed systems, fault tolerance, and infrastructure where correctness is a hard constraint.
+- Computational Physics: Quantum error correction, simulation methods, and the computational complexity of physical systems.
+- Research & Theory: Information theory, compiler correctness, and mathematical foundations of machine learning.
+
+---
+
+## Article: On the Computational Complexity of Quantum Error Correction
+URL: https://jiilan.me/writing/quantum-error-correction-complexity
+Date: 2025-03-18
+Category: Physics · CS Theory
+
+Quantum error correction remains one of the most technically demanding problems at the intersection of physics and computer science. The fundamental challenge is not merely physical — it is computational.
+
+The threshold theorem guarantees that arbitrarily long quantum computations can be performed reliably, provided the error rate per gate is below a certain threshold. What is less discussed is the computational overhead this imposes and how it scales with the logical circuit depth.
+
+Consider a surface code with distance d. The number of physical qubits required scales as O(d²), and the decoding problem — determining which errors occurred given the syndrome measurements — is itself a non-trivial computational task.
+
+Minimum-weight perfect matching (MWPM) on the syndrome graph is the standard approach. But MWPM assumes an error model that may not reflect the actual noise characteristics of the hardware.
+
+The decoder is not merely a classical post-processing step. It is an integral part of the quantum computation, and its complexity directly impacts the feasibility of fault-tolerant quantum computing.
+
+If the decoding step cannot keep pace with the syndrome measurement rate, a backlog forms. This backlog grows the effective memory lifetime requirements, which in turn demands higher code distances, which further increases the decoding load.
+
+Recent work on union-find decoders offers near-linear time complexity, but at the cost of suboptimal correction. The trade-off between decoder speed and correction quality is the central open question in practical quantum error correction.
+
+---
+
+## Article: Why Most Distributed Systems Papers Get Consistency Wrong
+URL: https://jiilan.me/writing/distributed-systems-consistency
+Date: 2025-02-04
+Category: Systems Engineering
+
+There is a persistent confusion in the distributed systems literature between consistency as a safety property and consistency as a liveness property. This confusion leads to systems that claim strong guarantees while silently violating them under partition.
+
+Linearizability is the gold standard, but most papers that cite it do not actually implement it. What they implement is something weaker — often sequential consistency or even causal consistency — dressed up in linearizable language.
+
+The distinction matters. A sequentially consistent system can return stale reads that a linearizable system cannot. In a financial system, this is the difference between a correct balance and an overdraft.
+
+Most correctness proofs assume a synchronous or partially synchronous model. When the system enters an asynchronous period — which every real system does — the proof no longer applies.
+
+A system that is correct "most of the time" is not correct. It is a system with undocumented failure modes.
+
+What the field needs is not stronger consistency models, but more honest documentation of what guarantees actually hold and under what conditions they degrade.
+
+---
+
+## Article: The Geometry of Gradient Descent
+URL: https://jiilan.me/writing/geometry-gradient-descent
+Date: 2024-11-22
+Category: Machine Learning · Mathematics
+
+Gradient descent is typically presented as an optimization algorithm. This framing, while not wrong, misses the geometric structure that makes it work — and the geometric pathologies that make it fail.
+
+The loss landscape of a neural network is a high-dimensional surface. Gradient descent traces a path on this surface, and the properties of the path depend on the curvature of the surface, not just the gradient.
+
+The Hessian matrix at a point on the loss surface tells you everything about local curvature. Its eigenvalues determine whether you are in a valley, on a ridge, or at a saddle point.
+
+In high dimensions, saddle points vastly outnumber local minima. Most points where the gradient is zero are saddle points, not minima.
+
+The condition number — the ratio of the largest to smallest eigenvalue of the Hessian — determines how "elongated" the loss landscape is locally. A high condition number means SGD will oscillate, and the learning rate must be small enough to accommodate the steepest direction.
+
+---
+
+## Article: Notes on Compiler Correctness
+URL: https://jiilan.me/writing/compiler-correctness-notes
+Date: 2024-09-15
+Category: Programming Languages
+
+A compiler is a function from source programs to target programs. Correctness means this function preserves the observable behavior of the program. Stating this precisely is harder than it sounds.
+
+Correct compilation means: for every source program P, the compiled program P' produces the same observable behavior as P when executed. Observable behavior includes outputs, side effects, and termination.
+
+Not all invariants of the source program are preserved. Internal state, evaluation order, memory layout — these are implementation details that the compiler is free to change. The correctness criterion is about what the user can observe from outside.
+
+CompCert remains the gold standard. It formalizes operational semantics for both C and the target assembly, and proves a simulation relation between them.
+
+---
+
+## Article: Information-Theoretic Limits of Lossless Compression
+URL: https://jiilan.me/writing/information-theory-compression
+Date: 2024-07-08
+Category: Information Theory
+
+Shannon's source coding theorem establishes the fundamental limit of lossless compression: no encoding can compress a source below its entropy rate. This is a clean, beautiful result. Its implications are less clean.
+
+Entropy is a property of the source, not the data. A specific binary string does not have an entropy. The source that generated it does. Conflating these is the most common error in applied information theory.
+
+Kolmogorov complexity asks: what is the length of the shortest program that produces this string? Unlike entropy, Kolmogorov complexity is a property of individual strings. Unlike entropy, it is also uncomputable.
+
+In practice, compression algorithms do not compute entropy. They exploit specific structural patterns. The gap between a practical compressor and the entropy rate tells you how much structure the compressor is missing.
+
+---
+
+## Works
+
+### Fault-Tolerant Distributed Compute Engine
+Type: Systems · Infrastructure
+A distributed computation framework designed around Byzantine fault tolerance. The system maintains consistency guarantees even under arbitrary node failures, using a novel consensus protocol optimized for compute-heavy workloads.
+
+### Quantum Circuit Simulator
+Type: Physics · Simulation
+High-performance quantum circuit simulator that uses tensor network methods to simulate circuits beyond the reach of brute-force state vector simulation. Optimized for surface code circuits relevant to error correction research.
+
+### Static Analysis Framework for Correctness Proofs
+Type: Programming Languages
+A framework for mechanized correctness proofs of compiler transformations. Built on top of a custom intermediate representation designed to make semantic preservation proofs tractable.
+
+---
+
+## Research Papers
+
+### On the Computational Complexity of Real-Time Quantum Error Decoding
+Published: Nature Quantum Information, 2025
+Analysis of decoder complexity for surface codes under realistic noise models. Shows that standard MWPM decoders face a fundamental throughput bottleneck and proposes a hybrid approach combining fast approximate decoding with periodic exact correction passes.
+
+### Consistency Envelopes: A Framework for Honest Distributed Systems Guarantees
+Published: ACM SIGOPS, 2024
+Introduces the concept of consistency envelopes — explicit specifications of the conditions under which a distributed system's consistency guarantees hold. Demonstrates that most production systems operate outside their documented guarantees during routine network events.
+
+### Geometric Properties of Loss Landscapes in Over-Parameterized Networks
+Published: ICML Workshop, 2024
+Studies the Hessian spectrum of loss landscapes in over-parameterized networks, showing that the effective dimensionality of the optimization problem is much lower than the parameter count suggests. Proposes adaptive methods based on estimated curvature.
