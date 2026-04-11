@@ -1,4 +1,2 @@
-# Force www to non-www
-https://www.jiilan.me/* https://jiilan.me/:splat 301
-
-# Trailing slash normalization (Cloudflare Pages handles this, but explicit for safety)
+# www to non-www is handled via Cloudflare DNS (CNAME www -> jiilan.me with redirect rule)
+# Only relative redirects are allowed here
