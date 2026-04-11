@@ -34,6 +34,31 @@ const recentPosts = posts.slice(0, 3);
     </div>
   </section>
 
+  <!-- ═══ NUMBERS / STATS ═══ -->
+  <section class="stats">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <span class="stat-number">5+</span>
+        <span class="stat-label">YEARS ENGINEERING</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">3</span>
+        <span class="stat-label">PUBLISHED PAPERS</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">2</span>
+        <span class="stat-label">RESEARCH DOMAINS</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">10+</span>
+        <span class="stat-label">OPEN SOURCE PROJECTS</span>
+      </div>
+    </div>
+  </section>
+
   <!-- ═══ WHAT I DO: Expertise Areas ═══ -->
   <section class="expertise">
     <div class="expertise-inner">
@@ -81,6 +106,127 @@ const recentPosts = posts.slice(0, 3);
     </div>
   </section>
 
+  <!-- ═══ TECH STACK ═══ -->
+  <section class="stack">
+    <div class="stack-inner">
+      <span class="section-label">TECH STACK &amp; TOOLS</span>
+      <div class="stack-grid">
+        <div class="stack-group">
+          <h4 class="stack-group-title">Languages</h4>
+          <div class="stack-tags">
+            <span class="stack-tag">Python</span>
+            <span class="stack-tag">TypeScript</span>
+            <span class="stack-tag">Rust</span>
+            <span class="stack-tag">C++</span>
+            <span class="stack-tag">Go</span>
+            <span class="stack-tag">Julia</span>
+          </div>
+        </div>
+        <div class="stack-group">
+          <h4 class="stack-group-title">Frameworks &amp; Runtime</h4>
+          <div class="stack-tags">
+            <span class="stack-tag">Node.js</span>
+            <span class="stack-tag">Astro</span>
+            <span class="stack-tag">React</span>
+            <span class="stack-tag">Next.js</span>
+            <span class="stack-tag">FastAPI</span>
+          </div>
+        </div>
+        <div class="stack-group">
+          <h4 class="stack-group-title">Infrastructure</h4>
+          <div class="stack-tags">
+            <span class="stack-tag">Docker</span>
+            <span class="stack-tag">Kubernetes</span>
+            <span class="stack-tag">PostgreSQL</span>
+            <span class="stack-tag">Redis</span>
+            <span class="stack-tag">gRPC</span>
+          </div>
+        </div>
+        <div class="stack-group">
+          <h4 class="stack-group-title">Research &amp; Scientific</h4>
+          <div class="stack-tags">
+            <span class="stack-tag">NumPy</span>
+            <span class="stack-tag">JAX</span>
+            <span class="stack-tag">Qiskit</span>
+            <span class="stack-tag">LaTeX</span>
+            <span class="stack-tag">MATLAB</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FEATURED WORK ═══ -->
+  <section class="featured">
+    <div class="featured-inner">
+      <span class="section-label">FEATURED</span>
+      <div class="featured-grid">
+        <div class="featured-card">
+          <span class="featured-type">PAPER</span>
+          <h3 class="featured-title">On the Computational Complexity of Real-Time Quantum Error Decoding</h3>
+          <p class="featured-desc">
+            Establishing a lower bound on decoder latency for fault-tolerant quantum computation.
+            Published in arXiv, 2025.
+          </p>
+          <a href="/research" class="featured-link">Read paper →</a>
+        </div>
+        <div class="featured-card">
+          <span class="featured-type">PROJECT</span>
+          <h3 class="featured-title">Fault-Tolerant Distributed Compute Engine</h3>
+          <p class="featured-desc">
+            A distributed compute framework designed around formal correctness guarantees.
+            Handles Byzantine failures without sacrificing throughput.
+          </p>
+          <a href="/works" class="featured-link">View project →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TIMELINE / MILESTONES ═══ -->
+  <section class="timeline">
+    <div class="timeline-inner">
+      <span class="section-label">MILESTONES</span>
+      <div class="timeline-list">
+        <div class="timeline-item">
+          <span class="timeline-year">2025</span>
+          <div class="timeline-content">
+            <h4 class="timeline-title">Published first paper on quantum error correction complexity</h4>
+            <p class="timeline-desc">arXiv preprint — Quantum Computing</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2024</span>
+          <div class="timeline-content">
+            <h4 class="timeline-title">Built fault-tolerant distributed compute engine</h4>
+            <p class="timeline-desc">Open-sourced on GitHub — formal correctness guarantees at scale</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2024</span>
+          <div class="timeline-content">
+            <h4 class="timeline-title">Presented at Workshop on Principles of Distributed Systems</h4>
+            <p class="timeline-desc">Consistency Envelopes — a framework for honest distributed guarantees</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2023</span>
+          <div class="timeline-content">
+            <h4 class="timeline-title">Started quantum computing research program</h4>
+            <p class="timeline-desc">Transitioned from pure systems engineering to computational physics</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2020</span>
+          <div class="timeline-content">
+            <h4 class="timeline-title">First production distributed system shipped</h4>
+            <p class="timeline-desc">Infrastructure serving millions of requests with formal correctness properties</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ═══ RECENT WRITING ═══ -->
   <section class="recent">
     <div class="recent-inner">
@@ -99,6 +245,60 @@ const recentPosts = posts.slice(0, 3);
             index={i}
           />
         ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="faq">
+    <div class="faq-inner">
+      <span class="section-label">FREQUENTLY ASKED</span>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-question">Are you available for freelance or consulting work?</summary>
+          <p class="faq-answer">
+            It depends on the project. I take on select consulting engagements
+            in distributed systems, computational physics, and research-heavy engineering.
+            Reach out via email and describe what you're working on.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">What's your background — physics or engineering?</summary>
+          <p class="faq-answer">
+            Both. I was trained in physics and drawn to engineering. The combination
+            means I think about invariants before implementations. I approach software
+            problems with a physicist's rigor and an engineer's pragmatism.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">Do you collaborate on research?</summary>
+          <p class="faq-answer">
+            Yes — particularly in quantum error correction, distributed systems theory,
+            and the computational foundations of machine learning. If you're working on
+            something in these areas, I'd like to hear about it.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">What tools and languages do you prefer?</summary>
+          <p class="faq-answer">
+            Depends on the problem. Python and Julia for research and prototyping.
+            Rust and Go for systems work. TypeScript for web tooling.
+            I don't have loyalty to tools — I have loyalty to correctness.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">Can I use your writing or cite your work?</summary>
+          <p class="faq-answer">
+            Published papers follow standard academic citation norms. Blog posts and
+            technical writing on this site can be referenced with attribution.
+            If in doubt, send me a message.
+          </p>
+        </details>
       </div>
     </div>
   </section>
@@ -246,6 +446,50 @@ const recentPosts = posts.slice(0, 3);
     margin-bottom: var(--space-4);
   }
 
+  /* ── Stats ── */
+  .stats {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: var(--space-8) var(--space-6);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .stats-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-6);
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .stat-number {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    color: var(--color-accent);
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: var(--font-ui);
+    font-size: 0.65rem;
+    color: var(--color-text-ghost);
+    letter-spacing: 0.1em;
+    text-align: center;
+  }
+
+  .stat-divider {
+    width: 1px;
+    height: 40px;
+    background: var(--color-border);
+  }
+
   /* ── Expertise ── */
   .expertise {
     max-width: var(--page-width);
@@ -322,6 +566,270 @@ const recentPosts = posts.slice(0, 3);
     font-style: italic;
   }
 
+  /* ── Tech Stack ── */
+  .stack {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: var(--space-8) var(--space-6);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .stack-inner {
+    max-width: var(--page-width);
+  }
+
+  .stack-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+
+  .stack-group-title {
+    font-family: var(--font-ui);
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    letter-spacing: 0.06em;
+    font-weight: 500;
+    margin-bottom: var(--space-2);
+  }
+
+  .stack-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1);
+  }
+
+  .stack-tag {
+    font-family: var(--font-ui);
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    letter-spacing: 0.04em;
+    padding: 4px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    transition: border-color var(--duration) var(--ease), color var(--duration) var(--ease);
+  }
+
+  .stack-tag:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+
+  /* ── Featured ── */
+  .featured {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: var(--space-8) var(--space-6);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .featured-inner {
+    max-width: var(--page-width);
+  }
+
+  .featured-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+
+  .featured-card {
+    padding: var(--space-3);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    transition: border-color var(--duration-md) var(--ease);
+  }
+
+  .featured-card:hover {
+    border-color: var(--color-accent);
+  }
+
+  .featured-type {
+    font-family: var(--font-ui);
+    font-size: 0.65rem;
+    color: var(--color-accent);
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: var(--space-2);
+  }
+
+  .featured-title {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: 400;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+    margin-bottom: var(--space-1);
+  }
+
+  .featured-desc {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: var(--space-2);
+  }
+
+  .featured-link {
+    font-family: var(--font-ui);
+    font-size: var(--text-sm);
+    color: var(--color-accent);
+    letter-spacing: 0.02em;
+    transition: opacity var(--duration) var(--ease);
+  }
+
+  .featured-link:hover {
+    opacity: 0.8;
+  }
+
+  /* ── Timeline ── */
+  .timeline {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: var(--space-8) var(--space-6);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .timeline-inner {
+    max-width: var(--content-width);
+    margin: 0 auto;
+  }
+
+  .timeline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: var(--space-3);
+    padding: var(--space-3) 0;
+    border-bottom: 1px solid var(--color-border-2);
+    position: relative;
+  }
+
+  .timeline-item:last-child {
+    border-bottom: none;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 66px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--color-border-2);
+  }
+
+  .timeline-item:last-child::before {
+    display: none;
+  }
+
+  .timeline-year {
+    font-family: var(--font-ui);
+    font-size: var(--text-xs);
+    color: var(--color-text-ghost);
+    letter-spacing: 0.06em;
+    padding-top: 2px;
+  }
+
+  .timeline-content {
+    padding-left: var(--space-2);
+  }
+
+  .timeline-title {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--color-text);
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 4px;
+  }
+
+  .timeline-desc {
+    font-family: var(--font-ui);
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    letter-spacing: 0.02em;
+  }
+
+  /* ── FAQ ── */
+  .faq {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: var(--space-8) var(--space-6);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .faq-inner {
+    max-width: var(--content-width);
+    margin: 0 auto;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--color-border-2);
+  }
+
+  .faq-item:last-child {
+    border-bottom: none;
+  }
+
+  .faq-question {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--color-text);
+    padding: var(--space-3) 0;
+    cursor: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2);
+    transition: color var(--duration) var(--ease);
+    line-height: 1.5;
+  }
+
+  .faq-question::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-question::after {
+    content: '+';
+    font-family: var(--font-ui);
+    font-size: var(--text-lg);
+    color: var(--color-text-ghost);
+    flex-shrink: 0;
+    transition: transform 200ms var(--ease), color 200ms var(--ease);
+  }
+
+  .faq-item[open] .faq-question::after {
+    content: '−';
+    color: var(--color-accent);
+  }
+
+  .faq-question:hover {
+    color: var(--color-accent);
+  }
+
+  .faq-answer {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    padding-bottom: var(--space-3);
+    max-width: 580px;
+  }
+
   /* ── Recent Writing ── */
   .recent {
     max-width: var(--page-width);
@@ -333,6 +841,7 @@ const recentPosts = posts.slice(0, 3);
 
   .recent-inner {
     max-width: var(--page-width);
+    margin: 0 auto;
   }
 
   .recent-header {
@@ -348,6 +857,7 @@ const recentPosts = posts.slice(0, 3);
 
   .post-list {
     max-width: var(--content-width);
+    margin: 0 auto;
   }
 
   .all-writing-link {
@@ -409,52 +919,146 @@ const recentPosts = posts.slice(0, 3);
   /* ── Responsive ── */
   @media (max-width: 768px) {
     .hero {
-      padding: var(--space-6) var(--space-3) 0;
-      padding-top: calc(var(--space-8) + 64px);
+      padding: var(--space-4) var(--space-3) 0;
+      padding-top: calc(var(--space-6) + 56px);
     }
 
     .hero-inner {
       grid-template-columns: 1fr;
       gap: var(--space-4);
-      text-align: center;
+    }
+
+    /* On mobile: photo first, text second */
+    .hero-text-col {
+      order: 2;
+      max-width: none;
     }
 
     .hero-photo-col {
-      display: flex;
-      justify-content: center;
+      order: 1;
     }
 
     .photo-frame {
-      max-width: 200px;
+      max-width: 100%;
+      aspect-ratio: 16 / 10;
+      border-radius: 4px;
     }
 
-    .hero-text-col {
-      max-width: none;
+    .photo {
+      object-position: center 20%;
     }
 
     .hero-bio {
       max-width: none;
+      font-size: var(--text-sm);
     }
 
     .hero-headline {
-      font-size: var(--text-3xl);
+      font-size: var(--text-2xl);
+    }
+
+    .hero-greeting {
+      font-size: var(--text-xs);
     }
 
     .hero-cta {
-      justify-content: center;
+      flex-direction: row;
+      gap: var(--space-2);
+    }
+
+    .cta-primary,
+    .cta-secondary {
+      font-size: var(--text-xs);
+      padding: 8px 16px;
     }
 
     .expertise {
-      padding: var(--space-8) var(--space-3) 0;
+      padding: var(--space-6) var(--space-3) 0;
     }
 
     .expertise-grid {
       grid-template-columns: 1fr;
-      gap: var(--space-3);
+      gap: var(--space-2);
+    }
+
+    .expertise-card {
+      padding: var(--space-2);
+    }
+
+    .expertise-title {
+      font-size: var(--text-lg);
+    }
+
+    .expertise-desc {
+      font-size: var(--text-xs);
     }
 
     .philosophy {
-      padding: var(--space-8) var(--space-3);
+      padding: var(--space-6) var(--space-3);
+    }
+
+    .philosophy-quote {
+      font-size: var(--text-lg);
+    }
+
+    .stats {
+      padding: var(--space-4) var(--space-3);
+    }
+
+    .stats-inner {
+      gap: var(--space-2);
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    .stat-divider {
+      display: none;
+    }
+
+    .stat-item {
+      min-width: 80px;
+    }
+
+    .stack {
+      padding: var(--space-6) var(--space-3);
+    }
+
+    .stack-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-3);
+    }
+
+    .featured {
+      padding: var(--space-6) var(--space-3);
+    }
+
+    .featured-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .timeline {
+      padding: var(--space-6) var(--space-3);
+    }
+
+    .timeline-item {
+      grid-template-columns: 48px 1fr;
+      gap: var(--space-2);
+    }
+
+    .timeline-item::before {
+      left: 56px;
+    }
+
+    .faq {
+      padding: var(--space-6) var(--space-3);
+    }
+
+    .faq-question {
+      font-size: var(--text-xs);
+    }
+
+    .faq-answer {
+      font-size: var(--text-xs);
     }
 
     .recent {
@@ -462,7 +1066,15 @@ const recentPosts = posts.slice(0, 3);
     }
 
     .currently {
-      padding: var(--space-6) var(--space-3) var(--space-8);
+      padding: var(--space-6) var(--space-3) var(--space-6);
+    }
+
+    .currently-text {
+      font-size: var(--text-sm);
+    }
+
+    .currently-links {
+      flex-wrap: wrap;
     }
   }
 </style>

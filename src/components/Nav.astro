@@ -103,7 +103,31 @@ function isActive(href: string): boolean {
 
   @media (max-width: 768px) {
     .nav {
-      padding: var(--space-2) var(--space-3);
+      padding: var(--space-1) var(--space-2);
+    }
+
+    .nav-links {
+      gap: 4px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .nav-links::-webkit-scrollbar {
+      display: none;
+    }
+
+    .nav-link {
+      white-space: nowrap;
+      font-size: 0.65rem;
+    }
+
+    .nav-sep {
+      font-size: 0.6rem;
+    }
+
+    .nav-logo {
+      font-size: var(--text-xs);
     }
   }
 </style>
