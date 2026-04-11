@@ -20,4 +20,3 @@ User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://jiilan.me/sitemap-index.xml
-LLMsTxt: https://jiilan.me/llms.txt
