@@ -107,7 +107,14 @@ img {
 }
 
 body {
-  animation: page-fade var(--duration-lg) var(--ease-out) both;
+  animation: page-fade var(--duration-lg) var(--ease-out) forwards;
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    animation: none;
+  }
 }
 
 /* ── Prose styling (for post content) ── */
