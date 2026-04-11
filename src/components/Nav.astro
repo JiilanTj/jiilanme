@@ -1,13 +1,25 @@
 ---
+const pathname = Astro.url.pathname;
+
+function isActive(href: string): boolean {
+  if (href === '/') return pathname === '/';
+  return pathname.startsWith(href);
+}
 ---
 
 <nav class="nav" id="site-nav">
   <div class="nav-inner">
     <a href="/" class="nav-logo">JNT</a>
     <div class="nav-links">
-      <a href="/writing" class="nav-link">writing</a>
+      <a href="/works" class:list={["nav-link", { "nav-link--active": isActive("/works") }]}>works</a>
       <span class="nav-sep">·</span>
-      <a href="/about" class="nav-link">about</a>
+      <a href="/writing" class:list={["nav-link", { "nav-link--active": isActive("/writing") }]}>writing</a>
+      <span class="nav-sep">·</span>
+      <a href="/research" class:list={["nav-link", { "nav-link--active": isActive("/research") }]}>research</a>
+      <span class="nav-sep">·</span>
+      <a href="/about" class:list={["nav-link", { "nav-link--active": isActive("/about") }]}>about</a>
+      <span class="nav-sep">·</span>
+      <a href="/contacts" class:list={["nav-link", { "nav-link--active": isActive("/contacts") }]}>contacts</a>
     </div>
   </div>
 </nav>
@@ -35,12 +47,8 @@
     right: 0;
     z-index: 100;
     padding: var(--space-3) var(--space-6);
-    border-bottom: 1px solid transparent;
-    transition: border-color var(--duration-md) var(--ease);
-  }
-
-  .nav--scrolled {
-    border-bottom-color: var(--color-border-2);
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
   }
 
   .nav-inner {
@@ -80,6 +88,10 @@
 
   .nav-link:hover {
     color: var(--color-text);
+  }
+
+  .nav-link--active {
+    color: var(--color-accent);
   }
 
   .nav-sep {

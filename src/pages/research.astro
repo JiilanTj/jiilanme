@@ -1,0 +1,218 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Research & Papers — Jiilan Nashrulloh Tanjung">
+  <section class="research-page">
+    <header class="page-header">
+      <h1 class="page-title">Research &amp; Papers</h1>
+      <p class="page-subtitle">Published work, preprints, and ongoing investigations.</p>
+      <hr class="page-rule" />
+    </header>
+
+    <div class="papers-list">
+      <div class="paper-item">
+        <div class="paper-meta">
+          <span class="paper-year">2025</span>
+          <span class="paper-status paper-status--published">Published</span>
+        </div>
+        <h3 class="paper-title">On the Computational Complexity of Real-Time Quantum Error Decoding</h3>
+        <p class="paper-authors">Jiilan N. Tanjung</p>
+        <p class="paper-venue">arXiv preprint — Quantum Computing</p>
+        <p class="paper-abstract">
+          We analyze the computational overhead of syndrome decoding in surface codes
+          and establish a lower bound on decoder latency for fault-tolerant quantum
+          computation at scale.
+        </p>
+        <div class="paper-links">
+          <a href="#" class="paper-link">PDF →</a>
+          <a href="#" class="paper-link">arXiv →</a>
+        </div>
+      </div>
+
+      <div class="paper-item">
+        <div class="paper-meta">
+          <span class="paper-year">2024</span>
+          <span class="paper-status paper-status--published">Published</span>
+        </div>
+        <h3 class="paper-title">Consistency Envelopes: A Framework for Honest Distributed Systems Guarantees</h3>
+        <p class="paper-authors">Jiilan N. Tanjung</p>
+        <p class="paper-venue">Workshop on Principles of Distributed Systems</p>
+        <p class="paper-abstract">
+          We propose the consistency envelope as a formal mechanism for documenting
+          the conditions under which a distributed system's safety guarantees hold,
+          and how they degrade under partition.
+        </p>
+        <div class="paper-links">
+          <a href="#" class="paper-link">PDF →</a>
+        </div>
+      </div>
+
+      <div class="paper-item">
+        <div class="paper-meta">
+          <span class="paper-year">2024</span>
+          <span class="paper-status paper-status--preprint">Preprint</span>
+        </div>
+        <h3 class="paper-title">Geometric Properties of Loss Landscapes in Over-Parameterized Networks</h3>
+        <p class="paper-authors">Jiilan N. Tanjung</p>
+        <p class="paper-venue">arXiv preprint — Machine Learning Theory</p>
+        <p class="paper-abstract">
+          An investigation into the relationship between Hessian curvature,
+          stochastic gradient noise structure, and generalization bounds
+          through the lens of PAC-Bayesian theory.
+        </p>
+        <div class="paper-links">
+          <a href="#" class="paper-link">PDF →</a>
+          <a href="#" class="paper-link">arXiv →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .research-page {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: var(--space-12) var(--space-6);
+    padding-top: calc(var(--space-12) + 64px);
+  }
+
+  .page-header {
+    margin-bottom: var(--space-8);
+  }
+
+  .page-title {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    font-weight: 400;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  .page-subtitle {
+    font-family: var(--font-ui);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    letter-spacing: 0.02em;
+    margin-top: var(--space-1);
+  }
+
+  .page-rule {
+    border: none;
+    height: 1px;
+    background: var(--color-border);
+    margin-top: var(--space-4);
+  }
+
+  .papers-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    max-width: var(--content-width);
+  }
+
+  .paper-item {
+    padding-bottom: var(--space-6);
+    border-bottom: 1px solid var(--color-border-2);
+  }
+
+  .paper-item:last-child {
+    border-bottom: none;
+  }
+
+  .paper-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-1);
+  }
+
+  .paper-year {
+    font-family: var(--font-ui);
+    font-size: var(--text-xs);
+    color: var(--color-text-ghost);
+    letter-spacing: 0.06em;
+  }
+
+  .paper-status {
+    font-family: var(--font-ui);
+    font-size: var(--text-xs);
+    letter-spacing: 0.06em;
+    padding: 2px 8px;
+    border-radius: 3px;
+  }
+
+  .paper-status--published {
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    opacity: 0.8;
+  }
+
+  .paper-status--preprint {
+    color: var(--color-accent-cold);
+    border: 1px solid var(--color-accent-cold);
+    opacity: 0.8;
+  }
+
+  .paper-title {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 400;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+    margin-bottom: 6px;
+  }
+
+  .paper-authors {
+    font-family: var(--font-ui);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    letter-spacing: 0.02em;
+    margin-bottom: 2px;
+  }
+
+  .paper-venue {
+    font-family: var(--font-ui);
+    font-size: var(--text-xs);
+    color: var(--color-text-ghost);
+    letter-spacing: 0.04em;
+    font-style: italic;
+    margin-bottom: var(--space-2);
+  }
+
+  .paper-abstract {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin-bottom: var(--space-2);
+  }
+
+  .paper-links {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  .paper-link {
+    font-family: var(--font-ui);
+    font-size: var(--text-sm);
+    color: var(--color-accent);
+    letter-spacing: 0.02em;
+    transition: opacity var(--duration) var(--ease);
+  }
+
+  .paper-link:hover {
+    opacity: 0.8;
+  }
+
+  @media (max-width: 768px) {
+    .research-page {
+      padding: var(--space-8) var(--space-3);
+      padding-top: calc(var(--space-8) + 64px);
+    }
+  }
+</style>

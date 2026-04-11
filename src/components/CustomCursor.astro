@@ -1,7 +1,11 @@
 ---
 ---
 
-<div class="cursor" id="custom-cursor"></div>
+<div class="cursor" id="custom-cursor">
+  <svg class="cursor-arrow" viewBox="0 0 24 24" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M5 3L19 12L12 13.5L9 21L5 3Z" fill="rgba(200,169,126,0.85)" stroke="var(--color-accent)" stroke-width="1.5" stroke-linejoin="round"/>
+  </svg>
+</div>
 
 <script>
   const cursor = document.getElementById('custom-cursor') as HTMLElement | null;
@@ -70,12 +74,28 @@
     background: transparent;
     pointer-events: none;
     z-index: 9999;
-    transition: background 150ms ease, opacity 200ms ease;
+    transition: width 200ms ease, height 200ms ease, border 200ms ease, background 200ms ease, border-radius 200ms ease, opacity 200ms ease;
     will-change: transform;
   }
 
+  .cursor .cursor-arrow {
+    position: absolute;
+    top: -2px;
+    left: 4px;
+    opacity: 0;
+    transition: opacity 200ms ease;
+  }
+
   .cursor--hover {
-    background: rgba(200, 169, 126, 0.3);
+    width: 10px;
+    height: 10px;
+    border: 1.5px solid var(--color-accent);
+    background: rgba(200, 169, 126, 0.15);
+    border-radius: 50%;
+  }
+
+  .cursor--hover .cursor-arrow {
+    opacity: 1;
   }
 
   @media (pointer: coarse) {

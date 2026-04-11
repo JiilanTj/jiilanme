@@ -1,0 +1,165 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Works — Jiilan Nashrulloh Tanjung">
+  <section class="works-page">
+    <header class="page-header">
+      <h1 class="page-title">Works</h1>
+      <p class="page-subtitle">Selected projects and engineering work.</p>
+      <hr class="page-rule" />
+    </header>
+
+    <div class="works-list">
+      <div class="work-item">
+        <div class="work-meta">
+          <span class="work-year">2025</span>
+          <span class="work-tag">Infrastructure</span>
+        </div>
+        <h3 class="work-title">Fault-Tolerant Distributed Compute Engine</h3>
+        <p class="work-desc">
+          A distributed compute framework designed around formal correctness guarantees.
+          Built to handle Byzantine failures without sacrificing throughput.
+        </p>
+        <a href="https://github.com/JiilanTj" class="work-link" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+      </div>
+
+      <div class="work-item">
+        <div class="work-meta">
+          <span class="work-year">2024</span>
+          <span class="work-tag">Simulation</span>
+        </div>
+        <h3 class="work-title">Quantum Circuit Simulator</h3>
+        <p class="work-desc">
+          High-performance simulator for noisy intermediate-scale quantum circuits.
+          Optimized tensor contraction with GPU acceleration.
+        </p>
+        <a href="https://github.com/JiilanTj" class="work-link" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+      </div>
+
+      <div class="work-item">
+        <div class="work-meta">
+          <span class="work-year">2024</span>
+          <span class="work-tag">Tooling</span>
+        </div>
+        <h3 class="work-title">Static Analysis Framework for Correctness Proofs</h3>
+        <p class="work-desc">
+          A lightweight framework for embedding correctness assertions into compiled languages,
+          inspired by CompCert's simulation relations.
+        </p>
+        <a href="https://github.com/JiilanTj" class="work-link" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .works-page {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: var(--space-12) var(--space-6);
+    padding-top: calc(var(--space-12) + 64px);
+  }
+
+  .page-header {
+    margin-bottom: var(--space-8);
+  }
+
+  .page-title {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    font-weight: 400;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  .page-subtitle {
+    font-family: var(--font-ui);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    letter-spacing: 0.02em;
+    margin-top: var(--space-1);
+  }
+
+  .page-rule {
+    border: none;
+    height: 1px;
+    background: var(--color-border);
+    margin-top: var(--space-4);
+  }
+
+  .works-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    max-width: var(--content-width);
+  }
+
+  .work-item {
+    padding-bottom: var(--space-6);
+    border-bottom: 1px solid var(--color-border-2);
+  }
+
+  .work-item:last-child {
+    border-bottom: none;
+  }
+
+  .work-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-1);
+  }
+
+  .work-year {
+    font-family: var(--font-ui);
+    font-size: var(--text-xs);
+    color: var(--color-text-ghost);
+    letter-spacing: 0.06em;
+  }
+
+  .work-tag {
+    font-family: var(--font-ui);
+    font-size: var(--text-xs);
+    color: var(--color-accent);
+    letter-spacing: 0.06em;
+  }
+
+  .work-title {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 400;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+    margin-bottom: var(--space-1);
+  }
+
+  .work-desc {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin-bottom: var(--space-2);
+    max-width: 560px;
+  }
+
+  .work-link {
+    font-family: var(--font-ui);
+    font-size: var(--text-sm);
+    color: var(--color-accent);
+    letter-spacing: 0.02em;
+    transition: opacity var(--duration) var(--ease);
+  }
+
+  .work-link:hover {
+    opacity: 0.8;
+  }
+
+  @media (max-width: 768px) {
+    .works-page {
+      padding: var(--space-8) var(--space-3);
+      padding-top: calc(var(--space-8) + 64px);
+    }
+  }
+</style>
