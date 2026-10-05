@@ -277,7 +277,12 @@ body {
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: marquee-x 28s linear infinite;
+  animation: marquee-x 80s linear infinite;
+}
+
+.marquee-track > span {
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 @media (prefers-reduced-motion: reduce) {

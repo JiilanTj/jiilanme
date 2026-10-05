@@ -4,43 +4,196 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="About — Jiilan Nashrulloh Tanjung" description="About Jiilan Nashrulloh Tanjung, AI-powered full-stack developer for web, mobile and business automation.">
   <section class="page">
-    <div class="card reveal">
-      <span class="kicker">About</span>
-      <h1 class="title">Hi, I'm Jiilan.</h1>
-      <div class="prose">
+    <div class="hero-card reveal">
+      <div class="photo-arch">
+        <img src="/jiilan.webp" alt="Portrait of Jiilan Nashrulloh Tanjung" width="400" height="400" loading="eager" decoding="async" />
+      </div>
+      <div class="hero-copy">
+        <span class="kicker">About</span>
+        <h1 class="title">Hi, I'm Jiilan.</h1>
         <p>I'm an AI-powered full-stack developer. I build websites, mobile apps and business automation for clients who want results, not tech talk.</p>
         <p>One person for the whole job: modern builds, clean code and AI features where they actually help — chatbots, lead flows, content and reports on autopilot.</p>
-        <p>Currently accepting new projects. For standard work, the <a href="/pricing">pricing page</a> locks your price instantly. For big custom systems, tell me your goal and timeline and I'll reply with a plan and a fixed quote.</p>
-        <p>
-          <a href="mailto:jiilannashrulloh@gmail.com">jiilannashrulloh@gmail.com</a>
-          <br />
-          <a href="https://github.com/JiilanTj" target="_blank" rel="noopener noreferrer">github.com/JiilanTj</a>
-        </p>
+        <div class="hero-meta">
+          <span class="pulse" aria-hidden="true"></span>
+          <span>Currently accepting new projects</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- DRAFT: cerita karangan, ganti dengan versi asli kamu -->
+    <div class="story reveal">
+      <span class="kicker">My story</span>
+      <ol class="chapters">
+        <li><span class="chapter-when">4th grade</span><span class="chapter-what">It started with a slow family computer and a lot of curiosity. My first "code" was copy-pasted HTML for a Blogspot layout — I broke it, fixed it, broke it again, and got hooked on that loop.</span></li>
+        <li><span class="chapter-when">School years</span><span class="chapter-what">Curiosity turned into habit: tutorials after homework, small scripts to automate boring tasks, and a growing folder of half-finished projects.</span></li>
+        <li><span class="chapter-when">University</span><span class="chapter-what">I went into physics but never stopped building. Somewhere between lab reports and late-night coding sessions, the two worlds merged: rigorous thinking, shipped as software.</span></li>
+        <li><span class="chapter-when">Now</span><span class="chapter-what">I do that full-time as a freelancer — websites, mobile apps and AI automation for clients, with the same 4th-grade excitement every time something finally works.</span></li>
+      </ol>
+    </div>
+
+    <div class="facts reveal">
+      <div class="fact tint-mint">
+        <span class="fact-icon" aria-hidden="true">$</span>
+        <h2>Locked pricing</h2>
+        <p>The quote builder fixes your price before we start. No hourly billing.</p>
+      </div>
+      <div class="fact tint-sky">
+        <span class="fact-icon" aria-hidden="true">1:1</span>
+        <h2>Solo and direct</h2>
+        <p>You talk to the person who builds it. No account managers, no handoffs.</p>
+      </div>
+      <div class="fact tint-peach">
+        <span class="fact-icon" aria-hidden="true">AI</span>
+        <h2>AI-powered</h2>
+        <p>AI speeds up the build and powers smart features inside your product.</p>
+      </div>
+    </div>
+
+    <div class="contact-card reveal">
+      <div>
+        <h2 class="contact-title">Let's work together.</h2>
+        <p class="contact-sub">Standard work locks instantly on the <a href="/pricing">pricing page</a>. Big custom systems get a plan and fixed quote.</p>
+      </div>
+      <div class="contact-actions">
+        <a href="mailto:jiilannashrulloh@gmail.com" class="btn-primary">Email me</a>
+        <a href="https://github.com/JiilanTj" target="_blank" rel="noopener noreferrer" class="btn-ghost">GitHub</a>
       </div>
     </div>
   </section>
 </Layout>
 
 <style>
-  .page { max-width: var(--page-width); margin: 0 auto; padding: var(--space-4) var(--space-3) var(--space-8); }
-  .card {
-    max-width: var(--content-width); margin: 0 auto;
+  .page {
+    max-width: var(--page-width); margin: 0 auto;
+    padding: var(--space-4) var(--space-3) var(--space-8);
+    display: flex; flex-direction: column; gap: 12px;
+  }
+
+  .hero-card {
+    display: grid; grid-template-columns: 240px minmax(0, 1fr);
+    gap: var(--space-4); align-items: center;
     background: var(--color-paper-2); border: 2px solid var(--color-ink);
     border-radius: 28px; padding: var(--space-4); box-shadow: var(--shadow-card);
   }
+
+  .photo-arch {
+    width: 100%; aspect-ratio: 4 / 4.6;
+    border-radius: 120px 120px 20px 20px; overflow: hidden;
+    border: 2px solid var(--color-ink); background: var(--color-cream);
+  }
+
+  .photo-arch img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+
   .kicker {
     display: inline-block; font-family: var(--font-mono); font-size: var(--text-xs); font-weight: 600;
     background: var(--color-lemon); border: 2px solid var(--color-ink);
     border-radius: var(--radius-pill); padding: 6px 14px; margin-bottom: var(--space-2);
   }
+
   .title {
     font-family: var(--font-display); font-weight: 700;
     font-size: var(--text-4xl); letter-spacing: -0.03em; line-height: 1.05;
-    margin-bottom: var(--space-3);
+    margin-bottom: var(--space-2);
   }
+
+  .hero-copy p + p { margin-top: 12px; }
+  .hero-copy p { color: var(--color-muted); max-width: 52ch; }
+  .hero-copy p:first-of-type { color: var(--color-ink); font-size: var(--text-lg); }
+
+  .hero-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-muted);
+    margin-top: var(--space-2);
+  }
+
+  .pulse {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--color-success);
+    box-shadow: 0 0 0 4px rgba(46, 125, 79, 0.18);
+  }
+
+  .story {
+    background: var(--color-paper-2); border: 2px solid var(--color-ink);
+    border-radius: 28px; padding: var(--space-4); box-shadow: var(--shadow-card);
+  }
+
+  .chapters { list-style: none; margin-top: var(--space-2); display: flex; flex-direction: column; }
+
+  .chapters li {
+    display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: var(--space-2);
+    padding: var(--space-2) 0; border-top: 2px dashed var(--color-line);
+  }
+
+  .chapters li:first-child { border-top: none; }
+
+  .chapter-when {
+    font-family: var(--font-mono); font-size: var(--text-sm); font-weight: 600;
+    color: var(--color-accent);
+  }
+
+  .chapter-what { color: var(--color-muted); max-width: 62ch; }
+
+  .facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+
+  .fact {
+    border: 2px solid var(--color-ink); border-radius: var(--radius-card);
+    padding: var(--space-3) var(--space-2);
+    transition: transform var(--duration) var(--ease);
+  }
+
+  .fact:hover { transform: translateY(-3px); }
+  .fact h2 { font-family: var(--font-display); font-size: var(--text-lg); letter-spacing: -0.01em; margin: 10px 0 6px; }
+  .fact p { font-size: var(--text-sm); color: var(--color-muted); }
+
+  .fact-icon {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-width: 40px; height: 40px; padding: 0 10px;
+    border-radius: var(--radius-pill);
+    background: var(--color-paper-2); border: 2px solid var(--color-ink);
+    font-family: var(--font-mono); font-weight: 600; font-size: var(--text-sm);
+  }
+
+  .contact-card {
+    display: flex; align-items: center; justify-content: space-between; gap: var(--space-3);
+    background: var(--color-cream);
+    border: 2px solid var(--color-ink); border-radius: 28px; padding: var(--space-4);
+    box-shadow: 6px 6px 0 var(--color-ink);
+  }
+
+  .contact-title {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: var(--text-2xl); letter-spacing: -0.02em;
+  }
+
+  .contact-sub { color: var(--color-muted); margin-top: 8px; max-width: 52ch; }
+  .contact-sub a { color: var(--color-accent); font-weight: 700; }
+
+  .contact-actions { display: flex; gap: 12px; flex-wrap: wrap; flex: none; }
+
+  .btn-primary, .btn-ghost {
+    font-family: var(--font-body); font-size: var(--text-base); font-weight: 700;
+    border-radius: var(--radius-pill); padding: 13px 24px;
+    border: 2px solid var(--color-ink); white-space: nowrap;
+    transition: transform var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
+  }
+
+  .btn-primary {
+    background: var(--color-ink); color: var(--color-paper);
+    box-shadow: 3px 3px 0 var(--color-accent);
+  }
+
+  .btn-primary:hover { transform: translate(-1px, -2px); box-shadow: 5px 5px 0 var(--color-accent); }
+  .btn-primary:active { transform: translateY(1px) scale(0.98); box-shadow: 1px 1px 0 var(--color-accent); }
+  .btn-ghost { background: var(--color-paper-2); color: var(--color-ink); }
+  .btn-ghost:hover { background: var(--color-lemon); transform: translateY(-2px); }
+  .btn-ghost:active { transform: translateY(1px) scale(0.98); }
+
   @media (max-width: 768px) {
     .page { padding: var(--space-3) var(--space-2) var(--space-6); }
-    .card { padding: var(--space-3) var(--space-2); }
+    .hero-card { grid-template-columns: minmax(0, 1fr); padding: var(--space-3) var(--space-2); }
+    .photo-arch { width: min(200px, 70%); margin: 0 auto; }
     .title { font-size: var(--text-3xl); }
+    .facts { grid-template-columns: minmax(0, 1fr); }
+    .contact-card { flex-direction: column; align-items: flex-start; }
   }
 </style>

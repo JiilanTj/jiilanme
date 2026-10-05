@@ -59,11 +59,12 @@ const recentPosts = posts.slice(0, 3);
     </div>
   </section>
 
-  <!-- MARQUEE (one per page) -->
+  <!-- MARQUEE (one per page). Even halves = seamless −50% loop. -->
   <div class="marquee" aria-hidden="true">
     <div class="marquee-track">
-      <span>web apps · mobile apps · AI automation · landing pages · dashboards · chatbots ·&nbsp;</span>
-      <span>web apps · mobile apps · AI automation · landing pages · dashboards · chatbots ·&nbsp;</span>
+      {Array.from({ length: 8 }).map(() => (
+        <span>web apps · mobile apps · AI automation · landing pages · dashboards · chatbots · ERP systems · SaaS products · APIs · integrations ·&nbsp;</span>
+      ))}
     </div>
   </div>
 
