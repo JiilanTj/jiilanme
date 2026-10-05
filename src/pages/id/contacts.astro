@@ -1,24 +1,24 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../../layouts/Layout.astro';
 ---
 
-<Layout title="Say hello — Jiilan Nashrulloh Tanjung" description="Contact Jiilan Nashrulloh Tanjung for websites, mobile apps and business automation." alternate="/id/contacts">
+<Layout lang="id" alternate="/contacts" title="Hubungi saya — Jiilan Nashrulloh Tanjung" description="Hubungi Jiilan Nashrulloh Tanjung untuk website, aplikasi mobile dan otomasi bisnis.">
   <section class="page">
     <header class="head reveal">
-      <h1 class="title">Say hello.</h1>
-      <p class="sub">Tell me about your project. Goal and timeline help a lot. I read everything and reply fast. Bringing a locked quote from the pricing page? Mention it and we skip straight to scheduling.</p>
+      <h1 class="title">Hubungi saya.</h1>
+      <p class="sub">Ceritain proyekmu. Tujuan dan timeline sangat membantu. Semua saya baca dan balas cepat. Bawa locked quote dari halaman pricing? Sebut aja, langsung lanjut ke penjadwalan.</p>
     </header>
 
     <div class="grid">
       <a href="mailto:jiilannashrulloh@gmail.com" class="channel channel-lemon reveal">
         <span class="label">Email</span>
         <span class="value">jiilannashrulloh@gmail.com</span>
-        <span class="hint">Replies within a few days →</span>
+        <span class="hint">Balasan dalam beberapa hari →</span>
       </a>
       <a href="https://github.com/JiilanTj" target="_blank" rel="noopener noreferrer" class="channel channel-ink reveal">
         <span class="label">GitHub</span>
         <span class="value">github.com/JiilanTj</span>
-        <span class="hint">Code and experiments →</span>
+        <span class="hint">Kode dan eksperimen →</span>
       </a>
     </div>
   </section>
@@ -27,7 +27,7 @@ import Layout from '../layouts/Layout.astro';
 <style>
   .page { max-width: var(--page-width); margin: 0 auto; padding: var(--space-4) var(--space-3) var(--space-8); }
   .title { font-family: var(--font-display); font-weight: 700; font-size: var(--text-4xl); letter-spacing: -0.03em; line-height: 1.05; }
-  .sub { color: var(--color-muted); font-size: var(--text-lg); margin-top: 10px; max-width: 52ch; }
+  .sub { color: var(--color-muted); font-size: var(--text-lg); margin-top: 10px; max-width: 56ch; }
   .grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; margin-top: var(--space-3); }
   .channel {
     border: 2px solid var(--color-ink); border-radius: var(--radius-card);

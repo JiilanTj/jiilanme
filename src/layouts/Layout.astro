@@ -11,6 +11,7 @@ interface Props {
   ogImage?: string;
   lang?: Locale;
   alternate?: string;
+  ogLocale?: string;
 }
 
 const {
@@ -20,6 +21,7 @@ const {
   ogImage = 'https://jiilan.me/jiilan.webp',
   lang = 'en',
   alternate,
+  ogLocale = lang === 'id' ? 'id_ID' : 'en_US',
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -53,7 +55,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL.href} />
     <meta property="og:image" content={ogImage} />
-    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale" content={ogLocale} />
     <meta property="og:site_name" content="Jiilan Nashrulloh Tanjung" />
 
     <!-- Twitter / X -->

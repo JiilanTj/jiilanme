@@ -1,164 +1,174 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../../layouts/Layout.astro';
 ---
 
-<Layout title="Pricing — Jiilan Nashrulloh Tanjung" description="Starting prices for websites, mobile apps and AI automation. Fixed quotes, no hourly billing." alternate="/id/pricing">
+<Layout lang="id" alternate="/pricing" title="Harga — Jiilan Nashrulloh Tanjung" description="Harga awal untuk website, aplikasi mobile dan otomasi AI. Quote pasti, tanpa hourly billing.">
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Jiilan Nashrulloh Tanjung — Full-Stack Development",
-    "url": "https://jiilan.me/pricing",
-    "priceRange": "$150+",
-    "areaServed": "Worldwide",
+    "url": "https://jiilan.me/id/pricing",
+    "priceRange": "Rp2,5jt+",
+    "areaServed": "Indonesia",
     "makesOffer": [
-      { "@type": "Offer", "name": "Landing page", "price": "150", "priceCurrency": "USD" },
-      { "@type": "Offer", "name": "Company site", "price": "500", "priceCurrency": "USD" },
-      { "@type": "Offer", "name": "Mobile app", "price": "1500", "priceCurrency": "USD" },
-      { "@type": "Offer", "name": "AI automation", "price": "250", "priceCurrency": "USD" }
+      { "@type": "Offer", "name": "Landing page", "price": "2500000", "priceCurrency": "IDR" },
+      { "@type": "Offer", "name": "Company site", "price": "8000000", "priceCurrency": "IDR" },
+      { "@type": "Offer", "name": "Mobile app", "price": "25000000", "priceCurrency": "IDR" },
+      { "@type": "Offer", "name": "AI automation", "price": "4000000", "priceCurrency": "IDR" }
     ]
   })} />
   <section class="page">
     <header class="page-head reveal">
-      <span class="kicker">Pricing</span>
-      <h1 class="page-title">Honest prices, fixed quotes.</h1>
-      <p class="page-sub">Starting prices below — or build your own quote underneath for a price that's locked the moment you send it.</p>
+      <span class="kicker">Harga</span>
+      <h1 class="page-title">Harga jujur, quote terkunci.</h1>
+      <p class="page-sub">Harga awal di bawah — atau rakit quotemu sendiri di bawah buat harga yang terkunci begitu kamu kirim.</p>
     </header>
 
     <div class="grid">
       <article class="card tint-lemon reveal">
         <span class="tag">Landing page</span>
-        <p class="starts">Starts at</p>
-        <p class="price">$150</p>
-        <p class="typical">Typical: $150–400</p>
+        <p class="starts">Mulai dari</p>
+        <p class="price">Rp 2,5 jt</p>
+        <p class="typical">Umumnya: Rp 2,5–6 jt</p>
         <ul>
-          <li>Custom design, no template</li>
-          <li>Copy polish and SEO basics</li>
-          <li>WhatsApp and contact integration</li>
-          <li>Launches in days</li>
+          <li>Desain custom, tanpa template</li>
+          <li>Copy polish dan SEO dasar</li>
+          <li>Integrasi WhatsApp dan kontak</li>
+          <li>Launch dalam hitungan hari</li>
         </ul>
-        <a href="#estimator" class="card-cta">Build your quote →</a>
+        <a href="#estimator" class="card-cta">Rakit quotemu →</a>
       </article>
 
       <article class="card tint-mint reveal">
         <span class="tag">Company site</span>
-        <p class="starts">Starts at</p>
-        <p class="price">$500</p>
-        <p class="typical">Typical: $500–1,200</p>
+        <p class="starts">Mulai dari</p>
+        <p class="price">Rp 8 jt</p>
+        <p class="typical">Umumnya: Rp 8–20 jt</p>
         <ul>
-          <li>Everything in Landing page</li>
-          <li>Edit content yourself with CMS</li>
-          <li>Dashboard for leads and content</li>
-          <li>Analytics set up for you</li>
+          <li>Semua yang ada di Landing page</li>
+          <li>Edit konten sendiri pakai CMS</li>
+          <li>Dashboard buat leads dan konten</li>
+          <li>Analytics disiapin sekalian</li>
         </ul>
-        <a href="#estimator" class="card-cta">Build your quote →</a>
+        <a href="#estimator" class="card-cta">Rakit quotemu →</a>
       </article>
 
       <article class="card tint-sky reveal">
-        <span class="tag">Mobile app</span>
-        <p class="starts">Starts at</p>
-        <p class="price">$1,500</p>
-        <p class="typical">Typical: $1,500–3,500</p>
+        <span class="tag">Aplikasi mobile</span>
+        <p class="starts">Mulai dari</p>
+        <p class="price">Rp 25 jt</p>
+        <p class="typical">Umumnya: Rp 25–60 jt</p>
         <ul>
-          <li>iOS and Android, one codebase</li>
-          <li>Release to both stores handled</li>
-          <li>Backend and admin dashboard</li>
-          <li>Free bug fixes in the first month</li>
+          <li>iOS dan Android, satu codebase</li>
+          <li>Rilis ke dua store diurusin</li>
+          <li>Backend dan dashboard admin</li>
+          <li>Bug fix gratis sebulan pertama</li>
         </ul>
-        <a href="#estimator" class="card-cta">Build your quote →</a>
+        <a href="#estimator" class="card-cta">Rakit quotemu →</a>
       </article>
 
       <article class="card tint-peach reveal">
-        <span class="tag">AI automation</span>
-        <p class="starts">Starts at</p>
-        <p class="price">$250</p>
-        <p class="typical">Typical: $250–900</p>
+        <span class="tag">Otomasi AI</span>
+        <p class="starts">Mulai dari</p>
+        <p class="price">Rp 4 jt</p>
+        <p class="typical">Umumnya: Rp 4–15 jt</p>
         <ul>
-          <li>AI chatbot for website or chat</li>
-          <li>Lead capture synced to your tools</li>
-          <li>One core workflow, end to end</li>
-          <li>Docs and handover call included</li>
+          <li>AI chatbot buat website atau chat</li>
+          <li>Leads kesimpen ke tools-mu</li>
+          <li>Satu workflow inti, end to end</li>
+          <li>Dokumentasi dan handover call</li>
         </ul>
-        <a href="#estimator" class="card-cta">Build your quote →</a>
+        <a href="#estimator" class="card-cta">Rakit quotemu →</a>
       </article>
     </div>
 
     <div class="estimator reveal" id="estimator">
-      <span class="tag">Custom estimate</span>
-      <h2>Build your own quote.</h2>
-      <p class="est-sub">Pick a type, add features, choose a speed. The price updates live.</p>
+      <span class="tag">Estimasi custom</span>
+      <h2>Rakit quotemu sendiri.</h2>
+      <p class="est-sub">Pilih tipe, tambah fitur, pilih kecepatan. Harga update live.</p>
 
       <div class="est-block">
-        <p class="est-label">Project types — combine for bundle discount</p>
+        <p class="est-label">Tipe proyek — gabung biar dapet diskon bundle</p>
         <div class="opt-row">
-          <label class="opt"><input type="checkbox" name="ptype" value="150" /><span>Landing page <em>$150+</em></span></label>
-          <label class="opt"><input type="checkbox" name="ptype" value="500" checked /><span>Business site <em>$500+</em></span></label>
-          <label class="opt"><input type="checkbox" name="ptype" value="1500" /><span>Mobile app <em>$1.5k+</em></span></label>
-          <label class="opt"><input type="checkbox" name="ptype" value="250" /><span>Automation <em>$250+</em></span></label>
-          <label class="opt"><input type="checkbox" name="ptype" value="3000" /><span>ERP / SaaS <em>$3k+</em></span></label>
+          <label class="opt"><input type="checkbox" name="ptype" value="2500000" /><span>Landing page <em>Rp2,5jt+</em></span></label>
+          <label class="opt"><input type="checkbox" name="ptype" value="8000000" checked /><span>Company site <em>Rp8jt+</em></span></label>
+          <label class="opt"><input type="checkbox" name="ptype" value="25000000" /><span>Aplikasi mobile <em>Rp25jt+</em></span></label>
+          <label class="opt"><input type="checkbox" name="ptype" value="4000000" /><span>Otomasi <em>Rp4jt+</em></span></label>
+          <label class="opt"><input type="checkbox" name="ptype" value="50000000" /><span>ERP / SaaS <em>Rp50jt+</em></span></label>
         </div>
       </div>
 
       <div class="est-block">
-        <p class="est-label">Core features</p>
+        <p class="est-label">Fitur inti</p>
         <div class="opt-row">
-          <label class="opt"><input type="checkbox" name="feat" value="300" /><span>Admin dashboard <em>+$300</em></span></label>
-          <label class="opt"><input type="checkbox" name="feat" value="250" /><span>Accounts and auth <em>+$250</em></span></label>
-          <label class="opt"><input type="checkbox" name="feat" value="350" /><span>Payments <em>+$350</em></span></label>
-          <label class="opt"><input type="checkbox" name="feat" value="400" /><span>AI chatbot <em>+$400</em></span></label>
-          <label class="opt"><input type="checkbox" name="feat" value="150" /><span>Multilingual <em>+$150</em></span></label>
-          <label class="opt"><input type="checkbox" name="feat" value="0" /><span>CMS <b class="free">Free</b></span></label>
-          <label class="opt"><input type="checkbox" name="feat" value="0" /><span>SEO basics <b class="free">Free</b></span></label>
-          <label class="opt"><input type="checkbox" name="feat" value="0" /><span>Analytics setup <b class="free">Free</b></span></label>
-          <label class="opt"><input type="checkbox" name="feat" value="0" /><span>SSL and hosting setup <b class="free">Free</b></span></label>
-          <label class="opt"><input type="checkbox" name="feat" value="0" /><span>Handover call <b class="free">Free</b></span></label>
+          <label class="opt"><input type="checkbox" name="feat" value="5000000" /><span>Admin dashboard <em>+Rp5jt</em></span></label>
+          <label class="opt"><input type="checkbox" name="feat" value="4000000" /><span>Akun dan auth <em>+Rp4jt</em></span></label>
+          <label class="opt"><input type="checkbox" name="feat" value="6000000" /><span>Payment <em>+Rp6jt</em></span></label>
+          <label class="opt"><input type="checkbox" name="feat" value="6500000" /><span>AI chatbot <em>+Rp6,5jt</em></span></label>
+          <label class="opt"><input type="checkbox" name="feat" value="2500000" /><span>Multibahasa <em>+Rp2,5jt</em></span></label>
+          <label class="opt"><input type="checkbox" name="feat" value="0" /><span>CMS <b class="free">Gratis</b></span></label>
+          <label class="opt"><input type="checkbox" name="feat" value="0" /><span>SEO dasar <b class="free">Gratis</b></span></label>
+          <label class="opt"><input type="checkbox" name="feat" value="0" /><span>Setup analytics <b class="free">Gratis</b></span></label>
+          <label class="opt"><input type="checkbox" name="feat" value="0" /><span>Setup SSL dan hosting <b class="free">Gratis</b></span></label>
+          <label class="opt"><input type="checkbox" name="feat" value="0" /><span>Handover call <b class="free">Gratis</b></span></label>
         </div>
       </div>
 
       <div class="est-block">
-        <p class="est-label">Revisions</p>
+        <p class="est-label">Revisi</p>
         <div class="opt-row">
-          <label class="opt"><input type="radio" name="rev" value="2" checked /><span>2 rounds <em>Free</em></span></label>
-          <label class="opt"><input type="radio" name="rev" value="5" /><span>5 rounds <em>+$150 · or +$50 if Flexible</em></span></label>
+          <label class="opt"><input type="radio" name="rev" value="2" checked /><span>2 ronde <em>Gratis</em></span></label>
+          <label class="opt"><input type="radio" name="rev" value="5" /><span>5 ronde <em>+Rp2,5jt · atau +Rp800rb kalau Fleksibel</em></span></label>
         </div>
       </div>
 
       <div class="est-block">
         <p class="est-label">Timeline</p>
         <div class="opt-row">
-          <label class="opt"><input type="radio" name="speed" value="0.9" data-name="Flexible −10%" /><span>Flexible <em>−10%</em></span></label>
-          <label class="opt"><input type="radio" name="speed" value="1" data-name="Standard" checked /><span>Standard <em>×1</em></span></label>
-          <label class="opt"><input type="radio" name="speed" value="1.3" data-name="Rush +30%" /><span>Rush <em>+30%</em></span></label>
+          <label class="opt"><input type="radio" name="speed" value="0.9" data-name="Fleksibel −10%" /><span>Fleksibel <em>−10%</em></span></label>
+          <label class="opt"><input type="radio" name="speed" value="1" data-name="Standar" checked /><span>Standar <em>×1</em></span></label>
+          <label class="opt"><input type="radio" name="speed" value="1.3" data-name="Kilat +30%" /><span>Kilat <em>+30%</em></span></label>
         </div>
       </div>
 
       <div class="est-result">
         <div class="bd">
-          <div class="bd-row"><span>Project types</span><b id="bd-types">1 type · $500</b></div>
-          <div class="bd-row" id="bd-save-row" style="display:none"><span>Bundle saving</span><b id="bd-save" class="save">−$0</b></div>
-          <div class="bd-row"><span>Features</span><b id="bd-feat">Free</b></div>
-          <div class="bd-row"><span>Revisions</span><b id="bd-rev">Free</b></div>
-          <div class="bd-row"><span>Timeline</span><b id="bd-speed">Standard</b></div>
+          <div class="bd-row"><span>Tipe proyek</span><b id="bd-types">1 tipe · Rp 8 jt</b></div>
+          <div class="bd-row" id="bd-save-row" style="display:none"><span>Hemat bundle</span><b id="bd-save" class="save">−Rp 0</b></div>
+          <div class="bd-row"><span>Fitur</span><b id="bd-feat">Gratis</b></div>
+          <div class="bd-row"><span>Revisi</span><b id="bd-rev">Gratis</b></div>
+          <div class="bd-row"><span>Timeline</span><b id="bd-speed">Standar</b></div>
         </div>
         <div class="res-total">
-          <span class="res-label">Your locked price</span>
-          <span class="res-num" id="est-total">$500</span>
+          <span class="res-label">Harga terkuncimu</span>
+          <span class="res-num" id="est-total">Rp 8 jt</span>
           <div class="res-actions">
-            <button class="btn-outline" id="est-copy" type="button"><span class="copy-label">Copy quote</span></button>
-            <a href="/contacts" class="btn-lemon">Get this scoped</a>
+            <button class="btn-outline" id="est-copy" type="button"><span class="copy-label">Salin quote</span></button>
+            <a href="/id/contacts" class="btn-lemon">Ajukan scope ini</a>
           </div>
         </div>
       </div>
-      <p class="est-note">This price is locked — send it to me and that's what you pay, no changes. Combining types shares discovery, design and setup, that's where the bundle discount comes from.</p>
+      <p class="est-note">Harga ini terkunci — kirim ke saya dan segitu bayarnya, tanpa perubahan. Gabung tipe nge-share discovery, desain dan setup, dari situ diskon bundle berasal.</p>
     </div>
 
     <script>
       (function () {
         var root = document.getElementById('estimator');
         if (!root) return;
-        function fmt(n) { return '$' + n.toLocaleString('en-US'); }
+        function fmt(n) { return 'Rp ' + n.toLocaleString('id-ID'); }
         function set(id, text) { document.getElementById(id).textContent = text; }
+        function short(n) {
+          if (n >= 1000000 && n % 1000000 === 0) return 'Rp ' + (n / 1000000) + ' jt';
+          if (n >= 1000000) return 'Rp ' + (n / 1000000).toLocaleString('id-ID', { maximumFractionDigits: 1 }) + ' jt';
+          return fmt(n);
+        }
+        function detailLine(label, value, detail) {
+          if (detail === 'none') return label + ': ' + value;
+          return value === 'Gratis' ? label + ': ' + detail : label + ' (' + value + '): ' + detail;
+        }
+        function val(id) { return document.getElementById(id).textContent; }
         function recalc() {
-          // Bundle logic: priciest type full, 2nd −15%, 3rd+ −25% (shared setup).
+          // Logika bundle: tipe termahal full, ke-2 −15%, ke-3+ −25% (setup bareng).
           var bases = [];
           root.querySelectorAll('input[name="ptype"]:checked').forEach(function (el) { bases.push(+el.value); });
           bases.sort(function (a, b) { return b - a; });
@@ -172,29 +182,26 @@ import Layout from '../layouts/Layout.astro';
           var speed = root.querySelector('input[name="speed"]:checked');
           var mult = +speed.value;
 
-          // 5 revision rounds cost little when the schedule is relaxed.
+          // 5 ronde revisi murah kalau jadwal longgar.
           var rev = +root.querySelector('input[name="rev"]:checked').value;
-          var revCost = rev === 5 ? (mult === 0.9 ? 50 : 150) : 0;
+          var revCost = rev === 5 ? (mult === 0.9 ? 800000 : 2500000) : 0;
 
-          set('bd-types', bases.length ? bases.length + (bases.length > 1 ? ' types · ' : ' type · ') + fmt(Math.round(full)) : '—');
+          set('bd-types', bases.length ? bases.length + (bases.length > 1 ? ' tipe · ' : ' tipe · ') + short(full) : '—');
           var saveRow = document.getElementById('bd-save-row');
-          if (saving > 0) { saveRow.style.display = ''; set('bd-save', '−' + fmt(saving)); }
+          if (saving > 0) { saveRow.style.display = ''; set('bd-save', '−' + short(saving)); }
           else { saveRow.style.display = 'none'; }
-          set('bd-feat', feat ? fmt(feat) : 'Free');
-          set('bd-rev', revCost ? fmt(revCost) : 'Free');
+          set('bd-feat', feat ? short(feat) : 'Gratis');
+          set('bd-rev', revCost ? short(revCost) : 'Gratis');
           set('bd-speed', speed.dataset.name);
-          // Discounted totals are never rounded: what you see is what you get.
+          // Total diskon nggak pernah dibulatkan: yang kelihatan ya yang dibayar.
           var raw = (disc + feat + revCost) * mult;
-          var discounted = saving > 0 || mult < 1 || revCost === 50;
+          var discounted = saving > 0 || mult < 1 || revCost === 800000;
           var total = discounted ? Math.round(raw) : (function () {
-            var step = raw < 1000 ? 10 : 50;
+            var step = raw < 1000000 ? 10000 : 50000;
             return Math.round(raw / step) * step;
           })();
           set('est-total', fmt(total));
         }
-        root.querySelectorAll('input').forEach(function (el) { el.addEventListener('change', recalc); });
-        recalc();
-
         function picked(name) {
           var items = [];
           root.querySelectorAll('input[name="' + name + '"]:checked').forEach(function (el) {
@@ -203,21 +210,19 @@ import Layout from '../layouts/Layout.astro';
           });
           return items.length ? items.join(', ') : 'none';
         }
-        function detailLine(label, value, detail) {
-          if (detail === 'none') return label + ': ' + value;
-          return value === 'Free' ? label + ': ' + detail : label + ' (' + value + '): ' + detail;
-        }
-        function val(id) { return document.getElementById(id).textContent; }
+        root.querySelectorAll('input').forEach(function (el) { el.addEventListener('change', recalc); });
+        recalc();
+
         var copyBtn = document.getElementById('est-copy');
         if (copyBtn) {
           copyBtn.addEventListener('click', async function () {
             var saveRow = document.getElementById('bd-save-row');
             var text =
-              'My locked quote from jiilan.me/pricing: ' + val('est-total') + '\n' +
-              'Project types (' + val('bd-types') + '): ' + picked('ptype') + '\n' +
-              (saveRow.style.display !== 'none' ? 'Bundle saving: ' + val('bd-save') + '\n' : '') +
-              detailLine('Features', val('bd-feat'), picked('feat')) + '\n' +
-              detailLine('Revisions', val('bd-rev'), picked('rev')) + '\n' +
+              'Quote terkunci saya dari jiilan.me/id/pricing: ' + val('est-total') + '\n' +
+              'Tipe proyek (' + val('bd-types') + '): ' + picked('ptype') + '\n' +
+              (saveRow.style.display !== 'none' ? 'Hemat bundle: ' + val('bd-save') + '\n' : '') +
+              detailLine('Fitur', val('bd-feat'), picked('feat')) + '\n' +
+              detailLine('Revisi', val('bd-rev'), picked('rev')) + '\n' +
               'Timeline: ' + picked('speed');
             try {
               await navigator.clipboard.writeText(text);
@@ -232,7 +237,7 @@ import Layout from '../layouts/Layout.astro';
             var label = copyBtn.querySelector('.copy-label');
             if (label) {
               var original = label.textContent;
-              label.textContent = 'Copied — send it to me!';
+              label.textContent = 'Tersalin — kirim ke saya!';
               setTimeout(function () { label.textContent = original; }, 2500);
             }
           });
@@ -242,14 +247,14 @@ import Layout from '../layouts/Layout.astro';
 
     <div class="custom reveal">
       <div>
-        <span class="custom-tag">ERP systems and SaaS products</span>
-        <h2>Big system? Quoted individually.</h2>
-        <p>Tell me what the software must do. You'll get a plan and a fixed price before anything starts.</p>
+        <span class="custom-tag">Sistem ERP dan produk SaaS</span>
+        <h2>Sistem gede? Quote individual.</h2>
+        <p>Ceritain software-nya harus bisa apa. Kamu dapet plan dan harga pasti sebelum mulai.</p>
       </div>
-      <a href="/contacts" class="btn-lemon">Say hello</a>
+      <a href="/id/contacts" class="btn-lemon">Hubungi saya</a>
     </div>
 
-    <p class="fine reveal">All prices in USD. Tier numbers are starting points. The estimator price is locked: copy it, send it, that's what you pay.</p>
+    <p class="fine reveal">Semua harga dalam IDR. Angka tier itu starting point. Harga estimator terkunci: salin, kirim, segitu bayarnya.</p>
   </section>
 </Layout>
 
@@ -284,7 +289,7 @@ import Layout from '../layouts/Layout.astro';
 
   .tag {
     align-self: flex-start; font-family: var(--font-mono); font-size: var(--text-xs); font-weight: 600;
-    border: 2px solid var(--color-ink); border-radius: var(--radius-pill); padding: 4px 12px;
+    border: 2px solid currentColor; border-radius: var(--radius-pill); padding: 4px 12px;
     background: var(--color-paper-2);
   }
 
@@ -360,28 +365,17 @@ import Layout from '../layouts/Layout.astro';
 
   .opt input:focus-visible + span { outline: 3px solid var(--color-accent); outline-offset: 2px; }
 
-  .est-result {
-    margin-top: var(--space-3); background: var(--color-ink); color: var(--color-paper);
-    border-radius: var(--radius-card); padding: var(--space-3);
-    display: flex; align-items: center; justify-content: space-between; gap: var(--space-3);
-  }
-
-  .res-label {
-    display: block; font-family: var(--font-mono); font-size: var(--text-xs);
-    color: var(--color-paper); opacity: 0.7;
-  }
-
-  .res-num {
-    display: block; font-family: var(--font-display); font-weight: 700;
-    font-size: clamp(2rem, 5vw, 3rem); letter-spacing: -0.03em; line-height: 1.1;
-    color: var(--color-lemon);
-  }
-
   .free {
     font-style: normal; font-family: var(--font-mono); font-size: 0.65rem; font-weight: 700;
     letter-spacing: 0.06em; text-transform: uppercase;
     color: #ffffff; background: var(--color-success);
     border-radius: var(--radius-pill); padding: 3px 10px;
+  }
+
+  .est-result {
+    margin-top: var(--space-3); background: var(--color-ink); color: var(--color-paper);
+    border-radius: var(--radius-card); padding: var(--space-3);
+    display: flex; align-items: center; justify-content: space-between; gap: var(--space-3);
   }
 
   .bd { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
@@ -398,6 +392,17 @@ import Layout from '../layouts/Layout.astro';
   .res-total {
     display: flex; flex-direction: column; align-items: flex-end; gap: 10px;
     flex: none; text-align: right;
+  }
+
+  .res-label {
+    display: block; font-family: var(--font-mono); font-size: var(--text-xs);
+    color: var(--color-paper); opacity: 0.7;
+  }
+
+  .res-num {
+    display: block; font-family: var(--font-display); font-weight: 700;
+    font-size: clamp(1.5rem, 4vw, 2.25rem); letter-spacing: -0.03em; line-height: 1.1;
+    color: var(--color-lemon); overflow-wrap: anywhere;
   }
 
   .est-note {

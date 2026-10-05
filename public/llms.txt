@@ -13,6 +13,7 @@
 - Information-Theoretic Limits of Lossless Compression: https://jiilan.me/writing/information-theory-compression
 
 ## Pages
+- Versi Indonesia: https://jiilan.me/id/
 - About: https://jiilan.me/about
 - Works: https://jiilan.me/works
 - Research & Papers: https://jiilan.me/research

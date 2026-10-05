@@ -1,15 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import PostCard from '../components/PostCard.astro';
-import { posts } from '../data/posts';
+import Layout from '../../layouts/Layout.astro';
+import PostCard from '../../components/PostCard.astro';
+import { posts } from '../../data/posts';
 
 const recentPosts = posts.slice(0, 3);
 ---
 
 <Layout
-  title="Jiilan Nashrulloh Tanjung — AI-Powered Full-Stack Developer"
-  description="AI-powered full-stack developer for web, mobile and business automation. You bring the goal, I ship it."
-  alternate="/id/"
+  lang="id"
+  alternate="/"
+  title="Jiilan Nashrulloh Tanjung — Jasa Web, Aplikasi & Otomasi AI"
+  description="Full-stack developer bertenaga AI untuk web, mobile dan otomasi bisnis. Kamu bawa tujuan, saya yang eksekusi."
 >
 
   <script type="application/ld+json" set:html={JSON.stringify({
@@ -39,23 +40,23 @@ const recentPosts = posts.slice(0, 3);
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Are you open for freelance projects?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. I take on websites, mobile apps and automation projects. Write to me with your goal and timeline." }
+        "name": "Apakah terima proyek freelance?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ya. Saya ngerjain website, aplikasi mobile dan proyek otomasi. Tulis tujuan dan timeline-mu." }
       },
       {
         "@type": "Question",
-        "name": "How much will it cost?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Starting prices are on the pricing page, and its quote builder locks your price on the spot. Only big custom systems like ERP are scoped individually." }
+        "name": "Berapa biayanya?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Harga awal ada di halaman pricing, dan quote builder-nya ngunci hargamu langsung tanpa discovery call. Cuma sistem custom gede kayak ERP yang di-scope individual." }
       },
       {
         "@type": "Question",
-        "name": "How fast can we start?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Usually within one to two weeks. Small sites ship in days, apps in weeks." }
+        "name": "Seberapa cepat bisa mulai?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Biasanya dalam satu sampai dua minggu. Site kecil launch dalam hitungan hari, aplikasi dalam hitungan minggu." }
       },
       {
         "@type": "Question",
-        "name": "Do you use AI in your work?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Daily. AI speeds up building, and powers features like chatbots and smart workflows inside your product." }
+        "name": "Pakai AI dalam kerjaan?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Tiap hari. AI ngebutin build, dan jadi fitur kayak chatbot dan smart workflow di dalam produkmu." }
       }
     ]
   })} />
@@ -64,25 +65,25 @@ const recentPosts = posts.slice(0, 3);
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-copy">
-        <span class="eyebrow">Hi, I'm Jiilan — full-stack developer</span>
-        <h1 class="hero-title">I build apps and<br />automation that grow business.</h1>
-        <p class="hero-sub">AI-powered full-stack developer for web, mobile and business automation. You bring the goal, I ship it.</p>
+        <span class="eyebrow">Halo, saya Jiilan — full-stack developer</span>
+        <h1 class="hero-title">Jasa Web, Aplikasi<br />& Otomasi AI untuk Bisnismu.</h1>
+        <p class="hero-sub">Full-stack developer bertenaga AI untuk web, mobile dan otomasi bisnis. Kamu bawa tujuan, saya yang eksekusi.</p>
         <div class="hero-ctas">
-          <a href="/works" class="btn-primary">See my work</a>
-          <a href="/contacts" class="btn-ghost">Say hello</a>
+          <a href="/id/works" class="btn-primary">Lihat karya</a>
+          <a href="/id/contacts" class="btn-ghost">Hubungi saya</a>
         </div>
         <div class="hero-meta">
           <span class="pulse" aria-hidden="true"></span>
-          <span>Available for new projects</span>
+          <span>Siap untuk proyek baru</span>
         </div>
       </div>
       <div class="hero-visual">
         <div class="photo-arch">
-          <img src="/jiilan.webp" alt="Portrait of Jiilan Nashrulloh Tanjung" width="400" height="400" loading="eager" decoding="async" fetchpriority="high" />
+          <img src="/jiilan.webp" alt="Foto Jiilan Nashrulloh Tanjung" width="400" height="400" loading="eager" decoding="async" fetchpriority="high" />
         </div>
         <span class="sticker sticker-a">web</span>
         <span class="sticker sticker-b">mobile</span>
-        <span class="sticker sticker-c">AI automation</span>
+        <span class="sticker sticker-c">otomasi AI</span>
       </div>
     </div>
   </section>
@@ -91,7 +92,7 @@ const recentPosts = posts.slice(0, 3);
   <div class="marquee" aria-hidden="true">
     <div class="marquee-track">
       {Array.from({ length: 8 }).map(() => (
-        <span>web apps · mobile apps · AI automation · landing pages · dashboards · chatbots · ERP systems · SaaS products · APIs · integrations ·&nbsp;</span>
+        <span>aplikasi web · aplikasi mobile · otomasi AI · landing page · dashboard · chatbot · sistem ERP · produk SaaS · API · integrasi ·&nbsp;</span>
       ))}
     </div>
   </div>
@@ -101,19 +102,19 @@ const recentPosts = posts.slice(0, 3);
     <div class="stats-grid reveal">
       <div class="stat-card stat-hero">
         <span class="stat-num">5+</span>
-        <span class="stat-label">years building software</span>
+        <span class="stat-label">tahun bikin software</span>
       </div>
       <div class="stat-card tint-mint">
         <span class="stat-num">10+</span>
-        <span class="stat-label">projects and open source</span>
+        <span class="stat-label">proyek dan open source</span>
       </div>
       <div class="stat-card tint-sky">
         <span class="stat-num">3</span>
-        <span class="stat-label">focus areas: web, mobile, AI</span>
+        <span class="stat-label">fokus: web, mobile, AI</span>
       </div>
       <div class="stat-card tint-peach">
         <span class="stat-num">→</span>
-        <span class="stat-label">your project next</span>
+        <span class="stat-label">proyekmu berikutnya</span>
       </div>
     </div>
   </section>
@@ -122,24 +123,24 @@ const recentPosts = posts.slice(0, 3);
   <section class="wrap">
     <div class="doing reveal">
       <div class="doing-head">
-        <h2 class="h2">Everything you need to ship.</h2>
-        <p class="lede">One developer for your website, your mobile app and the automation in between. No handoffs, no agency overhead.</p>
+        <h2 class="h2">Semua yang kamu butuhkan untuk launch.</h2>
+        <p class="lede">Satu developer untuk websitemu, aplikasimu dan otomasi di antaranya. Tanpa handoff, tanpa overhead agensi.</p>
       </div>
       <div class="doing-grid">
         <article class="doing-card doing-wide tint-mint">
           <span class="doing-icon" aria-hidden="true">◈</span>
           <h3>Web development</h3>
-          <p>From landing pages to ERP systems and full SaaS products. Scalable, secure, and built to grow with your business.</p>
+          <p>Dari landing page sampai sistem ERP dan produk SaaS. Scalable, aman, dan tumbuh bareng bisnismu.</p>
         </article>
         <article class="doing-card tint-sky">
           <span class="doing-icon" aria-hidden="true">◎</span>
-          <h3>Mobile apps</h3>
-          <p>React Native, Expo or Flutter for one codebase — or fully native Android and iOS. From sketch to store.</p>
+          <h3>Aplikasi mobile</h3>
+          <p>React Native, Expo atau Flutter untuk satu codebase — atau native Android dan iOS. Dari sketsa sampai store.</p>
         </article>
         <article class="doing-card tint-peach">
           <span class="doing-icon" aria-hidden="true">✳</span>
-          <h3>AI automation</h3>
-          <p>Chatbots, lead flows and workflow automation that save your team hours every week.</p>
+          <h3>Otomasi AI</h3>
+          <p>Chatbot, lead flow dan otomasi workflow yang hematin jam kerja tim tiap minggu.</p>
         </article>
       </div>
     </div>
@@ -148,19 +149,19 @@ const recentPosts = posts.slice(0, 3);
   <!-- FEATURED -->
   <section class="wrap">
     <div class="featured reveal">
-      <h2 class="h2">Selected work</h2>
+      <h2 class="h2">Karya pilihan</h2>
       <div class="featured-grid">
         <article class="feat-card feat-ink">
-          <span class="feat-tag">Web and mobile</span>
-          <h3>Apps your customers will actually enjoy</h3>
-          <p>Modern web and mobile apps built around your business goal, not tech for its own sake.</p>
-          <a href="/works">See my work →</a>
+          <span class="feat-tag">Web dan Mobile</span>
+          <h3>Aplikasi yang disukai customermu</h3>
+          <p>Aplikasi web dan mobile modern yang dibangun dari tujuan bisnismu — bukan teknologi demi teknologi.</p>
+          <a href="/id/works">Lihat karya saya →</a>
         </article>
         <article class="feat-card feat-paper">
-          <span class="feat-tag">Automation</span>
-          <h3>Let AI handle the boring parts</h3>
-          <p>Follow-ups, data entry and reports, automated quietly in the background while you grow.</p>
-          <a href="/contacts">Say hello →</a>
+          <span class="feat-tag">Otomasi</span>
+          <h3>Biar AI yang kerjain yang membosankan</h3>
+          <p>Follow-up, input data dan laporan, terotomasi diam-diam di background selagi kamu grow.</p>
+          <a href="/id/contacts">Hubungi saya →</a>
         </article>
       </div>
     </div>
@@ -169,10 +170,10 @@ const recentPosts = posts.slice(0, 3);
   <!-- STACK -->
   <section class="wrap">
     <div class="stack reveal">
-      <h2 class="h2">Tools I use</h2>
+      <h2 class="h2">Tools yang saya pakai</h2>
       <div class="stack-groups">
         <div class="stack-group tint-mint">
-          <span class="group-label">Languages</span>
+          <span class="group-label">Bahasa</span>
           <div class="pill-row">
             <span class="pill">TypeScript</span>
             <span class="pill">Python</span>
@@ -182,7 +183,7 @@ const recentPosts = posts.slice(0, 3);
           </div>
         </div>
         <div class="stack-group tint-sky">
-          <span class="group-label">Frameworks</span>
+          <span class="group-label">Framework</span>
           <div class="pill-row">
             <span class="pill">React</span>
             <span class="pill">Next.js</span>
@@ -194,7 +195,7 @@ const recentPosts = posts.slice(0, 3);
           </div>
         </div>
         <div class="stack-group tint-peach">
-          <span class="group-label">Backend and AI</span>
+          <span class="group-label">Backend dan AI</span>
           <div class="pill-row">
             <span class="pill">Node.js</span>
             <span class="pill">PostgreSQL</span>
@@ -211,10 +212,10 @@ const recentPosts = posts.slice(0, 3);
     <div class="writing reveal">
       <div class="writing-head">
         <div>
-          <span class="eyebrow">From the notebook</span>
-          <h2 class="h2">Recent writing</h2>
+          <span class="eyebrow">Dari catatan</span>
+          <h2 class="h2">Tulisan terbaru</h2>
         </div>
-        <a href="/writing" class="btn-ghost btn-sm">All writing</a>
+        <a href="/id/writing" class="btn-ghost btn-sm">Semua tulisan</a>
       </div>
       <div class="post-list">
         {recentPosts.map((post, i) => (
@@ -233,11 +234,11 @@ const recentPosts = posts.slice(0, 3);
   <!-- PROCESS -->
   <section class="wrap">
     <div class="timeline reveal">
-      <h2 class="h2">How we'll work together</h2>
+      <h2 class="h2">Cara kerja bareng</h2>
       <ol class="timeline-list">
-        <li><span class="t-year">01</span><span class="t-body"><strong>Tell me your goal</strong><em>A short call or a few messages. No jargon, no commitment.</em></span></li>
-        <li><span class="t-year">02</span><span class="t-body"><strong>Lock your price</strong><em>The quote builder locks it instantly — big systems get a custom plan instead.</em></span></li>
-        <li><span class="t-year">03</span><span class="t-body"><strong>Ship and improve</strong><em>Launch fast, then iterate based on real feedback.</em></span></li>
+        <li><span class="t-year">01</span><span class="t-body"><strong>Ceritain tujuanmu</strong><em>Call singkat atau beberapa pesan. Tanpa jargon, tanpa komitmen.</em></span></li>
+        <li><span class="t-year">02</span><span class="t-body"><strong>Kunci hargamu</strong><em>Quote builder ngunci langsung — sistem gede dapet custom plan.</em></span></li>
+        <li><span class="t-year">03</span><span class="t-body"><strong>Launch dan improve</strong><em>Launch cepat, lalu iterasi dari feedback beneran.</em></span></li>
       </ol>
     </div>
   </section>
@@ -245,23 +246,23 @@ const recentPosts = posts.slice(0, 3);
   <!-- FAQ -->
   <section class="wrap">
     <div class="faq reveal">
-      <h2 class="h2">Good questions</h2>
+      <h2 class="h2">Pertanyaan bagus</h2>
       <div class="faq-list">
         <details class="faq-item" open>
-          <summary>Are you open for freelance projects?</summary>
-          <p>Yes. I take on websites, mobile apps and automation projects. Write to me with your goal and timeline.</p>
+          <summary>Apakah terima proyek freelance?</summary>
+          <p>Ya. Saya ngerjain website, aplikasi mobile dan proyek otomasi. Tulis tujuan dan timeline-mu.</p>
         </details>
         <details class="faq-item">
-          <summary>How much will it cost?</summary>
-          <p>Starting prices are on the <a href="/pricing">pricing page</a> — and its quote builder locks your price on the spot, no discovery call needed. Only big custom systems like ERP are scoped individually.</p>
+          <summary>Berapa biayanya?</summary>
+          <p>Harga awal ada di <a href="/id/pricing">halaman pricing</a> — dan quote builder-nya ngunci hargamu langsung, tanpa discovery call. Cuma sistem custom gede kayak ERP yang di-scope individual.</p>
         </details>
         <details class="faq-item">
-          <summary>How fast can we start?</summary>
-          <p>Usually within one to two weeks. Small sites ship in days, apps in weeks.</p>
+          <summary>Seberapa cepat bisa mulai?</summary>
+          <p>Biasanya dalam satu sampai dua minggu. Site kecil launch dalam hitungan hari, aplikasi dalam hitungan minggu.</p>
         </details>
         <details class="faq-item">
-          <summary>Do you use AI in your work?</summary>
-          <p>Daily. AI speeds up building, and powers features like chatbots and smart workflows inside your product.</p>
+          <summary>Pakai AI dalam kerjaan?</summary>
+          <p>Tiap hari. AI ngebutin build, dan jadi fitur kayak chatbot dan smart workflow di dalam produkmu.</p>
         </details>
       </div>
     </div>
@@ -271,10 +272,10 @@ const recentPosts = posts.slice(0, 3);
   <section class="wrap">
     <div class="now-card reveal">
       <div>
-        <h2 class="h2 h2-light">Have a project? Let's ship it.</h2>
-        <p class="now-sub">Currently accepting new projects.</p>
+        <h2 class="h2 h2-light">Punya proyek? Mari wujudkan.</h2>
+        <p class="now-sub">Lagi terima proyek baru.</p>
       </div>
-      <a href="/contacts" class="btn-lemon">Say hello</a>
+      <a href="/id/contacts" class="btn-lemon">Hubungi saya</a>
     </div>
   </section>
 

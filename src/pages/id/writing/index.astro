@@ -1,7 +1,7 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import PostCard from '../../components/PostCard.astro';
-import { posts } from '../../data/posts';
+import Layout from '../../../layouts/Layout.astro';
+import PostCard from '../../../components/PostCard.astro';
+import { posts } from '../../../data/posts';
 
 interface YearGroup {
   year: string;
@@ -20,11 +20,11 @@ const grouped = posts.reduce<YearGroup[]>((acc, post) => {
 }, []);
 ---
 
-<Layout title="Writing — Jiilan Nashrulloh Tanjung" description="Notes, essays and things learned while building." alternate="/id/writing">
+<Layout lang="id" alternate="/writing" title="Tulisan — Jiilan Nashrulloh Tanjung" description="Catatan, esai dan hal yang dipelajari sambil membangun.">
   <section class="page">
     <header class="head reveal">
-      <h1 class="title">Writing</h1>
-      <p class="sub">Notes, essays and things I learned while building.</p>
+      <h1 class="title">Tulisan</h1>
+      <p class="sub">Catatan, esai dan hal yang saya pelajari sambil membangun.</p>
     </header>
 
     <div class="groups">
@@ -32,7 +32,7 @@ const grouped = posts.reduce<YearGroup[]>((acc, post) => {
         <section class="year-block reveal">
           <div class="year-head">
             <h2 class="year">{group.year}</h2>
-            <span class="year-count">{group.posts.length} {group.posts.length > 1 ? 'essays' : 'essay'}</span>
+            <span class="year-count">{group.posts.length} esai</span>
           </div>
           <div class="posts">
             {group.posts.map((post, i) => (
