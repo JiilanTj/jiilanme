@@ -1,7 +1,6 @@
 # Jiilan Nashrulloh Tanjung
 
-> Software Engineer, Physicist, and Researcher.
-> Writing about theoretical CS, physics, and systems engineering.
+> AI-powered Full-Stack Developer: web, mobile and business automation.
 
 ## Full content
 - llms-full.txt: https://jiilan.me/llms-full.txt
@@ -17,6 +16,7 @@
 - About: https://jiilan.me/about
 - Works: https://jiilan.me/works
 - Research & Papers: https://jiilan.me/research
+- Pricing: https://jiilan.me/pricing
 - Contact: https://jiilan.me/contacts
 
 ## Contact

@@ -1,0 +1,451 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Pricing — Jiilan Nashrulloh Tanjung" description="Starting prices for websites, mobile apps and AI automation. Fixed quotes, no hourly billing.">
+  <section class="page">
+    <header class="page-head reveal">
+      <span class="kicker">Pricing</span>
+      <h1 class="page-title">Honest prices, fixed quotes.</h1>
+      <p class="page-sub">Starting prices below — or build your own quote underneath for a price that's locked the moment you send it.</p>
+    </header>
+
+    <div class="grid">
+      <article class="card tint-lemon reveal">
+        <span class="tag">Landing page</span>
+        <p class="starts">Starts at</p>
+        <p class="price">$150</p>
+        <p class="typical">Typical: $150–400</p>
+        <ul>
+          <li>Custom design, no template</li>
+          <li>Copy polish and SEO basics</li>
+          <li>WhatsApp and contact integration</li>
+          <li>Launches in days</li>
+        </ul>
+        <a href="#estimator" class="card-cta">Build your quote →</a>
+      </article>
+
+      <article class="card tint-mint reveal">
+        <span class="tag">Company site</span>
+        <p class="starts">Starts at</p>
+        <p class="price">$500</p>
+        <p class="typical">Typical: $500–1,200</p>
+        <ul>
+          <li>Everything in Landing page</li>
+          <li>Edit content yourself with CMS</li>
+          <li>Dashboard for leads and content</li>
+          <li>Analytics set up for you</li>
+        </ul>
+        <a href="#estimator" class="card-cta">Build your quote →</a>
+      </article>
+
+      <article class="card tint-sky reveal">
+        <span class="tag">Mobile app</span>
+        <p class="starts">Starts at</p>
+        <p class="price">$1,500</p>
+        <p class="typical">Typical: $1,500–3,500</p>
+        <ul>
+          <li>iOS and Android, one codebase</li>
+          <li>Release to both stores handled</li>
+          <li>Backend and admin dashboard</li>
+          <li>Free bug fixes in the first month</li>
+        </ul>
+        <a href="#estimator" class="card-cta">Build your quote →</a>
+      </article>
+
+      <article class="card tint-peach reveal">
+        <span class="tag">AI automation</span>
+        <p class="starts">Starts at</p>
+        <p class="price">$250</p>
+        <p class="typical">Typical: $250–900</p>
+        <ul>
+          <li>AI chatbot for website or chat</li>
+          <li>Lead capture synced to your tools</li>
+          <li>One core workflow, end to end</li>
+          <li>Docs and handover call included</li>
+        </ul>
+        <a href="#estimator" class="card-cta">Build your quote →</a>
+      </article>
+    </div>
+
+    <div class="estimator reveal" id="estimator">
+      <span class="tag">Custom estimate</span>
+      <h2>Build your own quote.</h2>
+      <p class="est-sub">Pick a type, add features, choose a speed. The price updates live.</p>
+
+      <div class="est-block">
+        <p class="est-label">Project types — combine for bundle discount</p>
+        <div class="opt-row">
+          <label class="opt"><input type="checkbox" name="ptype" value="150" /><span>Landing page <em>$150+</em></span></label>
+          <label class="opt"><input type="checkbox" name="ptype" value="500" checked /><span>Business site <em>$500+</em></span></label>
+          <label class="opt"><input type="checkbox" name="ptype" value="1500" /><span>Mobile app <em>$1.5k+</em></span></label>
+          <label class="opt"><input type="checkbox" name="ptype" value="250" /><span>Automation <em>$250+</em></span></label>
+          <label class="opt"><input type="checkbox" name="ptype" value="3000" /><span>ERP / SaaS <em>$3k+</em></span></label>
+        </div>
+      </div>
+
+      <div class="est-block">
+        <p class="est-label">Core features</p>
+        <div class="opt-row">
+          <label class="opt"><input type="checkbox" name="feat" value="300" /><span>Admin dashboard <em>+$300</em></span></label>
+          <label class="opt"><input type="checkbox" name="feat" value="250" /><span>Accounts and auth <em>+$250</em></span></label>
+          <label class="opt"><input type="checkbox" name="feat" value="350" /><span>Payments <em>+$350</em></span></label>
+          <label class="opt"><input type="checkbox" name="feat" value="400" /><span>AI chatbot <em>+$400</em></span></label>
+          <label class="opt"><input type="checkbox" name="feat" value="150" /><span>Multilingual <em>+$150</em></span></label>
+          <label class="opt"><input type="checkbox" name="feat" value="0" /><span>CMS <b class="free">Free</b></span></label>
+          <label class="opt"><input type="checkbox" name="feat" value="0" /><span>SEO basics <b class="free">Free</b></span></label>
+          <label class="opt"><input type="checkbox" name="feat" value="0" /><span>Analytics setup <b class="free">Free</b></span></label>
+          <label class="opt"><input type="checkbox" name="feat" value="0" /><span>SSL and hosting setup <b class="free">Free</b></span></label>
+          <label class="opt"><input type="checkbox" name="feat" value="0" /><span>Handover call <b class="free">Free</b></span></label>
+        </div>
+      </div>
+
+      <div class="est-block">
+        <p class="est-label">Revisions</p>
+        <div class="opt-row">
+          <label class="opt"><input type="radio" name="rev" value="2" checked /><span>2 rounds <em>Free</em></span></label>
+          <label class="opt"><input type="radio" name="rev" value="5" /><span>5 rounds <em>+$150 · or +$50 if Flexible</em></span></label>
+        </div>
+      </div>
+
+      <div class="est-block">
+        <p class="est-label">Timeline</p>
+        <div class="opt-row">
+          <label class="opt"><input type="radio" name="speed" value="0.9" data-name="Flexible −10%" /><span>Flexible <em>−10%</em></span></label>
+          <label class="opt"><input type="radio" name="speed" value="1" data-name="Standard" checked /><span>Standard <em>×1</em></span></label>
+          <label class="opt"><input type="radio" name="speed" value="1.3" data-name="Rush +30%" /><span>Rush <em>+30%</em></span></label>
+        </div>
+      </div>
+
+      <div class="est-result">
+        <div class="bd">
+          <div class="bd-row"><span>Project types</span><b id="bd-types">1 type · $500</b></div>
+          <div class="bd-row" id="bd-save-row" style="display:none"><span>Bundle saving</span><b id="bd-save" class="save">−$0</b></div>
+          <div class="bd-row"><span>Features</span><b id="bd-feat">Free</b></div>
+          <div class="bd-row"><span>Revisions</span><b id="bd-rev">Free</b></div>
+          <div class="bd-row"><span>Timeline</span><b id="bd-speed">Standard</b></div>
+        </div>
+        <div class="res-total">
+          <span class="res-label">Your locked price</span>
+          <span class="res-num" id="est-total">$500</span>
+          <div class="res-actions">
+            <button class="btn-outline" id="est-copy" type="button"><span class="copy-label">Copy quote</span></button>
+            <a href="/contacts" class="btn-lemon">Get this scoped</a>
+          </div>
+        </div>
+      </div>
+      <p class="est-note">This price is locked — send it to me and that's what you pay, no changes. Combining types shares discovery, design and setup, that's where the bundle discount comes from.</p>
+    </div>
+
+    <script>
+      (function () {
+        var root = document.getElementById('estimator');
+        if (!root) return;
+        function fmt(n) { return '$' + n.toLocaleString('en-US'); }
+        function set(id, text) { document.getElementById(id).textContent = text; }
+        function recalc() {
+          // Bundle logic: priciest type full, 2nd −15%, 3rd+ −25% (shared setup).
+          var bases = [];
+          root.querySelectorAll('input[name="ptype"]:checked').forEach(function (el) { bases.push(+el.value); });
+          bases.sort(function (a, b) { return b - a; });
+          var full = bases.reduce(function (s, v) { return s + v; }, 0);
+          var disc = bases.reduce(function (s, v, i) { return s + v * (i === 0 ? 1 : (i === 1 ? 0.85 : 0.75)); }, 0);
+          var saving = Math.round(full - disc);
+
+          var feat = 0;
+          root.querySelectorAll('input[name="feat"]:checked').forEach(function (el) { feat += +el.value; });
+
+          var speed = root.querySelector('input[name="speed"]:checked');
+          var mult = +speed.value;
+
+          // 5 revision rounds cost little when the schedule is relaxed.
+          var rev = +root.querySelector('input[name="rev"]:checked').value;
+          var revCost = rev === 5 ? (mult === 0.9 ? 50 : 150) : 0;
+
+          set('bd-types', bases.length ? bases.length + (bases.length > 1 ? ' types · ' : ' type · ') + fmt(Math.round(full)) : '—');
+          var saveRow = document.getElementById('bd-save-row');
+          if (saving > 0) { saveRow.style.display = ''; set('bd-save', '−' + fmt(saving)); }
+          else { saveRow.style.display = 'none'; }
+          set('bd-feat', feat ? fmt(feat) : 'Free');
+          set('bd-rev', revCost ? fmt(revCost) : 'Free');
+          set('bd-speed', speed.dataset.name);
+          // Discounted totals are never rounded: what you see is what you get.
+          var raw = (disc + feat + revCost) * mult;
+          var discounted = saving > 0 || mult < 1 || revCost === 50;
+          var total = discounted ? Math.round(raw) : (function () {
+            var step = raw < 1000 ? 10 : 50;
+            return Math.round(raw / step) * step;
+          })();
+          set('est-total', fmt(total));
+        }
+        root.querySelectorAll('input').forEach(function (el) { el.addEventListener('change', recalc); });
+        recalc();
+
+        function picked(name) {
+          var items = [];
+          root.querySelectorAll('input[name="' + name + '"]:checked').forEach(function (el) {
+            var label = el.parentElement.querySelector('span');
+            if (label) items.push(label.innerText.replace(/\s+/g, ' ').trim());
+          });
+          return items.length ? items.join(', ') : 'none';
+        }
+        function detailLine(label, value, detail) {
+          if (detail === 'none') return label + ': ' + value;
+          return value === 'Free' ? label + ': ' + detail : label + ' (' + value + '): ' + detail;
+        }
+        function val(id) { return document.getElementById(id).textContent; }
+        var copyBtn = document.getElementById('est-copy');
+        if (copyBtn) {
+          copyBtn.addEventListener('click', async function () {
+            var saveRow = document.getElementById('bd-save-row');
+            var text =
+              'My locked quote from jiilan.me/pricing: ' + val('est-total') + '\n' +
+              'Project types (' + val('bd-types') + '): ' + picked('ptype') + '\n' +
+              (saveRow.style.display !== 'none' ? 'Bundle saving: ' + val('bd-save') + '\n' : '') +
+              detailLine('Features', val('bd-feat'), picked('feat')) + '\n' +
+              detailLine('Revisions', val('bd-rev'), picked('rev')) + '\n' +
+              'Timeline: ' + picked('speed');
+            try {
+              await navigator.clipboard.writeText(text);
+            } catch (e) {
+              var ta = document.createElement('textarea');
+              ta.value = text;
+              document.body.appendChild(ta);
+              ta.select();
+              document.execCommand('copy');
+              document.body.removeChild(ta);
+            }
+            var label = copyBtn.querySelector('.copy-label');
+            if (label) {
+              var original = label.textContent;
+              label.textContent = 'Copied — send it to me!';
+              setTimeout(function () { label.textContent = original; }, 2500);
+            }
+          });
+        }
+      })();
+    </script>
+
+    <div class="custom reveal">
+      <div>
+        <span class="custom-tag">ERP systems and SaaS products</span>
+        <h2>Big system? Quoted individually.</h2>
+        <p>Tell me what the software must do. You'll get a plan and a fixed price before anything starts.</p>
+      </div>
+      <a href="/contacts" class="btn-lemon">Say hello</a>
+    </div>
+
+    <p class="fine reveal">All prices in USD. Tier numbers are starting points. The estimator price is locked: copy it, send it, that's what you pay.</p>
+  </section>
+</Layout>
+
+<style>
+  .page { max-width: var(--page-width); margin: 0 auto; padding: var(--space-4) var(--space-3) var(--space-8); }
+
+  .kicker {
+    display: inline-block; font-family: var(--font-mono); font-size: var(--text-xs); font-weight: 600;
+    background: var(--color-lemon); border: 2px solid var(--color-ink);
+    border-radius: var(--radius-pill); padding: 6px 14px; margin-bottom: var(--space-2);
+  }
+
+  .page-title {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: var(--text-4xl); letter-spacing: -0.03em; line-height: 1.05;
+  }
+
+  .page-sub { color: var(--color-muted); font-size: var(--text-lg); margin-top: 10px; max-width: 60ch; }
+
+  .grid {
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 12px; margin-top: var(--space-3);
+  }
+
+  .card {
+    border: 2px solid var(--color-ink); border-radius: var(--radius-card);
+    padding: var(--space-3) var(--space-2); display: flex; flex-direction: column; gap: 8px;
+    transition: transform var(--duration) var(--ease);
+  }
+
+  .card:hover { transform: translateY(-3px); }
+
+  .tag {
+    align-self: flex-start; font-family: var(--font-mono); font-size: var(--text-xs); font-weight: 600;
+    border: 2px solid var(--color-ink); border-radius: var(--radius-pill); padding: 4px 12px;
+    background: var(--color-paper-2);
+  }
+
+  .starts { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-muted); }
+
+  .price {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: var(--text-3xl); letter-spacing: -0.03em; line-height: 1;
+  }
+
+  .typical { font-family: var(--font-mono); font-size: var(--text-xs); font-weight: 600; color: var(--color-accent); }
+
+  .card ul { list-style: none; display: flex; flex-direction: column; gap: 6px; margin-top: 4px; }
+
+  .card li {
+    font-size: var(--text-base); padding-left: 26px; position: relative;
+  }
+
+  .card li::before {
+    content: '✓'; position: absolute; left: 0;
+    font-family: var(--font-mono); font-weight: 700; color: var(--color-success);
+  }
+
+  .card-cta { margin-top: auto; padding-top: 8px; font-weight: 700; color: var(--color-ink); }
+  .card-cta:hover { color: var(--color-accent); }
+
+  .estimator {
+    margin-top: 12px; background: var(--color-paper-2);
+    border: 2px solid var(--color-ink); border-radius: 28px; padding: var(--space-4);
+    box-shadow: var(--shadow-card);
+  }
+
+  .estimator h2 {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: var(--text-2xl); letter-spacing: -0.02em;
+    margin: 10px 0 6px;
+  }
+
+  .est-sub { color: var(--color-muted); }
+
+  .est-block { margin-top: var(--space-3); }
+
+  .est-label {
+    font-family: var(--font-mono); font-size: var(--text-xs); font-weight: 600;
+    color: var(--color-muted); margin-bottom: 10px;
+  }
+
+  .opt-row { display: flex; flex-wrap: wrap; gap: 8px; }
+
+  .opt { position: relative; }
+
+  .opt input { position: absolute; opacity: 0; pointer-events: none; }
+
+  .opt span {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--font-body); font-size: var(--text-sm); font-weight: 700;
+    color: var(--color-ink); background: var(--color-paper);
+    border: 2px solid var(--color-ink); border-radius: var(--radius-pill);
+    padding: 9px 16px; white-space: nowrap;
+    transition: transform var(--duration) var(--ease), background var(--duration) var(--ease), color var(--duration) var(--ease);
+  }
+
+  .opt span em { font-style: normal; font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-muted); }
+
+  .opt span:hover { transform: translateY(-2px); }
+
+  .opt input:checked + span {
+    background: var(--color-ink); color: var(--color-paper);
+    box-shadow: 3px 3px 0 var(--color-accent);
+  }
+
+  .opt input:checked + span em { color: var(--color-lemon); }
+
+  .opt input:focus-visible + span { outline: 3px solid var(--color-accent); outline-offset: 2px; }
+
+  .est-result {
+    margin-top: var(--space-3); background: var(--color-ink); color: var(--color-paper);
+    border-radius: var(--radius-card); padding: var(--space-3);
+    display: flex; align-items: center; justify-content: space-between; gap: var(--space-3);
+  }
+
+  .res-label {
+    display: block; font-family: var(--font-mono); font-size: var(--text-xs);
+    color: var(--color-paper); opacity: 0.7;
+  }
+
+  .res-num {
+    display: block; font-family: var(--font-display); font-weight: 700;
+    font-size: clamp(2rem, 5vw, 3rem); letter-spacing: -0.03em; line-height: 1.1;
+    color: var(--color-lemon);
+  }
+
+  .free {
+    font-style: normal; font-family: var(--font-mono); font-size: 0.65rem; font-weight: 700;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    color: #ffffff; background: var(--color-success);
+    border-radius: var(--radius-pill); padding: 3px 10px;
+  }
+
+  .bd { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+
+  .bd-row {
+    display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-2);
+    font-family: var(--font-mono); font-size: var(--text-xs);
+  }
+
+  .bd-row span { color: var(--color-paper); opacity: 0.65; white-space: nowrap; }
+  .bd-row b { color: var(--color-paper); font-weight: 600; text-align: right; }
+  .bd-row b.save { color: var(--color-mint-deep); }
+
+  .res-total {
+    display: flex; flex-direction: column; align-items: flex-end; gap: 10px;
+    flex: none; text-align: right;
+  }
+
+  .est-note {
+    margin-top: 12px; font-family: var(--font-mono); font-size: var(--text-xs);
+    color: var(--color-muted);
+  }
+
+  .custom {
+    margin-top: 12px; background: var(--color-ink); color: var(--color-paper);
+    border: 2px solid var(--color-ink); border-radius: 28px; padding: var(--space-4);
+    display: flex; align-items: center; justify-content: space-between; gap: var(--space-3);
+    box-shadow: 6px 6px 0 var(--color-accent);
+  }
+
+  .custom-tag {
+    display: inline-block; font-family: var(--font-mono); font-size: var(--text-xs); font-weight: 600;
+    background: var(--color-lemon); color: var(--color-ink);
+    border-radius: var(--radius-pill); padding: 4px 12px; margin-bottom: 10px;
+  }
+
+  .custom h2 {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: var(--text-2xl); letter-spacing: -0.02em;
+  }
+
+  .custom p { opacity: 0.75; margin-top: 8px; max-width: 52ch; }
+
+  .btn-lemon {
+    flex: none; font-family: var(--font-body); font-size: var(--text-base); font-weight: 700;
+    color: var(--color-ink); background: var(--color-lemon);
+    border: 2px solid var(--color-paper); border-radius: var(--radius-pill);
+    padding: 13px 24px; white-space: nowrap;
+    transition: transform var(--duration) var(--ease);
+  }
+
+  .btn-lemon:hover { transform: translateY(-2px) rotate(1deg); }
+  .btn-lemon:active { transform: translateY(1px) scale(0.98); }
+
+  .res-actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+
+  .btn-outline {
+    font-family: var(--font-body); font-size: var(--text-base); font-weight: 700;
+    color: var(--color-paper); background: transparent;
+    border: 2px solid var(--color-paper); border-radius: var(--radius-pill);
+    padding: 13px 24px; white-space: nowrap;
+    transition: transform var(--duration) var(--ease), background var(--duration) var(--ease);
+  }
+
+  .btn-outline:hover { background: rgba(250, 250, 246, 0.12); transform: translateY(-2px); }
+  .btn-outline:active { transform: translateY(1px) scale(0.98); }
+  .btn-outline .copy-label { pointer-events: none; }
+
+  .fine {
+    margin-top: var(--space-3); font-family: var(--font-mono); font-size: var(--text-xs);
+    color: var(--color-muted); max-width: 70ch;
+  }
+
+  @media (max-width: 768px) {
+    .page { padding: var(--space-3) var(--space-2) var(--space-6); }
+    .page-title { font-size: var(--text-3xl); }
+    .grid { grid-template-columns: minmax(0, 1fr); }
+    .custom, .est-result { flex-direction: column; align-items: flex-start; }
+    .res-total { align-items: flex-start; text-align: left; }
+  }
+</style>

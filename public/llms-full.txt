@@ -1,6 +1,6 @@
 # Jiilan Nashrulloh Tanjung — Full Content
 
-> Software Engineer, Physicist, and Researcher.
+> AI-powered Full-Stack Developer: web, mobile and business automation.
 > Also known as: Jiilan, JiilanTj, Jiilan NT, Jiilan Tanjung, Jiilan Nashrulloh.
 > Website: https://jiilan.me
 > GitHub: https://github.com/JiilanTj
@@ -10,12 +10,12 @@
 
 ## About
 
-I operate at the boundary where theoretical physics meets systems engineering. Most of my work involves problems where the abstraction layers are leaking — where you need to understand both the mathematics and the metal to make progress.
+I'm an AI-powered full-stack developer. I build websites, mobile apps and business automation for clients who want results, not tech talk.
 
 Areas of expertise:
-- Systems Engineering: Distributed systems, fault tolerance, and infrastructure where correctness is a hard constraint.
-- Computational Physics: Quantum error correction, simulation methods, and the computational complexity of physical systems.
-- Research & Theory: Information theory, compiler correctness, and mathematical foundations of machine learning.
+- Web Development: From landing pages to ERP systems and full SaaS products. Scalable, secure, and built to grow with your business.
+- Mobile Apps: React Native, Expo or Flutter for one codebase — or fully native Android and iOS.
+- AI Automation: Chatbots, lead flows and workflow automation that save hours every week.
 
 ---
 

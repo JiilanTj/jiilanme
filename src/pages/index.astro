@@ -6,7 +6,10 @@ import { posts } from '../data/posts';
 const recentPosts = posts.slice(0, 3);
 ---
 
-<Layout title="Jiilan Nashrulloh Tanjung">
+<Layout
+  title="Jiilan Nashrulloh Tanjung — AI-Powered Full-Stack Developer"
+  description="AI-powered full-stack developer for web, mobile and business automation. You bring the goal, I ship it."
+>
 
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
@@ -14,15 +17,14 @@ const recentPosts = posts.slice(0, 3);
     "name": "Jiilan Nashrulloh Tanjung",
     "alternateName": ["Jiilan", "JiilanTj", "Jiilan NT", "Jiilan Tanjung", "Jiilan Nashrulloh"],
     "url": "https://jiilan.me",
-    "jobTitle": ["Software Engineer", "Physicist", "Researcher"],
+    "jobTitle": ["Full-Stack Developer"],
     "knowsAbout": [
-      "Computer Science",
-      "Theoretical Physics",
-      "Systems Engineering",
-      "Distributed Systems",
-      "Compiler Design",
-      "Information Theory",
-      "Quantum Computing"
+      "Web Development",
+      "Mobile App Development",
+      "Business Automation",
+      "AI Integration",
+      "React",
+      "React Native"
     ],
     "sameAs": [
       "https://github.com/JiilanTj"
@@ -34,25 +36,25 @@ const recentPosts = posts.slice(0, 3);
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-copy">
-        <span class="eyebrow">Hello, I'm Jiilan — engineer and physicist</span>
-        <h1 class="hero-title">I build systems that<br />take physics seriously.</h1>
-        <p class="hero-sub">Distributed systems, quantum computing and the math behind them. Built with care.</p>
+        <span class="eyebrow">Hi, I'm Jiilan — full-stack developer</span>
+        <h1 class="hero-title">I build apps and<br />automation that grow business.</h1>
+        <p class="hero-sub">AI-powered full-stack developer for web, mobile and business automation. You bring the goal, I ship it.</p>
         <div class="hero-ctas">
-          <a href="/writing" class="btn-primary">Read writing</a>
+          <a href="/works" class="btn-primary">See my work</a>
           <a href="/contacts" class="btn-ghost">Say hello</a>
         </div>
         <div class="hero-meta">
           <span class="pulse" aria-hidden="true"></span>
-          <span>Open for research collaboration</span>
+          <span>Available for new projects</span>
         </div>
       </div>
       <div class="hero-visual">
         <div class="photo-arch">
           <img src="/jiilan.webp" alt="Portrait of Jiilan Nashrulloh Tanjung" width="400" height="400" loading="eager" decoding="async" fetchpriority="high" />
         </div>
-        <span class="sticker sticker-a">systems</span>
-        <span class="sticker sticker-b">physics</span>
-        <span class="sticker sticker-c">5+ yrs</span>
+        <span class="sticker sticker-a">web</span>
+        <span class="sticker sticker-b">mobile</span>
+        <span class="sticker sticker-c">AI automation</span>
       </div>
     </div>
   </section>
@@ -60,8 +62,8 @@ const recentPosts = posts.slice(0, 3);
   <!-- MARQUEE (one per page) -->
   <div class="marquee" aria-hidden="true">
     <div class="marquee-track">
-      <span>distributed systems · quantum error correction · compilers · information theory · writing ·&nbsp;</span>
-      <span>distributed systems · quantum error correction · compilers · information theory · writing ·&nbsp;</span>
+      <span>web apps · mobile apps · AI automation · landing pages · dashboards · chatbots ·&nbsp;</span>
+      <span>web apps · mobile apps · AI automation · landing pages · dashboards · chatbots ·&nbsp;</span>
     </div>
   </div>
 
@@ -70,19 +72,19 @@ const recentPosts = posts.slice(0, 3);
     <div class="stats-grid reveal">
       <div class="stat-card stat-hero">
         <span class="stat-num">5+</span>
-        <span class="stat-label">years shipping systems</span>
+        <span class="stat-label">years building software</span>
       </div>
       <div class="stat-card tint-mint">
-        <span class="stat-num">3</span>
-        <span class="stat-label">published papers</span>
+        <span class="stat-num">10+</span>
+        <span class="stat-label">projects and open source</span>
       </div>
       <div class="stat-card tint-sky">
-        <span class="stat-num">10+</span>
-        <span class="stat-label">open source projects</span>
+        <span class="stat-num">3</span>
+        <span class="stat-label">focus areas: web, mobile, AI</span>
       </div>
       <div class="stat-card tint-peach">
-        <span class="stat-num">2</span>
-        <span class="stat-label">research domains</span>
+        <span class="stat-num">→</span>
+        <span class="stat-label">your project next</span>
       </div>
     </div>
   </section>
@@ -91,24 +93,24 @@ const recentPosts = posts.slice(0, 3);
   <section class="wrap">
     <div class="doing reveal">
       <div class="doing-head">
-        <h2 class="h2">Work that lives between math and metal.</h2>
-        <p class="lede">I pick problems where the abstraction is leaking and you need both theory and tooling.</p>
+        <h2 class="h2">Everything you need to ship.</h2>
+        <p class="lede">One developer for your website, your mobile app and the automation in between. No handoffs, no agency overhead.</p>
       </div>
       <div class="doing-grid">
         <article class="doing-card doing-wide tint-mint">
           <span class="doing-icon" aria-hidden="true">◈</span>
-          <h3>Systems engineering</h3>
-          <p>Distributed systems and infrastructure where correctness is a hard constraint.</p>
+          <h3>Web development</h3>
+          <p>From landing pages to ERP systems and full SaaS products. Scalable, secure, and built to grow with your business.</p>
         </article>
         <article class="doing-card tint-sky">
           <span class="doing-icon" aria-hidden="true">◎</span>
-          <h3>Computational physics</h3>
-          <p>Quantum error correction and simulation of physical systems.</p>
+          <h3>Mobile apps</h3>
+          <p>React Native, Expo or Flutter for one codebase — or fully native Android and iOS. From sketch to store.</p>
         </article>
         <article class="doing-card tint-peach">
           <span class="doing-icon" aria-hidden="true">✳</span>
-          <h3>Research and theory</h3>
-          <p>Information theory, compilers and foundations of machine learning.</p>
+          <h3>AI automation</h3>
+          <p>Chatbots, lead flows and workflow automation that save your team hours every week.</p>
         </article>
       </div>
     </div>
@@ -120,16 +122,16 @@ const recentPosts = posts.slice(0, 3);
       <h2 class="h2">Selected work</h2>
       <div class="featured-grid">
         <article class="feat-card feat-ink">
-          <span class="feat-tag">Paper</span>
-          <h3>On the complexity of real-time quantum error decoding</h3>
-          <p>A lower bound on decoder latency for fault-tolerant quantum computation. arXiv, 2025.</p>
-          <a href="/research">Read paper →</a>
+          <span class="feat-tag">Web and mobile</span>
+          <h3>Apps your customers will actually enjoy</h3>
+          <p>Modern web and mobile apps built around your business goal, not tech for its own sake.</p>
+          <a href="/works">See my work →</a>
         </article>
         <article class="feat-card feat-paper">
-          <span class="feat-tag">Project</span>
-          <h3>Fault-tolerant distributed compute engine</h3>
-          <p>A framework with formal correctness guarantees that survives Byzantine failures.</p>
-          <a href="/works">View project →</a>
+          <span class="feat-tag">Automation</span>
+          <h3>Let AI handle the boring parts</h3>
+          <p>Follow-ups, data entry and reports, automated quietly in the background while you grow.</p>
+          <a href="/contacts">Say hello →</a>
         </article>
       </div>
     </div>
@@ -138,20 +140,39 @@ const recentPosts = posts.slice(0, 3);
   <!-- STACK -->
   <section class="wrap">
     <div class="stack reveal">
-      <h2 class="h2">Tools I reach for</h2>
-      <div class="stack-row">
-        <span class="pill">Python</span>
-        <span class="pill">Rust</span>
-        <span class="pill">TypeScript</span>
-        <span class="pill">Go</span>
-        <span class="pill">Julia</span>
-        <span class="pill">C++</span>
-        <span class="pill">Astro</span>
-        <span class="pill">React</span>
-        <span class="pill">Docker</span>
-        <span class="pill">PostgreSQL</span>
-        <span class="pill">Qiskit</span>
-        <span class="pill">LaTeX</span>
+      <h2 class="h2">Tools I use</h2>
+      <div class="stack-groups">
+        <div class="stack-group tint-mint">
+          <span class="group-label">Languages</span>
+          <div class="pill-row">
+            <span class="pill">TypeScript</span>
+            <span class="pill">Python</span>
+            <span class="pill">Dart</span>
+            <span class="pill">Kotlin</span>
+            <span class="pill">Swift</span>
+          </div>
+        </div>
+        <div class="stack-group tint-sky">
+          <span class="group-label">Frameworks</span>
+          <div class="pill-row">
+            <span class="pill">React</span>
+            <span class="pill">Next.js</span>
+            <span class="pill">Astro</span>
+            <span class="pill">React Native</span>
+            <span class="pill">Expo</span>
+            <span class="pill">Flutter</span>
+            <span class="pill">Tailwind CSS</span>
+          </div>
+        </div>
+        <div class="stack-group tint-peach">
+          <span class="group-label">Backend and AI</span>
+          <div class="pill-row">
+            <span class="pill">Node.js</span>
+            <span class="pill">PostgreSQL</span>
+            <span class="pill">OpenAI API</span>
+            <span class="pill">Docker</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -161,10 +182,10 @@ const recentPosts = posts.slice(0, 3);
     <div class="writing reveal">
       <div class="writing-head">
         <div>
-          <span class="eyebrow">Notes and essays</span>
+          <span class="eyebrow">From the notebook</span>
           <h2 class="h2">Recent writing</h2>
         </div>
-        <a href="/writing" class="btn-ghost btn-sm">Read writing</a>
+        <a href="/writing" class="btn-ghost btn-sm">All writing</a>
       </div>
       <div class="post-list">
         {recentPosts.map((post, i) => (
@@ -180,16 +201,14 @@ const recentPosts = posts.slice(0, 3);
     </div>
   </section>
 
-  <!-- TIMELINE -->
+  <!-- PROCESS -->
   <section class="wrap">
     <div class="timeline reveal">
-      <h2 class="h2">Milestones</h2>
+      <h2 class="h2">How we'll work together</h2>
       <ol class="timeline-list">
-        <li><span class="t-year">2025</span><span class="t-body"><strong>Published paper on quantum error correction complexity</strong><em>arXiv preprint</em></span></li>
-        <li><span class="t-year">2024</span><span class="t-body"><strong>Built fault-tolerant distributed compute engine</strong><em>Open source, formal guarantees</em></span></li>
-        <li><span class="t-year">2024</span><span class="t-body"><strong>Presented on consistency envelopes</strong><em>Workshop on distributed systems</em></span></li>
-        <li><span class="t-year">2023</span><span class="t-body"><strong>Started quantum computing research program</strong><em>From systems to computational physics</em></span></li>
-        <li><span class="t-year">2020</span><span class="t-body"><strong>Shipped first production distributed system</strong><em>Serving millions of requests</em></span></li>
+        <li><span class="t-year">01</span><span class="t-body"><strong>Tell me your goal</strong><em>A short call or a few messages. No jargon, no commitment.</em></span></li>
+        <li><span class="t-year">02</span><span class="t-body"><strong>Lock your price</strong><em>The quote builder locks it instantly — big systems get a custom plan instead.</em></span></li>
+        <li><span class="t-year">03</span><span class="t-body"><strong>Ship and improve</strong><em>Launch fast, then iterate based on real feedback.</em></span></li>
       </ol>
     </div>
   </section>
@@ -200,20 +219,20 @@ const recentPosts = posts.slice(0, 3);
       <h2 class="h2">Good questions</h2>
       <div class="faq-list">
         <details class="faq-item" open>
-          <summary>Are you available for consulting?</summary>
-          <p>I take select engagements in distributed systems and research-heavy engineering. Send a short note about your problem.</p>
+          <summary>Are you open for freelance projects?</summary>
+          <p>Yes. I take on websites, mobile apps and automation projects. Write to me with your goal and timeline.</p>
         </details>
         <details class="faq-item">
-          <summary>Physics or engineering background?</summary>
-          <p>Both. Trained in physics, drawn to engineering. I state failure modes up front and build from there.</p>
+          <summary>How much will it cost?</summary>
+          <p>Starting prices are on the <a href="/pricing">pricing page</a> — and its quote builder locks your price on the spot, no discovery call needed. Only big custom systems like ERP are scoped individually.</p>
         </details>
         <details class="faq-item">
-          <summary>Open to research collaboration?</summary>
-          <p>Yes, especially quantum error correction and distributed systems theory. I reply fastest to concrete ideas.</p>
+          <summary>How fast can we start?</summary>
+          <p>Usually within one to two weeks. Small sites ship in days, apps in weeks.</p>
         </details>
         <details class="faq-item">
-          <summary>Favorite tools?</summary>
-          <p>Python and Julia for research. Rust and Go for systems. TypeScript for web. Correctness over loyalty.</p>
+          <summary>Do you use AI in your work?</summary>
+          <p>Daily. AI speeds up building, and powers features like chatbots and smart workflows inside your product.</p>
         </details>
       </div>
     </div>
@@ -223,8 +242,8 @@ const recentPosts = posts.slice(0, 3);
   <section class="wrap">
     <div class="now-card reveal">
       <div>
-        <h2 class="h2 h2-light">Currently exploring fault-tolerant quantum architectures.</h2>
-        <p class="now-sub">Building infrastructure where correctness is non-negotiable.</p>
+        <h2 class="h2 h2-light">Have a project? Let's ship it.</h2>
+        <p class="now-sub">Currently accepting new projects.</p>
       </div>
       <a href="/contacts" class="btn-lemon">Say hello</a>
     </div>
@@ -560,26 +579,68 @@ const recentPosts = posts.slice(0, 3);
     padding: var(--space-3);
   }
 
-  .stack-row {
+  .stack-groups {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 12px;
+    margin-top: calc(var(--space-2) + 14px);
+  }
+
+  .stack-group {
+    position: relative;
+    border: 2px solid var(--color-ink);
+    border-radius: var(--radius-card);
+    padding: var(--space-3) var(--space-2) var(--space-2);
+    transition: transform var(--duration) var(--ease);
+  }
+
+  .stack-group:hover { transform: translateY(-3px); }
+
+  .group-label {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-2deg);
+    white-space: nowrap;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    color: var(--color-ink);
+    background: var(--color-lemon);
+    border: 2px solid var(--color-ink);
+    border-radius: var(--radius-pill);
+    padding: 4px 14px;
+    box-shadow: 2px 2px 0 var(--color-ink);
+  }
+
+  .stack-group:nth-child(2) .group-label { transform: translate(-50%, -50%) rotate(1.5deg); }
+  .stack-group:nth-child(3) .group-label { transform: translate(-50%, -50%) rotate(-1deg); }
+
+  .pill-row {
     display: flex;
-    gap: 10px;
-    overflow-x: auto;
-    padding: 4px 2px 8px;
-    margin-top: var(--space-2);
-    scroll-snap-type: x mandatory;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
   }
 
   .pill {
-    flex: none;
-    scroll-snap-align: start;
     font-family: var(--font-mono);
     font-size: var(--text-sm);
     font-weight: 500;
-    background: var(--color-paper);
+    color: var(--color-ink);
+    background: var(--color-paper-2);
     border: 2px solid var(--color-ink);
     border-radius: var(--radius-pill);
-    padding: 8px 16px;
-    box-shadow: 2px 2px 0 var(--color-ink);
+    padding: 6px 14px;
+    transition: transform var(--duration) var(--ease);
+  }
+
+  .stack-group.tint-mint .pill { background: var(--color-mint-deep); }
+  .stack-group.tint-sky .pill { background: var(--color-sky-deep); }
+  .stack-group.tint-peach .pill { background: var(--color-peach-deep); }
+
+  .pill:hover {
+    transform: translateY(-2px);
   }
 
   /* Writing */
@@ -682,6 +743,8 @@ const recentPosts = posts.slice(0, 3);
 
   .faq-item[open] summary::after { content: '–'; background: var(--color-accent); color: var(--color-accent-ink); }
   .faq-item p { color: var(--color-muted); margin-top: 10px; max-width: 60ch; }
+  .faq-item p a { color: var(--color-accent); font-weight: 700; }
+  .faq-item p a:hover { text-decoration: underline; }
 
   /* Now */
   .now-card {
@@ -710,7 +773,7 @@ const recentPosts = posts.slice(0, 3);
     .sticker-b { right: 2%; }
     .stats-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
     .doing, .timeline { padding: var(--space-3) var(--space-2); }
-    .doing-grid, .featured-grid { grid-template-columns: minmax(0, 1fr); }
+    .doing-grid, .featured-grid, .stack-groups { grid-template-columns: minmax(0, 1fr); }
     .h2 { font-size: var(--text-2xl); }
     .now-card { flex-direction: column; align-items: flex-start; }
     .writing-head { align-items: flex-start; flex-direction: column; }
