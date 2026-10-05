@@ -144,12 +144,15 @@ body {
 }
 
 /* ── Reveal on scroll (progressive enhancement) ── */
-.reveal {
+/* Content is visible by default; only hidden when JS is confirmed running
+   (html.js is added by an inline head script). No-JS, bots and script
+   failures still see everything. */
+html.js .reveal {
   opacity: 0;
   transform: translateY(18px);
 }
 
-.reveal.is-visible {
+html.js .reveal.is-visible {
   opacity: 1;
   transform: none;
   transition: opacity 600ms var(--ease), transform 600ms var(--ease);
@@ -157,8 +160,8 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   body { animation: none; }
-  .reveal { opacity: 1; transform: none; }
-  .reveal.is-visible { transition: none; }
+  html.js .reveal { opacity: 1; transform: none; }
+  html.js .reveal.is-visible { transition: none; }
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;

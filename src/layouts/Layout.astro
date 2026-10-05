@@ -79,6 +79,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       />
     </noscript>
 
+    <script is:inline>document.documentElement.classList.add('js');</script>
     <script is:inline define:vars={{ idLive: ID_ENABLED }}>
       (function () {
         try {
