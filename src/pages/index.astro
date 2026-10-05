@@ -30,234 +30,142 @@ const recentPosts = posts.slice(0, 3);
     "email": "jiilannashrulloh@gmail.com"
   })} />
 
-  <!-- ═══ HERO: Photo + Identity ═══ -->
+  <!-- HERO -->
   <section class="hero">
     <div class="hero-inner">
-      <div class="hero-text-col">
-        <p class="hero-greeting">Jiilan Nashrulloh Tanjung</p>
-        <h1 class="hero-headline">Software Engineer,<br />Physicist &amp; Researcher</h1>
-        <p class="hero-bio">
-          I operate at the boundary where theoretical physics meets systems engineering.
-          Most of my work involves problems where the abstraction layers are leaking —
-          where you need to understand both the mathematics and the metal to make progress.
-        </p>
-        <div class="hero-cta">
-          <a href="/writing" class="cta-primary">Read my writing</a>
-          <a href="/about" class="cta-secondary">More about me</a>
+      <div class="hero-copy">
+        <span class="eyebrow">Hello, I'm Jiilan — engineer and physicist</span>
+        <h1 class="hero-title">I build systems that<br />take physics seriously.</h1>
+        <p class="hero-sub">Distributed systems, quantum computing and the math behind them. Built with care.</p>
+        <div class="hero-ctas">
+          <a href="/writing" class="btn-primary">Read writing</a>
+          <a href="/contacts" class="btn-ghost">Say hello</a>
+        </div>
+        <div class="hero-meta">
+          <span class="pulse" aria-hidden="true"></span>
+          <span>Open for research collaboration</span>
         </div>
       </div>
-
-      <div class="hero-photo-col">
-        <div class="photo-frame">
-          <img src="/jiilan.webp" alt="Jiilan Nashrulloh Tanjung" class="photo" width="400" height="400" loading="eager" decoding="async" fetchpriority="high" />
-          <div class="photo-glow"></div>
-          <div class="photo-glow-top"></div>
+      <div class="hero-visual">
+        <div class="photo-arch">
+          <img src="/jiilan.webp" alt="Portrait of Jiilan Nashrulloh Tanjung" width="400" height="400" loading="eager" decoding="async" fetchpriority="high" />
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ NUMBERS / STATS ═══ -->
-  <section class="stats">
-    <div class="stats-inner">
-      <div class="stat-item">
-        <span class="stat-number">5+</span>
-        <span class="stat-label">YEARS ENGINEERING</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <span class="stat-number">3</span>
-        <span class="stat-label">PUBLISHED PAPERS</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <span class="stat-number">2</span>
-        <span class="stat-label">RESEARCH DOMAINS</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <span class="stat-number">10+</span>
-        <span class="stat-label">OPEN SOURCE PROJECTS</span>
+        <span class="sticker sticker-a">systems</span>
+        <span class="sticker sticker-b">physics</span>
+        <span class="sticker sticker-c">5+ yrs</span>
       </div>
     </div>
   </section>
 
-  <!-- ═══ WHAT I DO: Expertise Areas ═══ -->
-  <section class="expertise">
-    <div class="expertise-inner">
-      <span class="section-label">WHAT I WORK ON</span>
+  <!-- MARQUEE (one per page) -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>distributed systems · quantum error correction · compilers · information theory · writing ·&nbsp;</span>
+      <span>distributed systems · quantum error correction · compilers · information theory · writing ·&nbsp;</span>
+    </div>
+  </div>
 
-      <div class="expertise-grid">
-        <div class="expertise-card">
-          <span class="expertise-number">01</span>
-          <h2 class="expertise-title">Systems Engineering</h2>
-          <p class="expertise-desc">
-            Distributed systems, fault tolerance, and infrastructure
-            where correctness is a hard constraint, not an aspiration.
-          </p>
-        </div>
-
-        <div class="expertise-card">
-          <span class="expertise-number">02</span>
-          <h2 class="expertise-title">Computational Physics</h2>
-          <p class="expertise-desc">
-            Quantum error correction, simulation methods, and the computational
-            complexity of physical systems.
-          </p>
-        </div>
-
-        <div class="expertise-card">
-          <span class="expertise-number">03</span>
-          <h2 class="expertise-title">Research &amp; Theory</h2>
-          <p class="expertise-desc">
-            Information theory, compiler correctness, and mathematical
-            foundations of machine learning.
-          </p>
-        </div>
+  <!-- STATS BENTO -->
+  <section class="wrap">
+    <div class="stats-grid reveal">
+      <div class="stat-card stat-hero">
+        <span class="stat-num">5+</span>
+        <span class="stat-label">years shipping systems</span>
+      </div>
+      <div class="stat-card tint-mint">
+        <span class="stat-num">3</span>
+        <span class="stat-label">published papers</span>
+      </div>
+      <div class="stat-card tint-sky">
+        <span class="stat-num">10+</span>
+        <span class="stat-label">open source projects</span>
+      </div>
+      <div class="stat-card tint-peach">
+        <span class="stat-num">2</span>
+        <span class="stat-label">research domains</span>
       </div>
     </div>
   </section>
 
-  <!-- ═══ PHILOSOPHY: How I Think ═══ -->
-  <section class="philosophy">
-    <div class="philosophy-inner">
-      <span class="section-label">HOW I THINK</span>
-      <blockquote class="philosophy-quote">
-        "I think about invariants before implementations and entropy before optimization.
-        I write software the way I write proofs: with the failure modes stated up front."
-      </blockquote>
-    </div>
-  </section>
-
-  <!-- ═══ TECH STACK ═══ -->
-  <section class="stack">
-    <div class="stack-inner">
-      <span class="section-label">TECH STACK &amp; TOOLS</span>
-      <div class="stack-grid">
-        <div class="stack-group">
-          <h3 class="stack-group-title">Languages</h3>
-          <div class="stack-tags">
-            <span class="stack-tag">Python</span>
-            <span class="stack-tag">TypeScript</span>
-            <span class="stack-tag">Rust</span>
-            <span class="stack-tag">C++</span>
-            <span class="stack-tag">Go</span>
-            <span class="stack-tag">Julia</span>
-          </div>
-        </div>
-        <div class="stack-group">
-          <h3 class="stack-group-title">Frameworks &amp; Runtime</h3>
-          <div class="stack-tags">
-            <span class="stack-tag">Node.js</span>
-            <span class="stack-tag">Astro</span>
-            <span class="stack-tag">React</span>
-            <span class="stack-tag">Next.js</span>
-            <span class="stack-tag">FastAPI</span>
-          </div>
-        </div>
-        <div class="stack-group">
-          <h3 class="stack-group-title">Infrastructure</h3>
-          <div class="stack-tags">
-            <span class="stack-tag">Docker</span>
-            <span class="stack-tag">Kubernetes</span>
-            <span class="stack-tag">PostgreSQL</span>
-            <span class="stack-tag">Redis</span>
-            <span class="stack-tag">gRPC</span>
-          </div>
-        </div>
-        <div class="stack-group">
-          <h3 class="stack-group-title">Research &amp; Scientific</h3>
-          <div class="stack-tags">
-            <span class="stack-tag">NumPy</span>
-            <span class="stack-tag">JAX</span>
-            <span class="stack-tag">Qiskit</span>
-            <span class="stack-tag">LaTeX</span>
-            <span class="stack-tag">MATLAB</span>
-          </div>
-        </div>
+  <!-- WHAT I DO -->
+  <section class="wrap">
+    <div class="doing reveal">
+      <div class="doing-head">
+        <h2 class="h2">Work that lives between math and metal.</h2>
+        <p class="lede">I pick problems where the abstraction is leaking and you need both theory and tooling.</p>
+      </div>
+      <div class="doing-grid">
+        <article class="doing-card doing-wide tint-mint">
+          <span class="doing-icon" aria-hidden="true">◈</span>
+          <h3>Systems engineering</h3>
+          <p>Distributed systems and infrastructure where correctness is a hard constraint.</p>
+        </article>
+        <article class="doing-card tint-sky">
+          <span class="doing-icon" aria-hidden="true">◎</span>
+          <h3>Computational physics</h3>
+          <p>Quantum error correction and simulation of physical systems.</p>
+        </article>
+        <article class="doing-card tint-peach">
+          <span class="doing-icon" aria-hidden="true">✳</span>
+          <h3>Research and theory</h3>
+          <p>Information theory, compilers and foundations of machine learning.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- ═══ FEATURED WORK ═══ -->
-  <section class="featured">
-    <div class="featured-inner">
-      <span class="section-label">FEATURED</span>
+  <!-- FEATURED -->
+  <section class="wrap">
+    <div class="featured reveal">
+      <h2 class="h2">Selected work</h2>
       <div class="featured-grid">
-        <div class="featured-card">
-          <span class="featured-type">PAPER</span>
-          <h2 class="featured-title">On the Computational Complexity of Real-Time Quantum Error Decoding</h2>
-          <p class="featured-desc">
-            Establishing a lower bound on decoder latency for fault-tolerant quantum computation.
-            Published in arXiv, 2025.
-          </p>
-          <a href="/research" class="featured-link">Read paper →</a>
-        </div>
-        <div class="featured-card">
-          <span class="featured-type">PROJECT</span>
-          <h2 class="featured-title">Fault-Tolerant Distributed Compute Engine</h2>
-          <p class="featured-desc">
-            A distributed compute framework designed around formal correctness guarantees.
-            Handles Byzantine failures without sacrificing throughput.
-          </p>
-          <a href="/works" class="featured-link">View project →</a>
-        </div>
+        <article class="feat-card feat-ink">
+          <span class="feat-tag">Paper</span>
+          <h3>On the complexity of real-time quantum error decoding</h3>
+          <p>A lower bound on decoder latency for fault-tolerant quantum computation. arXiv, 2025.</p>
+          <a href="/research">Read paper →</a>
+        </article>
+        <article class="feat-card feat-paper">
+          <span class="feat-tag">Project</span>
+          <h3>Fault-tolerant distributed compute engine</h3>
+          <p>A framework with formal correctness guarantees that survives Byzantine failures.</p>
+          <a href="/works">View project →</a>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- ═══ TIMELINE / MILESTONES ═══ -->
-  <section class="timeline">
-    <div class="timeline-inner">
-      <span class="section-label">MILESTONES</span>
-      <div class="timeline-list">
-        <div class="timeline-item">
-          <span class="timeline-year">2025</span>
-          <div class="timeline-content">
-            <h3 class="timeline-title">Published first paper on quantum error correction complexity</h3>
-            <p class="timeline-desc">arXiv preprint — Quantum Computing</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-year">2024</span>
-          <div class="timeline-content">
-            <h3 class="timeline-title">Built fault-tolerant distributed compute engine</h3>
-            <p class="timeline-desc">Open-sourced on GitHub — formal correctness guarantees at scale</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-year">2024</span>
-          <div class="timeline-content">
-            <h3 class="timeline-title">Presented at Workshop on Principles of Distributed Systems</h3>
-            <p class="timeline-desc">Consistency Envelopes — a framework for honest distributed guarantees</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-year">2023</span>
-          <div class="timeline-content">
-            <h3 class="timeline-title">Started quantum computing research program</h3>
-            <p class="timeline-desc">Transitioned from pure systems engineering to computational physics</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-year">2020</span>
-          <div class="timeline-content">
-            <h3 class="timeline-title">First production distributed system shipped</h3>
-            <p class="timeline-desc">Infrastructure serving millions of requests with formal correctness properties</p>
-          </div>
-        </div>
+  <!-- STACK -->
+  <section class="wrap">
+    <div class="stack reveal">
+      <h2 class="h2">Tools I reach for</h2>
+      <div class="stack-row">
+        <span class="pill">Python</span>
+        <span class="pill">Rust</span>
+        <span class="pill">TypeScript</span>
+        <span class="pill">Go</span>
+        <span class="pill">Julia</span>
+        <span class="pill">C++</span>
+        <span class="pill">Astro</span>
+        <span class="pill">React</span>
+        <span class="pill">Docker</span>
+        <span class="pill">PostgreSQL</span>
+        <span class="pill">Qiskit</span>
+        <span class="pill">LaTeX</span>
       </div>
     </div>
   </section>
 
-  <!-- ═══ RECENT WRITING ═══ -->
-  <section class="recent">
-    <div class="recent-inner">
-      <div class="recent-header">
-        <span class="section-label">RECENT WRITING</span>
-        <a href="/writing" class="all-writing-link">All writing →</a>
+  <!-- WRITING -->
+  <section class="wrap">
+    <div class="writing reveal">
+      <div class="writing-head">
+        <div>
+          <span class="eyebrow">Notes and essays</span>
+          <h2 class="h2">Recent writing</h2>
+        </div>
+        <a href="/writing" class="btn-ghost btn-sm">Read writing</a>
       </div>
-
       <div class="post-list">
         {recentPosts.map((post, i) => (
           <PostCard
@@ -272,902 +180,539 @@ const recentPosts = posts.slice(0, 3);
     </div>
   </section>
 
-  <!-- ═══ FAQ ═══ -->
-  <section class="faq">
-    <div class="faq-inner">
-      <span class="section-label">FREQUENTLY ASKED</span>
+  <!-- TIMELINE -->
+  <section class="wrap">
+    <div class="timeline reveal">
+      <h2 class="h2">Milestones</h2>
+      <ol class="timeline-list">
+        <li><span class="t-year">2025</span><span class="t-body"><strong>Published paper on quantum error correction complexity</strong><em>arXiv preprint</em></span></li>
+        <li><span class="t-year">2024</span><span class="t-body"><strong>Built fault-tolerant distributed compute engine</strong><em>Open source, formal guarantees</em></span></li>
+        <li><span class="t-year">2024</span><span class="t-body"><strong>Presented on consistency envelopes</strong><em>Workshop on distributed systems</em></span></li>
+        <li><span class="t-year">2023</span><span class="t-body"><strong>Started quantum computing research program</strong><em>From systems to computational physics</em></span></li>
+        <li><span class="t-year">2020</span><span class="t-body"><strong>Shipped first production distributed system</strong><em>Serving millions of requests</em></span></li>
+      </ol>
+    </div>
+  </section>
 
+  <!-- FAQ -->
+  <section class="wrap">
+    <div class="faq reveal">
+      <h2 class="h2">Good questions</h2>
       <div class="faq-list">
-        <details class="faq-item">
-          <summary class="faq-question">Are you available for freelance or consulting work?</summary>
-          <p class="faq-answer">
-            It depends on the project. I take on select consulting engagements
-            in distributed systems, computational physics, and research-heavy engineering.
-            Reach out via email and describe what you're working on.
-          </p>
+        <details class="faq-item" open>
+          <summary>Are you available for consulting?</summary>
+          <p>I take select engagements in distributed systems and research-heavy engineering. Send a short note about your problem.</p>
         </details>
-
         <details class="faq-item">
-          <summary class="faq-question">What's your background — physics or engineering?</summary>
-          <p class="faq-answer">
-            Both. I was trained in physics and drawn to engineering. The combination
-            means I think about invariants before implementations. I approach software
-            problems with a physicist's rigor and an engineer's pragmatism.
-          </p>
+          <summary>Physics or engineering background?</summary>
+          <p>Both. Trained in physics, drawn to engineering. I state failure modes up front and build from there.</p>
         </details>
-
         <details class="faq-item">
-          <summary class="faq-question">Do you collaborate on research?</summary>
-          <p class="faq-answer">
-            Yes — particularly in quantum error correction, distributed systems theory,
-            and the computational foundations of machine learning. If you're working on
-            something in these areas, I'd like to hear about it.
-          </p>
+          <summary>Open to research collaboration?</summary>
+          <p>Yes, especially quantum error correction and distributed systems theory. I reply fastest to concrete ideas.</p>
         </details>
-
         <details class="faq-item">
-          <summary class="faq-question">What tools and languages do you prefer?</summary>
-          <p class="faq-answer">
-            Depends on the problem. Python and Julia for research and prototyping.
-            Rust and Go for systems work. TypeScript for web tooling.
-            I don't have loyalty to tools — I have loyalty to correctness.
-          </p>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-question">Can I use your writing or cite your work?</summary>
-          <p class="faq-answer">
-            Published papers follow standard academic citation norms. Blog posts and
-            technical writing on this site can be referenced with attribution.
-            If in doubt, send me a message.
-          </p>
+          <summary>Favorite tools?</summary>
+          <p>Python and Julia for research. Rust and Go for systems. TypeScript for web. Correctness over loyalty.</p>
         </details>
       </div>
     </div>
   </section>
 
-  <!-- ═══ CURRENTLY ═══ -->
-  <section class="currently">
-    <div class="currently-inner">
-      <span class="section-label">CURRENTLY</span>
-      <p class="currently-text">
-        Investigating fault-tolerant quantum computing architectures.
-        Building infrastructure that treats correctness as a non-negotiable constraint.
-      </p>
-      <div class="currently-links">
-        <a href="mailto:jiilannashrulloh@gmail.com" class="contact-link">jiilannashrulloh@gmail.com</a>
-        <span class="link-sep">·</span>
-        <a href="https://github.com/JiilanTj" class="contact-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+  <!-- CURRENTLY -->
+  <section class="wrap">
+    <div class="now-card reveal">
+      <div>
+        <h2 class="h2 h2-light">Currently exploring fault-tolerant quantum architectures.</h2>
+        <p class="now-sub">Building infrastructure where correctness is non-negotiable.</p>
       </div>
+      <a href="/contacts" class="btn-lemon">Say hello</a>
     </div>
   </section>
 
 </Layout>
 
 <style>
-  /* ── Hero ── */
+  .wrap {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: var(--space-4) var(--space-3) 0;
+  }
+
+  .h2 {
+    font-family: var(--font-display);
+    font-style: normal;
+    font-weight: 700;
+    font-size: var(--text-3xl);
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    color: var(--color-ink);
+    overflow-wrap: anywhere;
+    min-width: 0;
+  }
+
+  .h2-light { color: var(--color-paper); }
+
+  .lede {
+    font-size: var(--text-lg);
+    color: var(--color-muted);
+    max-width: 56ch;
+    margin-top: 12px;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    color: var(--color-ink);
+    background: var(--color-paper-2);
+    border: 2px solid var(--color-ink);
+    border-radius: var(--radius-pill);
+    padding: 6px 14px;
+    margin-bottom: var(--space-2);
+  }
+
+  /* Hero */
   .hero {
     max-width: var(--page-width);
     margin: 0 auto;
-    padding: var(--space-8) var(--space-6) 0;
-    padding-top: calc(var(--space-12) + 64px);
+    padding: var(--space-4) var(--space-3) 0;
+    padding-top: var(--space-6);
+    min-height: 0;
   }
 
   .hero-inner {
     display: grid;
-    grid-template-columns: 1fr 300px;
-    gap: var(--space-8);
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    gap: var(--space-4);
     align-items: center;
+    background: var(--color-paper-2);
+    border: 2px solid var(--color-ink);
+    border-radius: 28px;
+    padding: var(--space-4);
+    box-shadow: var(--shadow-card);
+    animation: rise-in 600ms var(--ease) both;
   }
 
-  .hero-photo-col {
-    position: relative;
+  .hero-title {
+    font-family: var(--font-display);
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(2rem, 4.6vw, 3.25rem);
+    letter-spacing: -0.035em;
+    line-height: 1.05;
+    margin-bottom: var(--space-2);
+    overflow-wrap: anywhere;
+    min-width: 0;
   }
 
-  .photo-frame {
+  .hero-sub {
+    font-size: var(--text-lg);
+    color: var(--color-muted);
+    max-width: 42ch;
+    margin-bottom: var(--space-3);
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: var(--space-2);
+  }
+
+  .btn-primary, .btn-ghost, .btn-lemon {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    font-weight: 700;
+    border-radius: var(--radius-pill);
+    padding: 13px 24px;
+    border: 2px solid var(--color-ink);
+    white-space: nowrap;
+    transition: transform var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
+  }
+
+  .btn-primary {
+    background: var(--color-ink);
+    color: var(--color-paper);
+    box-shadow: 3px 3px 0 var(--color-accent);
+  }
+
+  .btn-primary:hover { transform: translate(-1px, -2px); box-shadow: 5px 5px 0 var(--color-accent); }
+  .btn-primary:active { transform: translateY(1px) scale(0.98); box-shadow: 1px 1px 0 var(--color-accent); }
+
+  .btn-ghost {
+    background: var(--color-paper);
+    color: var(--color-ink);
+  }
+
+  .btn-ghost:hover { background: var(--color-lemon); transform: translateY(-2px) rotate(-0.5deg); }
+  .btn-ghost:active { transform: translateY(1px) scale(0.98); }
+
+  .btn-sm { font-size: var(--text-sm); padding: 10px 18px; }
+
+  .btn-lemon {
+    background: var(--color-lemon);
+    color: var(--color-ink);
+  }
+
+  .btn-lemon:hover { transform: translateY(-2px) rotate(1deg); }
+  .btn-lemon:active { transform: translateY(1px) scale(0.98); }
+
+  .hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-muted);
+  }
+
+  .pulse {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-success);
+    box-shadow: 0 0 0 4px rgba(46, 125, 79, 0.18);
+  }
+
+  .hero-visual {
     position: relative;
-    width: 100%;
-    max-width: 280px;
-    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .photo-arch {
+    width: min(320px, 100%);
+    aspect-ratio: 4 / 4.6;
+    border-radius: 160px 160px 24px 24px;
     overflow: hidden;
-    border-radius: 4px;
+    border: 2px solid var(--color-ink);
+    background: var(--color-cream);
   }
 
-  .photo {
+  .photo-arch img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center top;
-    filter: contrast(1.05) brightness(0.85) saturate(0.7);
   }
 
-  .photo-glow {
+  .sticker {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 50%;
-    background: linear-gradient(to top, var(--color-bg) 0%, transparent 100%);
-    pointer-events: none;
-    animation: glow-breathe 6s var(--ease-melancholy) infinite;
-  }
-
-  .photo-glow-top {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 25%;
-    background: linear-gradient(to bottom, var(--color-bg) 0%, transparent 100%);
-    pointer-events: none;
-  }
-
-  @keyframes glow-breathe {
-    0%, 100% { opacity: 0.8; }
-    50% { opacity: 1; }
-  }
-
-  .hero-text-col {
-    max-width: 600px;
-  }
-
-  .hero-greeting {
-    font-family: var(--font-ui);
-    font-size: var(--text-sm);
-    color: var(--color-accent);
-    opacity: 0.85;
-    letter-spacing: 0.12em;
-    margin-bottom: 20px;
-  }
-
-  .hero-headline {
-    font-family: var(--font-display);
-    font-size: var(--text-4xl);
-    font-weight: 400;
-    color: var(--color-text);
-    letter-spacing: -0.03em;
-    line-height: 1.05;
-    margin-bottom: 30px;
-  }
-
-  .hero-bio {
     font-family: var(--font-mono);
-    font-size: var(--text-base);
-    color: var(--color-text-muted);
-    line-height: 1.7;
-    max-width: 520px;
-    margin-bottom: var(--space-4);
-  }
-
-  .hero-cta {
-    display: flex;
-    align-items: center;
-    gap: var(--space-3);
-  }
-
-  .cta-primary {
-    font-family: var(--font-ui);
-    font-size: var(--text-sm);
-    color: var(--color-accent);
-    background: rgba(122, 143, 173, 0.15);
-    border: 1px solid var(--color-accent);
-    padding: 12px 28px;
-    border-radius: 4px;
-    letter-spacing: 0.04em;
-    transition: background 180ms ease, border-color 180ms ease;
-  }
-
-  .cta-primary:hover {
-    background: rgba(122, 143, 173, 0.08);
-    border-color: #8da0be;
-  }
-
-  .cta-secondary {
-    font-family: var(--font-ui);
-    font-size: var(--text-sm);
-    color: var(--color-text-ghost);
-    letter-spacing: 0.02em;
-    padding: 12px 28px;
-    border: 1px solid #1c2030;
-    border-radius: 4px;
-    background: transparent;
-    transition: color 180ms ease, border-color 180ms ease;
-  }
-
-  .cta-secondary:hover {
-    color: var(--color-text-muted);
-    border-color: #2d3348;
-  }
-
-  /* ── Section Label ── */
-  .section-label {
-    font-family: var(--font-ui);
     font-size: var(--text-xs);
-    color: var(--color-text-ghost);
-    letter-spacing: 0.1em;
-    display: block;
-    margin-bottom: var(--space-4);
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: var(--radius-pill);
+    border: 2px solid var(--color-ink);
+    box-shadow: 2px 2px 0 var(--color-ink);
   }
 
-  /* ── Stats ── */
-  .stats {
-    max-width: var(--page-width);
-    margin: 0 auto;
-    padding: var(--space-6) var(--space-6);
-    border-top: 1px solid var(--color-border);
+  .sticker-a { top: 12%; left: 2%; background: var(--color-lemon); transform: rotate(-8deg); }
+  .sticker-b { top: 44%; right: 0; background: var(--color-sky); transform: rotate(6deg); }
+  .sticker-c { bottom: 10%; left: 8%; background: var(--color-paper-2); transform: rotate(-3deg); }
+
+  /* Marquee */
+  .marquee {
+    margin-top: var(--space-4);
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--color-ink);
   }
 
-  .stats-inner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--space-6);
+  .marquee-track span { padding: 12px 0; }
+
+  /* Stats */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    gap: 12px;
   }
 
-  .stat-item {
+  .stat-card {
+    background: var(--color-paper-2);
+    border: 2px solid var(--color-ink);
+    border-radius: var(--radius-card);
+    padding: var(--space-3) var(--space-2);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 5px;
+    gap: 4px;
+    transition: transform var(--duration) var(--ease);
   }
 
-  .stat-number {
+  .stat-card:hover { transform: translateY(-3px) rotate(-0.4deg); }
+
+  .stat-hero { background: var(--color-ink); color: var(--color-paper); border-color: var(--color-ink); }
+  .stat-hero .stat-label { color: var(--color-paper); opacity: 0.75; }
+
+  .tint-mint { background: var(--color-mint); }
+  .tint-sky { background: var(--color-sky); }
+  .tint-peach { background: var(--color-peach); }
+
+  .stat-num {
     font-family: var(--font-display);
-    font-size: var(--text-2xl);
-    color: var(--color-accent);
-    letter-spacing: -0.02em;
+    font-weight: 700;
+    font-size: var(--text-3xl);
+    letter-spacing: -0.03em;
     line-height: 1;
   }
 
   .stat-label {
-    font-family: var(--font-ui);
-    font-size: 0.65rem;
-    color: var(--color-text-ghost);
-    letter-spacing: 0.1em;
-    text-align: center;
-  }
-
-  .stat-divider {
-    width: 1px;
-    height: 24px;
-    background: var(--color-border);
-    align-self: center;
-  }
-
-  /* ── Expertise ── */
-  .expertise {
-    max-width: var(--page-width);
-    margin: 0 auto;
-    padding: var(--space-12) var(--space-6) 0;
-    border-top: 1px solid var(--color-border);
-  }
-
-  .expertise-inner {
-    max-width: var(--page-width);
-  }
-
-  .expertise-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-4);
-  }
-
-  .expertise-card {
-    padding: var(--space-3);
-    border: 1px solid var(--color-border);
-    border-radius: 4px;
-    transition: border-color var(--duration-md) var(--ease);
-  }
-
-  .expertise-card:hover {
-    border-color: var(--color-accent);
-  }
-
-  .expertise-number {
-    font-family: var(--font-ui);
-    font-size: var(--text-xs);
-    color: var(--color-accent);
-    letter-spacing: 0.08em;
-    display: block;
-    margin-bottom: var(--space-2);
-  }
-
-  .expertise-title {
-    font-family: var(--font-display);
-    font-size: var(--text-xl);
-    font-weight: 400;
-    color: var(--color-text);
-    letter-spacing: -0.02em;
-    margin-bottom: var(--space-1);
-  }
-
-  .expertise-desc {
     font-family: var(--font-mono);
-    font-size: var(--text-sm);
-    color: var(--color-text-muted);
-    line-height: 1.6;
+    font-size: var(--text-xs);
+    color: var(--color-muted);
   }
 
-  /* ── Philosophy ── */
-  .philosophy {
-    max-width: var(--page-width);
-    margin: 0 auto;
-    padding: var(--space-12) var(--space-6);
+  /* Doing */
+  .doing {
+    background: var(--color-paper-2);
+    border: 2px solid var(--color-ink);
+    border-radius: 28px;
+    padding: var(--space-4);
+    margin-top: var(--space-4);
+    box-shadow: var(--shadow-card);
   }
 
-  .philosophy-inner {
-    max-width: var(--content-width);
-  }
-
-  .philosophy-quote {
-    font-family: var(--font-display);
-    font-size: var(--text-xl);
-    color: var(--color-text);
-    line-height: 1.5;
-    letter-spacing: -0.01em;
-    border-left: 2px solid var(--color-accent);
-    padding-left: var(--space-3);
-    font-style: italic;
-  }
-
-  /* ── Tech Stack ── */
-  .stack {
-    max-width: var(--page-width);
-    margin: 0 auto;
-    padding: var(--space-8) var(--space-6);
-    border-top: 1px solid var(--color-border);
-  }
-
-  .stack-inner {
-    max-width: var(--page-width);
-  }
-
-  .stack-grid {
+  .doing-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-4);
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) minmax(0, 1fr);
+    gap: 12px;
+    margin-top: var(--space-3);
   }
 
-  .stack-group-title {
-    font-family: var(--font-ui);
-    font-size: var(--text-xs);
-    color: var(--color-text-muted);
-    letter-spacing: 0.06em;
-    font-weight: 500;
-    margin-bottom: var(--space-2);
+  .doing-card {
+    border: 2px solid var(--color-ink);
+    border-radius: var(--radius-card);
+    padding: var(--space-3) var(--space-2);
+    transition: transform var(--duration) var(--ease);
   }
 
-  .stack-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-1);
+  .doing-card:hover { transform: translateY(-3px); }
+  .doing-card h3 { font-family: var(--font-display); font-size: var(--text-xl); letter-spacing: -0.02em; margin: 10px 0 8px; }
+  .doing-card p { color: var(--color-muted); font-size: var(--text-base); }
+
+  .doing-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--color-paper-2);
+    border: 2px solid var(--color-ink);
+    font-weight: 700;
   }
 
-  .stack-tag {
-    font-family: var(--font-ui);
-    font-size: var(--text-xs);
-    color: var(--color-text-muted);
-    letter-spacing: 0.04em;
-    padding: 4px 12px;
-    border: 1px solid var(--color-border);
-    border-radius: 3px;
-    transition: border-color var(--duration) var(--ease), color var(--duration) var(--ease);
-  }
-
-  .stack-tag:hover {
-    border-color: var(--color-accent);
-    color: var(--color-accent);
-  }
-
-  /* ── Featured ── */
-  .featured {
-    max-width: var(--page-width);
-    margin: 0 auto;
-    padding: var(--space-8) var(--space-6);
-    border-top: 1px solid var(--color-border);
-  }
-
-  .featured-inner {
-    max-width: var(--page-width);
-  }
+  /* Featured */
+  .featured { margin-top: var(--space-4); }
 
   .featured-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-4);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 12px;
+    margin-top: var(--space-2);
   }
 
-  .featured-card {
+  .feat-card {
+    border: 2px solid var(--color-ink);
+    border-radius: var(--radius-card);
     padding: var(--space-3);
-    border: 1px solid var(--color-border);
-    border-radius: 4px;
-    transition: border-color var(--duration-md) var(--ease);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: transform var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
   }
 
-  .featured-card:hover {
-    border-color: var(--color-accent);
+  .feat-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-pop); }
+
+  .feat-ink { background: var(--color-ink); color: var(--color-paper); }
+  .feat-ink p { opacity: 0.75; }
+  .feat-ink a { color: var(--color-lemon); font-weight: 700; }
+  .feat-paper { background: var(--color-cream); }
+  .feat-paper a { color: var(--color-accent); font-weight: 700; }
+
+  .feat-tag {
+    align-self: flex-start;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    border: 2px solid currentColor;
+    border-radius: var(--radius-pill);
+    padding: 4px 12px;
   }
 
-  .featured-type {
-    font-family: var(--font-ui);
-    font-size: 0.65rem;
-    color: var(--color-accent);
-    letter-spacing: 0.1em;
-    display: block;
-    margin-bottom: var(--space-2);
-  }
-
-  .featured-title {
+  .feat-card h3 {
     font-family: var(--font-display);
-    font-size: var(--text-lg);
-    font-weight: 400;
-    color: var(--color-text);
+    font-size: var(--text-xl);
     letter-spacing: -0.02em;
-    line-height: 1.3;
-    margin-bottom: var(--space-1);
+    line-height: 1.25;
+    overflow-wrap: anywhere;
   }
 
-  .featured-desc {
+  /* Stack */
+  .stack {
+    margin-top: var(--space-4);
+    background: var(--color-paper-2);
+    border: 2px solid var(--color-ink);
+    border-radius: var(--radius-card);
+    padding: var(--space-3);
+  }
+
+  .stack-row {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 4px 2px 8px;
+    margin-top: var(--space-2);
+    scroll-snap-type: x mandatory;
+  }
+
+  .pill {
+    flex: none;
+    scroll-snap-align: start;
     font-family: var(--font-mono);
     font-size: var(--text-sm);
-    color: var(--color-text-muted);
-    line-height: 1.6;
+    font-weight: 500;
+    background: var(--color-paper);
+    border: 2px solid var(--color-ink);
+    border-radius: var(--radius-pill);
+    padding: 8px 16px;
+    box-shadow: 2px 2px 0 var(--color-ink);
+  }
+
+  /* Writing */
+  .writing { margin-top: var(--space-4); }
+
+  .writing-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--space-2);
     margin-bottom: var(--space-2);
   }
 
-  .featured-link {
-    font-family: var(--font-ui);
-    font-size: var(--text-sm);
-    color: var(--color-accent);
-    letter-spacing: 0.02em;
-    transition: opacity var(--duration) var(--ease);
+  .post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
   }
 
-  .featured-link:hover {
-    opacity: 0.8;
-  }
-
-  /* ── Timeline ── */
+  /* Timeline */
   .timeline {
-    max-width: var(--page-width);
-    margin: 0 auto;
-    padding: var(--space-8) var(--space-6);
-    border-top: 1px solid var(--color-border);
-  }
-
-  .timeline-inner {
-    max-width: var(--content-width);
-    margin: 0 auto;
+    margin-top: var(--space-4);
+    background: var(--color-paper-2);
+    border: 2px solid var(--color-ink);
+    border-radius: var(--radius-card);
+    padding: var(--space-4) var(--space-3);
   }
 
   .timeline-list {
+    list-style: none;
+    margin-top: var(--space-2);
     display: flex;
     flex-direction: column;
-    gap: 0;
   }
 
-  .timeline-item {
+  .timeline-list li {
     display: grid;
-    grid-template-columns: 56px 1fr;
-    gap: var(--space-3);
-    padding: var(--space-3) 0;
-    border-bottom: 1px solid var(--color-border-2);
-    position: relative;
+    grid-template-columns: 64px minmax(0, 1fr);
+    gap: var(--space-2);
+    padding: var(--space-2) 0;
+    border-top: 2px dashed var(--color-line);
   }
 
-  .timeline-item:last-child {
-    border-bottom: none;
-  }
+  .timeline-list li:first-child { border-top: none; }
 
-  .timeline-item::before {
-    content: '';
-    position: absolute;
-    left: 66px;
-    top: 0;
-    bottom: 0;
-    width: 1px;
-    background: var(--color-border-2);
-  }
-
-  .timeline-item:last-child::before {
-    display: none;
-  }
-
-  .timeline-year {
-    font-family: var(--font-ui);
-    font-size: var(--text-xs);
-    color: var(--color-text-ghost);
-    letter-spacing: 0.06em;
-    padding-top: 2px;
-  }
-
-  .timeline-content {
-    padding-left: var(--space-2);
-  }
-
-  .timeline-title {
+  .t-year {
     font-family: var(--font-mono);
     font-size: var(--text-sm);
-    color: var(--color-text);
-    font-weight: 500;
-    line-height: 1.4;
-    margin-bottom: 4px;
+    font-weight: 600;
+    color: var(--color-accent);
   }
 
-  .timeline-desc {
-    font-family: var(--font-ui);
-    font-size: var(--text-xs);
-    color: var(--color-text-muted);
-    letter-spacing: 0.02em;
-  }
+  .t-body { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .t-body strong { font-size: var(--text-base); }
+  .t-body em { font-style: normal; color: var(--color-muted); font-size: var(--text-sm); }
 
-  /* ── FAQ ── */
-  .faq {
-    max-width: var(--page-width);
-    margin: 0 auto;
-    padding: var(--space-8) var(--space-6);
-    border-top: 1px solid var(--color-border);
-  }
-
-  .faq-inner {
-    max-width: var(--content-width);
-    margin: 0 auto;
-  }
+  /* FAQ */
+  .faq { margin-top: var(--space-4); }
 
   .faq-list {
     display: flex;
     flex-direction: column;
-    gap: 0;
+    gap: 12px;
+    margin-top: var(--space-2);
   }
 
   .faq-item {
-    border-bottom: 1px solid var(--color-border-2);
+    background: var(--color-paper-2);
+    border: 2px solid var(--color-ink);
+    border-radius: var(--radius-card);
+    padding: var(--space-2) var(--space-3);
   }
 
-  .faq-item:last-child {
-    border-bottom: none;
-  }
-
-  .faq-question {
-    font-family: var(--font-mono);
-    font-size: var(--text-sm);
-    color: var(--color-text);
-    padding: var(--space-3) 0;
-    cursor: none;
+  .faq-item summary {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--text-lg);
+    letter-spacing: -0.01em;
     list-style: none;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     gap: var(--space-2);
-    transition: color var(--duration) var(--ease);
-    line-height: 1.5;
   }
 
-  .faq-question::-webkit-details-marker {
-    display: none;
-  }
-
-  .faq-question::after {
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
     content: '+';
-    font-family: var(--font-ui);
-    font-size: var(--text-lg);
-    color: var(--color-text-ghost);
-    flex-shrink: 0;
-    transition: transform 200ms var(--ease), color 200ms var(--ease);
-  }
-
-  .faq-item[open] .faq-question::after {
-    content: '−';
-    color: var(--color-accent);
-  }
-
-  .faq-question:hover {
-    color: var(--color-accent);
-  }
-
-  .faq-answer {
+    flex: none;
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--color-lemon);
+    border: 2px solid var(--color-ink);
     font-family: var(--font-mono);
-    font-size: var(--text-sm);
-    color: var(--color-text-muted);
-    line-height: 1.7;
-    padding-bottom: var(--space-3);
-    max-width: 580px;
   }
 
-  /* ── Recent Writing ── */
-  .recent {
-    max-width: var(--page-width);
-    margin: 0 auto;
-    padding: 0 var(--space-6) var(--space-8);
-    border-top: 1px solid var(--color-border);
-    padding-top: var(--space-8);
-  }
+  .faq-item[open] summary::after { content: '–'; background: var(--color-accent); color: var(--color-accent-ink); }
+  .faq-item p { color: var(--color-muted); margin-top: 10px; max-width: 60ch; }
 
-  .recent-inner {
-    max-width: var(--page-width);
-    margin: 0 auto;
-  }
-
-  .recent-header {
+  /* Now */
+  .now-card {
+    margin: var(--space-4) 0 var(--space-8);
+    background: var(--color-accent);
+    color: var(--color-accent-ink);
+    border: 2px solid var(--color-ink);
+    border-radius: 28px;
+    padding: var(--space-4);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: var(--space-4);
+    gap: var(--space-3);
+    box-shadow: 6px 6px 0 var(--color-ink);
   }
 
-  .recent-header .section-label {
-    margin-bottom: 0;
-  }
+  .now-sub { opacity: 0.85; margin-top: 8px; }
 
-  .post-list {
-    max-width: var(--content-width);
-    margin: 0 auto;
-  }
-
-  .all-writing-link {
-    font-family: var(--font-ui);
-    font-size: var(--text-sm);
-    color: var(--color-accent);
-    letter-spacing: 0.04em;
-    transition: opacity var(--duration) var(--ease);
-  }
-
-  .all-writing-link:hover {
-    opacity: 0.8;
-  }
-
-  /* ── Currently ── */
-  .currently {
-    max-width: var(--page-width);
-    margin: 0 auto;
-    padding: var(--space-8) var(--space-6) var(--space-12);
-    border-top: 1px solid var(--color-border);
-  }
-
-  .currently-inner {
-    max-width: var(--content-width);
-  }
-
-  .currently-text {
-    font-family: var(--font-mono);
-    font-size: var(--text-base);
-    color: var(--color-text-muted);
-    line-height: 1.7;
-    margin-bottom: var(--space-3);
-  }
-
-  .currently-links {
-    display: flex;
-    align-items: center;
-    gap: var(--space-1);
-  }
-
-  .contact-link {
-    font-family: var(--font-ui);
-    font-size: var(--text-sm);
-    color: var(--color-accent);
-    position: relative;
-    transition: opacity var(--duration) var(--ease);
-  }
-
-  .contact-link:hover {
-    opacity: 0.8;
-  }
-
-  .link-sep {
-    font-family: var(--font-ui);
-    font-size: var(--text-xs);
-    color: var(--color-text-ghost);
-  }
-
-  /* ── Responsive ── */
   @media (max-width: 768px) {
-    .hero {
-      padding: var(--space-4) var(--space-3) 0;
-      padding-top: calc(var(--space-6) + 56px);
-    }
-
-    .hero-inner {
-      grid-template-columns: 1fr;
-      gap: var(--space-4);
-    }
-
-    /* On mobile: photo first, text second */
-    .hero-text-col {
-      order: 2;
-      max-width: none;
-    }
-
-    .hero-photo-col {
-      order: 1;
-    }
-
-    .photo-frame {
-      max-width: 100%;
-      aspect-ratio: 16 / 10;
-      border-radius: 4px;
-    }
-
-    .photo {
-      object-position: center 20%;
-    }
-
-    .hero-bio {
-      max-width: none;
-      font-size: var(--text-sm);
-    }
-
-    .hero-headline {
-      font-size: var(--text-2xl);
-    }
-
-    .hero-greeting {
-      font-size: var(--text-xs);
-    }
-
-    .hero-cta {
-      flex-direction: row;
-      gap: var(--space-2);
-    }
-
-    .cta-primary,
-    .cta-secondary {
-      font-size: var(--text-xs);
-      padding: 8px 16px;
-    }
-
-    .expertise {
-      padding: var(--space-6) var(--space-3) 0;
-    }
-
-    .expertise-grid {
-      grid-template-columns: 1fr;
-      gap: var(--space-2);
-    }
-
-    .expertise-card {
-      padding: var(--space-2);
-    }
-
-    .expertise-title {
-      font-size: var(--text-lg);
-    }
-
-    .expertise-desc {
-      font-size: var(--text-xs);
-    }
-
-    .philosophy {
-      padding: var(--space-6) var(--space-3);
-    }
-
-    .philosophy-quote {
-      font-size: var(--text-lg);
-    }
-
-    .stats {
-      padding: var(--space-4) var(--space-3);
-    }
-
-    .stats-inner {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: var(--space-3);
-      justify-items: center;
-    }
-
-    .stat-divider {
-      display: none;
-    }
-
-    .stat-item {
-      min-width: unset;
-      width: 100%;
-      align-items: center;
-    }
-
-    .stat-number {
-      font-size: var(--text-2xl);
-    }
-
-    .stat-label {
-      font-size: 0.6rem;
-    }
-
-    .stack {
-      padding: var(--space-6) var(--space-3);
-    }
-
-    .stack-grid {
-      grid-template-columns: 1fr;
-      gap: var(--space-4);
-    }
-
-    .stack-group-title {
-      font-size: 0.7rem;
-      margin-bottom: var(--space-1);
-    }
-
-    .stack-tag {
-      font-size: 0.7rem;
-      padding: 6px 14px;
-    }
-
-    .featured {
-      padding: var(--space-6) var(--space-3);
-    }
-
-    .featured-grid {
-      grid-template-columns: 1fr;
-      gap: var(--space-3);
-    }
-
-    .featured-card {
-      padding: var(--space-3);
-    }
-
-    .featured-title {
-      font-size: var(--text-base);
-    }
-
-    .featured-desc {
-      font-size: var(--text-xs);
-    }
-
-    .timeline {
-      padding: var(--space-6) var(--space-3);
-    }
-
-    .timeline-item {
-      grid-template-columns: 44px 1fr;
-      gap: var(--space-2);
-      padding: var(--space-2) 0;
-    }
-
-    .timeline-item::before {
-      left: 52px;
-    }
-
-    .timeline-year {
-      font-size: 0.65rem;
-    }
-
-    .timeline-title {
-      font-size: var(--text-xs);
-    }
-
-    .timeline-desc {
-      font-size: 0.65rem;
-    }
-
-    .faq {
-      padding: var(--space-6) var(--space-3);
-    }
-
-    .faq-question {
-      font-size: var(--text-xs);
-      padding: var(--space-2) 0;
-    }
-
-    .faq-answer {
-      font-size: var(--text-xs);
-      padding-bottom: var(--space-2);
-    }
-
-    .recent {
-      padding: var(--space-6) var(--space-3) var(--space-6);
-    }
-
-    .currently {
-      padding: var(--space-6) var(--space-3) var(--space-6);
-    }
-
-    .currently-text {
-      font-size: var(--text-sm);
-    }
-
-    .currently-links {
-      flex-wrap: wrap;
-    }
+    .wrap { padding: var(--space-3) var(--space-2) 0; }
+    .hero { padding: var(--space-3) var(--space-2) 0; }
+    .hero-inner { grid-template-columns: minmax(0, 1fr); padding: var(--space-3) var(--space-2); }
+    .hero-visual { order: -1; }
+    .photo-arch { width: min(240px, 80%); }
+    .sticker-a { left: 4%; }
+    .sticker-b { right: 2%; }
+    .stats-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+    .doing, .timeline { padding: var(--space-3) var(--space-2); }
+    .doing-grid, .featured-grid { grid-template-columns: minmax(0, 1fr); }
+    .h2 { font-size: var(--text-2xl); }
+    .now-card { flex-direction: column; align-items: flex-start; }
+    .writing-head { align-items: flex-start; flex-direction: column; }
   }
 </style>

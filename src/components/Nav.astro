@@ -7,132 +7,163 @@ function isActive(href: string): boolean {
 }
 ---
 
-<nav class="nav" id="site-nav">
+<nav class="nav" aria-label="Primary">
   <div class="nav-inner">
-    <a href="/" class="nav-logo">JNT</a>
+    <a href="/" class="nav-logo" aria-label="Jiilan home">
+      <span class="logo-mark" aria-hidden="true">J</span>
+      <span class="logo-text">jiilan.me</span>
+    </a>
     <div class="nav-links">
-      <a href="/works" class:list={["nav-link", { "nav-link--active": isActive("/works") }]}>works</a>
-      <span class="nav-sep">·</span>
-      <a href="/writing" class:list={["nav-link", { "nav-link--active": isActive("/writing") }]}>writing</a>
-      <span class="nav-sep">·</span>
-      <a href="/research" class:list={["nav-link", { "nav-link--active": isActive("/research") }]}>research</a>
-      <span class="nav-sep">·</span>
-      <a href="/about" class:list={["nav-link", { "nav-link--active": isActive("/about") }]}>about</a>
-      <span class="nav-sep">·</span>
-      <a href="/contacts" class:list={["nav-link", { "nav-link--active": isActive("/contacts") }]}>contacts</a>
+      <a href="/works" class:list={["nav-link", { "is-active": isActive("/works") }]}>Works</a>
+      <a href="/writing" class:list={["nav-link", { "is-active": isActive("/writing") }]}>Writing</a>
+      <a href="/research" class:list={["nav-link", { "is-active": isActive("/research") }]}>Research</a>
+      <a href="/about" class:list={["nav-link", { "is-active": isActive("/about") }]}>About</a>
     </div>
+    <a href="/contacts" class="nav-cta">Say hello</a>
   </div>
 </nav>
 
-<script>
-  const nav = document.getElementById('site-nav');
-  if (nav) {
-    let scrolled = false;
-    const onScroll = () => {
-      const shouldShow = window.scrollY > 60;
-      if (shouldShow !== scrolled) {
-        scrolled = shouldShow;
-        nav.classList.toggle('nav--scrolled', scrolled);
-      }
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-  }
-</script>
-
 <style>
   .nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    position: sticky;
+    top: 12px;
     z-index: 100;
-    padding: var(--space-3) var(--space-6);
-    background: var(--color-bg);
-    border-bottom: 1px solid transparent;
-    transition: border-bottom-color 300ms ease;
-  }
-
-  .nav.nav--scrolled {
-    border-bottom-color: var(--color-border);
+    max-width: var(--page-width);
+    margin: 12px auto 0;
+    padding: 0 var(--space-3);
   }
 
   .nav-inner {
-    max-width: var(--page-width);
-    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: var(--space-2);
+    min-height: 64px;
+    padding: 10px 10px 10px 16px;
+    background: var(--color-paper-2);
+    border: 2px solid var(--color-ink);
+    border-radius: var(--radius-pill);
+    box-shadow: var(--shadow-card);
   }
 
   .nav-logo {
-    font-family: var(--font-ui);
-    font-size: var(--text-sm);
-    font-weight: 500;
-    color: var(--color-accent);
-    letter-spacing: 0.08em;
-    transition: opacity var(--duration) var(--ease);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--text-base);
+    color: var(--color-ink);
+    letter-spacing: -0.02em;
+    white-space: nowrap;
   }
 
-  .nav-logo:hover {
-    opacity: 0.8;
+  .logo-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    color: var(--color-accent-ink);
+    font-size: var(--text-base);
+    transform: rotate(-6deg);
+  }
+
+  .logo-text {
+    font-weight: 700;
   }
 
   .nav-links {
     display: flex;
     align-items: center;
-    gap: var(--space-1);
+    gap: 4px;
+    background: var(--color-paper);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-pill);
+    padding: 4px;
   }
 
   .nav-link {
-    font-family: var(--font-ui);
-    font-size: var(--text-xs);
-    color: var(--color-text-muted);
-    letter-spacing: 0.06em;
-    transition: color var(--duration) var(--ease);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--color-muted);
+    padding: 8px 14px;
+    border-radius: var(--radius-pill);
+    white-space: nowrap;
+    transition: background var(--duration) var(--ease), color var(--duration) var(--ease), transform var(--duration) var(--ease);
   }
 
   .nav-link:hover {
-    color: var(--color-text);
+    color: var(--color-ink);
+    background: var(--color-cream);
   }
 
-  .nav-link--active {
-    color: var(--color-accent);
+  .nav-link:active {
+    transform: translateY(1px) scale(0.98);
   }
 
-  .nav-sep {
-    font-family: var(--font-ui);
-    font-size: var(--text-xs);
-    color: var(--color-text-ghost);
-    user-select: none;
+  .nav-link.is-active {
+    background: var(--color-ink);
+    color: var(--color-paper);
+  }
+
+  .nav-cta {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    color: var(--color-accent-ink);
+    background: var(--color-accent);
+    border: 2px solid var(--color-ink);
+    border-radius: var(--radius-pill);
+    padding: 10px 18px;
+    white-space: nowrap;
+    box-shadow: 3px 3px 0 var(--color-ink);
+    transition: transform var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
+  }
+
+  .nav-cta:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0 var(--color-ink);
+  }
+
+  .nav-cta:active {
+    transform: translateY(1px) scale(0.98);
+    box-shadow: 1px 1px 0 var(--color-ink);
   }
 
   @media (max-width: 768px) {
     .nav {
-      padding: var(--space-1) var(--space-2);
+      top: 8px;
+      margin-top: 8px;
+      padding: 0 var(--space-2);
     }
 
+    .nav-inner {
+      min-height: 60px;
+      padding: 8px 8px 8px 12px;
+      gap: 8px;
+    }
+
+    .logo-text { display: none; }
+
     .nav-links {
-      gap: 4px;
+      flex: 1;
       overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
     }
 
-    .nav-links::-webkit-scrollbar {
-      display: none;
-    }
+    .nav-links::-webkit-scrollbar { display: none; }
 
     .nav-link {
-      white-space: nowrap;
-      font-size: 0.65rem;
+      padding: 8px 12px;
+      font-size: var(--text-sm);
     }
 
-    .nav-sep {
-      font-size: 0.6rem;
-    }
-
-    .nav-logo {
-      font-size: var(--text-xs);
+    .nav-cta {
+      padding: 9px 14px;
     }
   }
 </style>

@@ -2,164 +2,68 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Works — Jiilan Nashrulloh Tanjung">
-  <section class="works-page">
-    <header class="page-header">
+<Layout title="Works — Jiilan Nashrulloh Tanjung" description="Selected projects by Jiilan Nashrulloh Tanjung in distributed systems, simulation and tooling.">
+  <section class="page">
+    <header class="page-head reveal">
       <h1 class="page-title">Works</h1>
-      <p class="page-subtitle">Selected projects and engineering work.</p>
-      <hr class="page-rule" />
+      <p class="page-sub">Small set of projects I care about. Each one taught me something.</p>
     </header>
 
-    <div class="works-list">
-      <div class="work-item">
-        <div class="work-meta">
-          <span class="work-year">2025</span>
-          <span class="work-tag">Infrastructure</span>
-        </div>
-        <h2 class="work-title">Fault-Tolerant Distributed Compute Engine</h2>
-        <p class="work-desc">
-          A distributed compute framework designed around formal correctness guarantees.
-          Built to handle Byzantine failures without sacrificing throughput.
-        </p>
-        <a href="https://github.com/JiilanTj" class="work-link" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
-      </div>
+    <div class="grid">
+      <article class="card card-ink reveal">
+        <span class="tag">2025 · Infrastructure</span>
+        <h2>Fault-Tolerant Distributed Compute Engine</h2>
+        <p>A distributed compute framework with formal correctness guarantees. Handles Byzantine failures without losing throughput.</p>
+        <a href="https://github.com/JiilanTj" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+      </article>
 
-      <div class="work-item">
-        <div class="work-meta">
-          <span class="work-year">2024</span>
-          <span class="work-tag">Simulation</span>
-        </div>
-        <h2 class="work-title">Quantum Circuit Simulator</h2>
-        <p class="work-desc">
-          High-performance simulator for noisy intermediate-scale quantum circuits.
-          Optimized tensor contraction with GPU acceleration.
-        </p>
-        <a href="https://github.com/JiilanTj" class="work-link" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
-      </div>
+      <article class="card card-mint reveal">
+        <span class="tag">2024 · Simulation</span>
+        <h2>Quantum Circuit Simulator</h2>
+        <p>Fast simulator for noisy quantum circuits. Optimized tensor contraction with GPU acceleration.</p>
+        <a href="https://github.com/JiilanTj" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+      </article>
 
-      <div class="work-item">
-        <div class="work-meta">
-          <span class="work-year">2024</span>
-          <span class="work-tag">Tooling</span>
-        </div>
-        <h2 class="work-title">Static Analysis Framework for Correctness Proofs</h2>
-        <p class="work-desc">
-          A lightweight framework for embedding correctness assertions into compiled languages,
-          inspired by CompCert's simulation relations.
-        </p>
-        <a href="https://github.com/JiilanTj" class="work-link" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
-      </div>
+      <article class="card card-sky reveal">
+        <span class="tag">2024 · Tooling</span>
+        <h2>Static Analysis for Correctness Proofs</h2>
+        <p>Lightweight framework for correctness assertions in compiled languages, inspired by CompCert simulation relations.</p>
+        <a href="https://github.com/JiilanTj" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+      </article>
     </div>
   </section>
 </Layout>
 
 <style>
-  .works-page {
-    max-width: var(--page-width);
-    margin: 0 auto;
-    padding: var(--space-12) var(--space-6);
-    padding-top: calc(var(--space-12) + 64px);
-  }
-
-  .page-header {
-    margin-bottom: var(--space-8);
-  }
-
+  .page { max-width: var(--page-width); margin: 0 auto; padding: var(--space-4) var(--space-3) var(--space-8); }
+  .page-head { margin-bottom: var(--space-3); }
   .page-title {
-    font-family: var(--font-display);
-    font-size: var(--text-3xl);
-    font-weight: 400;
-    color: var(--color-text);
-    letter-spacing: -0.02em;
-    line-height: 1.2;
+    font-family: var(--font-display); font-weight: 700;
+    font-size: var(--text-4xl); letter-spacing: -0.03em; line-height: 1.05;
   }
-
-  .page-subtitle {
-    font-family: var(--font-ui);
-    font-size: var(--text-sm);
-    color: var(--color-text-muted);
-    letter-spacing: 0.02em;
-    margin-top: var(--space-1);
+  .page-sub { color: var(--color-muted); font-size: var(--text-lg); margin-top: 10px; max-width: 56ch; }
+  .grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr); gap: 12px; margin-top: var(--space-3); }
+  .card {
+    border: 2px solid var(--color-ink); border-radius: var(--radius-card);
+    padding: var(--space-3) var(--space-2); display: flex; flex-direction: column; gap: 10px;
+    transition: transform var(--duration) var(--ease);
   }
-
-  .page-rule {
-    border: none;
-    height: 1px;
-    background: var(--color-border);
-    margin-top: var(--space-4);
+  .card:hover { transform: translateY(-3px); }
+  .card h2 { font-family: var(--font-display); font-size: var(--text-xl); letter-spacing: -0.02em; line-height: 1.25; overflow-wrap: anywhere; }
+  .card p { color: var(--color-muted); }
+  .card-ink { background: var(--color-ink); color: var(--color-paper); }
+  .card-ink p { opacity: 0.75; }
+  .card-ink a { color: var(--color-lemon); font-weight: 700; }
+  .card-mint { background: var(--color-mint); }
+  .card-sky { background: var(--color-sky); }
+  .card a { font-weight: 700; color: var(--color-accent); }
+  .tag {
+    align-self: flex-start; font-family: var(--font-mono); font-size: var(--text-xs); font-weight: 600;
+    border: 2px solid currentColor; border-radius: var(--radius-pill); padding: 4px 12px;
   }
-
-  .works-list {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-6);
-    max-width: var(--content-width);
-  }
-
-  .work-item {
-    padding-bottom: var(--space-6);
-    border-bottom: 1px solid var(--color-border-2);
-  }
-
-  .work-item:last-child {
-    border-bottom: none;
-  }
-
-  .work-meta {
-    display: flex;
-    align-items: center;
-    gap: var(--space-2);
-    margin-bottom: var(--space-1);
-  }
-
-  .work-year {
-    font-family: var(--font-ui);
-    font-size: var(--text-xs);
-    color: var(--color-text-ghost);
-    letter-spacing: 0.06em;
-  }
-
-  .work-tag {
-    font-family: var(--font-ui);
-    font-size: var(--text-xs);
-    color: var(--color-accent);
-    letter-spacing: 0.06em;
-  }
-
-  .work-title {
-    font-family: var(--font-display);
-    font-size: var(--text-xl);
-    font-weight: 400;
-    color: var(--color-text);
-    letter-spacing: -0.02em;
-    margin-bottom: var(--space-1);
-  }
-
-  .work-desc {
-    font-family: var(--font-mono);
-    font-size: var(--text-sm);
-    color: var(--color-text-muted);
-    line-height: 1.7;
-    margin-bottom: var(--space-2);
-    max-width: 560px;
-  }
-
-  .work-link {
-    font-family: var(--font-ui);
-    font-size: var(--text-sm);
-    color: var(--color-accent);
-    letter-spacing: 0.02em;
-    transition: opacity var(--duration) var(--ease);
-  }
-
-  .work-link:hover {
-    opacity: 0.8;
-  }
-
   @media (max-width: 768px) {
-    .works-page {
-      padding: var(--space-8) var(--space-3);
-      padding-top: calc(var(--space-8) + 64px);
-    }
+    .page { padding: var(--space-3) var(--space-2) var(--space-6); }
+    .grid { grid-template-columns: minmax(0, 1fr); }
+    .page-title { font-size: var(--text-3xl); }
   }
 </style>
