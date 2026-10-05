@@ -4,11 +4,12 @@ interface Props {
   date: string;
   readTime: string;
   category: string;
+  locale?: string;
 }
 
-const { title, date, readTime, category } = Astro.props;
+const { title, date, readTime, category, locale = 'en-US' } = Astro.props;
 
-const formattedDate = new Date(date).toLocaleDateString('en-US', {
+const formattedDate = new Date(date).toLocaleDateString(locale, {
   year: 'numeric',
   month: 'long',
   day: 'numeric',

@@ -38,17 +38,19 @@ function p(href: string): string {
       <a href={p('/about')} class:list={["nav-link", { "is-active": isActive("/about") }]}>{t.about}</a>
       <a href={p('/pricing')} class:list={["nav-link", { "is-active": isActive("/pricing") }]}>{t.pricing}</a>
     </div>
-    <div class="locale-switch" role="group" aria-label="Language / Bahasa">
-      {lang === 'en'
-        ? <span class="loc loc-active" aria-current="true">EN</span>
-        : <a class="loc" href={toCounterpart(pathname, 'en')} onclick="try{localStorage.setItem('locale','en')}catch(e){}">EN</a>}
-      {ID_ENABLED
-        ? (lang === 'id'
-          ? <span class="loc loc-active" aria-current="true">ID</span>
-          : <a class="loc" href={toCounterpart(pathname, 'id')} onclick="try{localStorage.setItem('locale','id')}catch(e){}">ID</a>)
-        : <span class="loc loc-soon" title="Versi Indonesia segera hadir">ID</span>}
+    <div class="nav-right">
+      <div class="locale-switch" role="group" aria-label="Language / Bahasa">
+        {lang === 'en'
+          ? <span class="loc loc-active" aria-current="true">EN</span>
+          : <a class="loc" href={toCounterpart(pathname, 'en')} onclick="try{localStorage.setItem('locale','en')}catch(e){}">EN</a>}
+        {ID_ENABLED
+          ? (lang === 'id'
+            ? <span class="loc loc-active" aria-current="true">ID</span>
+            : <a class="loc" href={toCounterpart(pathname, 'id')} onclick="try{localStorage.setItem('locale','id')}catch(e){}">ID</a>)
+          : <span class="loc loc-soon" title="Versi Indonesia segera hadir">ID</span>}
+      </div>
+      <a href={p('/contacts')} class="nav-cta">{t.sayHello}</a>
     </div>
-    <a href={p('/contacts')} class="nav-cta">{t.sayHello}</a>
   </div>
 </nav>
 
@@ -63,9 +65,9 @@ function p(href: string): string {
   }
 
   .nav-inner {
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
     align-items: center;
-    justify-content: space-between;
     gap: var(--space-2);
     min-height: 64px;
     padding: 10px 10px 10px 16px;
@@ -73,6 +75,17 @@ function p(href: string): string {
     border: 2px solid var(--color-ink);
     border-radius: var(--radius-pill);
     box-shadow: var(--shadow-card);
+  }
+
+  .nav-logo { justify-self: start; }
+  .nav-links { justify-self: center; }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-self: end;
+    min-width: 0;
   }
 
   .nav-logo {
@@ -108,6 +121,7 @@ function p(href: string): string {
     display: flex;
     align-items: center;
     gap: 4px;
+    min-width: 0;
     background: var(--color-paper);
     border: 1px solid var(--color-line);
     border-radius: var(--radius-pill);

@@ -42,6 +42,8 @@ const grouped = posts.reduce<YearGroup[]>((acc, post) => {
                 readTime={post.readTime}
                 slug={post.slug}
                 index={i}
+                locale="id-ID"
+                base="/id/writing"
               />
             ))}
           </div>

@@ -14,7 +14,7 @@ I'm an AI-powered full-stack developer. I build websites, mobile apps and busine
 
 Areas of expertise:
 - Web Development: From landing pages to ERP systems and full SaaS products. Scalable, secure, and built to grow with your business.
-- Mobile Apps: React Native, Expo or Flutter for one codebase — or fully native Android and iOS.
+- Mobile Apps: React Native, Expo or Flutter for one codebase, or fully native Android and iOS.
 - AI Automation: Chatbots, lead flows and workflow automation that save hours every week.
 
 ---
@@ -24,11 +24,11 @@ URL: https://jiilan.me/writing/quantum-error-correction-complexity
 Date: 2025-03-18
 Category: Physics · CS Theory
 
-Quantum error correction remains one of the most technically demanding problems at the intersection of physics and computer science. The fundamental challenge is not merely physical — it is computational.
+Quantum error correction remains one of the most technically demanding problems at the intersection of physics and computer science. The fundamental challenge is not merely physical. It is computational.
 
 The threshold theorem guarantees that arbitrarily long quantum computations can be performed reliably, provided the error rate per gate is below a certain threshold. What is less discussed is the computational overhead this imposes and how it scales with the logical circuit depth.
 
-Consider a surface code with distance d. The number of physical qubits required scales as O(d²), and the decoding problem — determining which errors occurred given the syndrome measurements — is itself a non-trivial computational task.
+Consider a surface code with distance d. The number of physical qubits required scales as O(d²), and the decoding problem of determining which errors occurred from the syndrome measurements is itself a non-trivial computational task.
 
 Minimum-weight perfect matching (MWPM) on the syndrome graph is the standard approach. But MWPM assumes an error model that may not reflect the actual noise characteristics of the hardware.
 
@@ -47,11 +47,11 @@ Category: Systems Engineering
 
 There is a persistent confusion in the distributed systems literature between consistency as a safety property and consistency as a liveness property. This confusion leads to systems that claim strong guarantees while silently violating them under partition.
 
-Linearizability is the gold standard, but most papers that cite it do not actually implement it. What they implement is something weaker — often sequential consistency or even causal consistency — dressed up in linearizable language.
+Linearizability is the gold standard, but most papers that cite it do not actually implement it. What they implement is something weaker, often sequential consistency or even causal consistency, dressed up in linearizable language.
 
 The distinction matters. A sequentially consistent system can return stale reads that a linearizable system cannot. In a financial system, this is the difference between a correct balance and an overdraft.
 
-Most correctness proofs assume a synchronous or partially synchronous model. When the system enters an asynchronous period — which every real system does — the proof no longer applies.
+Most correctness proofs assume a synchronous or partially synchronous model. When the system enters an asynchronous period, which every real system does, the proof no longer applies.
 
 A system that is correct "most of the time" is not correct. It is a system with undocumented failure modes.
 
@@ -64,7 +64,7 @@ URL: https://jiilan.me/writing/geometry-gradient-descent
 Date: 2024-11-22
 Category: Machine Learning · Mathematics
 
-Gradient descent is typically presented as an optimization algorithm. This framing, while not wrong, misses the geometric structure that makes it work — and the geometric pathologies that make it fail.
+Gradient descent is typically presented as an optimization algorithm. This framing, while not wrong, misses the geometric structure that makes it work, and the geometric pathologies that make it fail.
 
 The loss landscape of a neural network is a high-dimensional surface. Gradient descent traces a path on this surface, and the properties of the path depend on the curvature of the surface, not just the gradient.
 
@@ -72,7 +72,7 @@ The Hessian matrix at a point on the loss surface tells you everything about loc
 
 In high dimensions, saddle points vastly outnumber local minima. Most points where the gradient is zero are saddle points, not minima.
 
-The condition number — the ratio of the largest to smallest eigenvalue of the Hessian — determines how "elongated" the loss landscape is locally. A high condition number means SGD will oscillate, and the learning rate must be small enough to accommodate the steepest direction.
+The condition number, the ratio of the largest to smallest eigenvalue of the Hessian, determines how "elongated" the loss landscape is locally. A high condition number means SGD will oscillate, and the learning rate must be small enough to accommodate the steepest direction.
 
 ---
 
@@ -85,7 +85,7 @@ A compiler is a function from source programs to target programs. Correctness me
 
 Correct compilation means: for every source program P, the compiled program P' produces the same observable behavior as P when executed. Observable behavior includes outputs, side effects, and termination.
 
-Not all invariants of the source program are preserved. Internal state, evaluation order, memory layout — these are implementation details that the compiler is free to change. The correctness criterion is about what the user can observe from outside.
+Not all invariants of the source program are preserved. Internal state, evaluation order, memory layout: these are implementation details that the compiler is free to change. The correctness criterion is about what the user can observe from outside.
 
 CompCert remains the gold standard. It formalizes operational semantics for both C and the target assembly, and proves a simulation relation between them.
 
@@ -130,7 +130,7 @@ Analysis of decoder complexity for surface codes under realistic noise models. S
 
 ### Consistency Envelopes: A Framework for Honest Distributed Systems Guarantees
 Published: ACM SIGOPS, 2024
-Introduces the concept of consistency envelopes — explicit specifications of the conditions under which a distributed system's consistency guarantees hold. Demonstrates that most production systems operate outside their documented guarantees during routine network events.
+Introduces the concept of consistency envelopes: explicit specifications of the conditions under which a distributed system's consistency guarantees hold. Demonstrates that most production systems operate outside their documented guarantees during routine network events.
 
 ### Geometric Properties of Loss Landscapes in Over-Parameterized Networks
 Published: ICML Workshop, 2024

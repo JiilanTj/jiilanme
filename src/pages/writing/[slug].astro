@@ -23,6 +23,7 @@ const { post } = Astro.props;
   category={post.category}
   description={post.description}
   slug={post.slug}
+  alternate={`/id/writing/${post.slug}`}
 >
   <Fragment set:html={post.content} />
 </BlogPost>

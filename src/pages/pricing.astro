@@ -21,7 +21,7 @@ import Layout from '../layouts/Layout.astro';
     <header class="page-head reveal">
       <span class="kicker">Pricing</span>
       <h1 class="page-title">Honest prices, fixed quotes.</h1>
-      <p class="page-sub">Starting prices below — or build your own quote underneath for a price that's locked the moment you send it.</p>
+      <p class="page-sub">Starting prices below. Or build your own quote underneath for a price that's locked the moment you send it.</p>
     </header>
 
     <div class="grid">
@@ -88,7 +88,7 @@ import Layout from '../layouts/Layout.astro';
       <p class="est-sub">Pick a type, add features, choose a speed. The price updates live.</p>
 
       <div class="est-block">
-        <p class="est-label">Project types — combine for bundle discount</p>
+        <p class="est-label">Project types: combine for bundle discount</p>
         <div class="opt-row">
           <label class="opt"><input type="checkbox" name="ptype" value="150" /><span>Landing page <em>$150+</em></span></label>
           <label class="opt"><input type="checkbox" name="ptype" value="500" checked /><span>Business site <em>$500+</em></span></label>
@@ -148,7 +148,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
       </div>
-      <p class="est-note">This price is locked — send it to me and that's what you pay, no changes. Combining types shares discovery, design and setup, that's where the bundle discount comes from.</p>
+      <p class="est-note">This price is locked. Send it to me and that's what you pay, no changes. Combining types shares discovery, design and setup, that's where the bundle discount comes from.</p>
     </div>
 
     <script>
@@ -232,7 +232,7 @@ import Layout from '../layouts/Layout.astro';
             var label = copyBtn.querySelector('.copy-label');
             if (label) {
               var original = label.textContent;
-              label.textContent = 'Copied — send it to me!';
+              label.textContent = 'Copied! Send it to me.';
               setTimeout(function () { label.textContent = original; }, 2500);
             }
           });

@@ -1,4 +1,4 @@
-// i18n infrastructure. Flip ID_ENABLED to true once /id/* pages exist —
+// i18n infrastructure. Flip ID_ENABLED to true once /id/* pages exist:
 // the nav switcher, auto-detect redirect and hreflang all key off this flag.
 export const ID_ENABLED = true;
 

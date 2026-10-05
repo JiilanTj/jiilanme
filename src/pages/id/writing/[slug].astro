@@ -1,0 +1,31 @@
+---
+import BlogPost from '../../../layouts/BlogPost.astro';
+import { postsId } from '../../../data/posts-id';
+import type { Post } from '../../../data/posts';
+
+export function getStaticPaths() {
+  return postsId.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+interface Props {
+  post: Post;
+}
+
+const { post } = Astro.props;
+---
+
+<BlogPost
+  lang="id"
+  alternate={`/writing/${post.slug}`}
+  title={post.title}
+  date={post.date}
+  readTime={post.readTime}
+  category={post.category}
+  description={post.description}
+  slug={post.slug}
+>
+  <Fragment set:html={post.content} />
+</BlogPost>

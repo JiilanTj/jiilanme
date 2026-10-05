@@ -5,27 +5,32 @@ interface Props {
   readTime: string;
   slug: string;
   index?: number;
+  locale?: string;
+  base?: string;
 }
 
-const { title, date, readTime, slug, index = 0 } = Astro.props;
+const { title, date, readTime, slug, index = 0, locale = 'en-US', base = '/writing' } = Astro.props;
 
-const formattedDate = new Date(date).toLocaleDateString('en-US', {
+const formattedDate = new Date(date).toLocaleDateString(locale, {
   year: 'numeric',
   month: 'short',
   day: 'numeric',
 });
 
+const minutes = parseInt(readTime, 10);
+const readLabel = `${minutes} ${locale.startsWith('id') ? 'mnt' : 'min'}`;
+
 const delay = `${Math.min(index, 6) * 60}ms`;
 ---
 
-<a href={`/writing/${slug}`} class="post-card" style={`animation-delay: ${delay}`}>
+<a href={`${base}/${slug}`} class="post-card" style={`animation-delay: ${delay}`}>
   <span class="post-arrow" aria-hidden="true">→</span>
   <span class="post-body">
     <span class="post-card-title">{title}</span>
     <span class="post-card-meta">
       <span>{formattedDate}</span>
       <span class="meta-dot" aria-hidden="true"></span>
-      <span>{readTime}</span>
+      <span>{readLabel}</span>
     </span>
   </span>
 </a>
