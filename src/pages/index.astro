@@ -32,6 +32,33 @@ const recentPosts = posts.slice(0, 3);
     "email": "jiilannashrulloh@gmail.com"
   })} />
 
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Are you open for freelance projects?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. I take on websites, mobile apps and automation projects. Write to me with your goal and timeline." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much will it cost?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Starting prices are on the pricing page, and its quote builder locks your price on the spot. Only big custom systems like ERP are scoped individually." }
+      },
+      {
+        "@type": "Question",
+        "name": "How fast can we start?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Usually within one to two weeks. Small sites ship in days, apps in weeks." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you use AI in your work?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Daily. AI speeds up building, and powers features like chatbots and smart workflows inside your product." }
+      }
+    ]
+  })} />
+
   <!-- HERO -->
   <section class="hero">
     <div class="hero-inner">

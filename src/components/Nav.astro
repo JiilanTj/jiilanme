@@ -1,26 +1,54 @@
 ---
+import { ID_ENABLED, toCounterpart, type Locale } from '../i18n/config';
+import { dict } from '../i18n/dict';
+
+interface Props {
+  lang?: Locale;
+}
+
+const { lang = 'en' } = Astro.props;
+const t = dict[lang];
+
 const pathname = Astro.url.pathname;
+// Strip /id prefix so active states work in both locales.
+const base = pathname.replace(/^\/id(?=\/|$)/, '') || '/';
 
 function isActive(href: string): boolean {
-  if (href === '/') return pathname === '/';
-  return pathname.startsWith(href);
+  if (href === '/') return base === '/';
+  return base.startsWith(href);
+}
+
+// Prefix internal links when rendering the Indonesian locale.
+function p(href: string): string {
+  if (lang !== 'id') return href;
+  return href === '/' ? '/id/' : `/id${href}`;
 }
 ---
 
 <nav class="nav" aria-label="Primary">
   <div class="nav-inner">
-    <a href="/" class="nav-logo" aria-label="Jiilan home">
+    <a href={p('/')} class="nav-logo" aria-label="Jiilan home">
       <span class="logo-mark" aria-hidden="true">J</span>
       <span class="logo-text">jiilan.me</span>
     </a>
     <div class="nav-links">
-      <a href="/works" class:list={["nav-link", { "is-active": isActive("/works") }]}>Works</a>
-      <a href="/writing" class:list={["nav-link", { "is-active": isActive("/writing") }]}>Writing</a>
-      <a href="/research" class:list={["nav-link", { "is-active": isActive("/research") }]}>Research</a>
-      <a href="/about" class:list={["nav-link", { "is-active": isActive("/about") }]}>About</a>
-      <a href="/pricing" class:list={["nav-link", { "is-active": isActive("/pricing") }]}>Pricing</a>
+      <a href={p('/works')} class:list={["nav-link", { "is-active": isActive("/works") }]}>{t.works}</a>
+      <a href={p('/writing')} class:list={["nav-link", { "is-active": isActive("/writing") }]}>{t.writing}</a>
+      <a href={p('/research')} class:list={["nav-link", { "is-active": isActive("/research") }]}>{t.research}</a>
+      <a href={p('/about')} class:list={["nav-link", { "is-active": isActive("/about") }]}>{t.about}</a>
+      <a href={p('/pricing')} class:list={["nav-link", { "is-active": isActive("/pricing") }]}>{t.pricing}</a>
     </div>
-    <a href="/contacts" class="nav-cta">Say hello</a>
+    <div class="locale-switch" role="group" aria-label="Language / Bahasa">
+      {lang === 'en'
+        ? <span class="loc loc-active" aria-current="true">EN</span>
+        : <a class="loc" href={toCounterpart(pathname, 'en')} onclick="try{localStorage.setItem('locale','en')}catch(e){}">EN</a>}
+      {ID_ENABLED
+        ? (lang === 'id'
+          ? <span class="loc loc-active" aria-current="true">ID</span>
+          : <a class="loc" href={toCounterpart(pathname, 'id')} onclick="try{localStorage.setItem('locale','id')}catch(e){}">ID</a>)
+        : <span class="loc loc-soon" title="Versi Indonesia segera hadir">ID</span>}
+    </div>
+    <a href={p('/contacts')} class="nav-cta">{t.sayHello}</a>
   </div>
 </nav>
 
@@ -109,6 +137,42 @@ function isActive(href: string): boolean {
   .nav-link.is-active {
     background: var(--color-ink);
     color: var(--color-paper);
+  }
+
+  .locale-switch {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-pill);
+    padding: 2px;
+    flex: none;
+  }
+
+  .loc {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--color-muted);
+    padding: 4px 8px;
+    border-radius: var(--radius-pill);
+    white-space: nowrap;
+  }
+
+  a.loc:hover {
+    background: var(--color-cream);
+    color: var(--color-ink);
+  }
+
+  .loc-active {
+    background: var(--color-ink);
+    color: var(--color-paper);
+  }
+
+  .loc-soon {
+    opacity: 0.45;
+    border: 1px dashed var(--color-faint);
+    cursor: not-allowed;
   }
 
   .nav-cta {

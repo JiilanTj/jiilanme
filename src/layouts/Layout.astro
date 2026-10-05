@@ -2,12 +2,15 @@
 import '../styles/global.css';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import { ID_ENABLED, toCounterpart, type Locale } from '../i18n/config';
 
 interface Props {
   title?: string;
   description?: string;
   ogType?: string;
   ogImage?: string;
+  lang?: Locale;
+  alternate?: string;
 }
 
 const {
@@ -15,13 +18,15 @@ const {
   description = 'AI-powered full-stack developer for web, mobile and business automation. You bring the goal, I ship it.',
   ogType = 'website',
   ogImage = 'https://jiilan.me/jiilan.webp',
+  lang = 'en',
+  alternate,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,6 +34,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta name="author" content="Jiilan Nashrulloh Tanjung" />
     <meta name="keywords" content="Jiilan, JiilanTj, Jiilan Tanjung, Jiilan Nashrulloh Tanjung, jiilan.me, full-stack developer, web developer, mobile app developer, AI automation, business automation" />
     <link rel="canonical" href={canonicalURL.href} />
+    {alternate && (
+      <>
+        <link rel="alternate" hreflang={lang === 'en' ? 'id' : 'en'} href={new URL(alternate, Astro.site).href} />
+        <link rel="alternate" hreflang={lang} href={canonicalURL.href} />
+        <link rel="alternate" hreflang="x-default" href={lang === 'en' ? canonicalURL.href : new URL(toCounterpart(Astro.url.pathname, 'en'), Astro.site).href} />
+      </>
+    )}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="alternate" type="application/rss+xml" title="Jiilan Nashrulloh Tanjung" href="/rss.xml" />
@@ -65,16 +77,37 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       />
     </noscript>
 
+    <script is:inline define:vars={{ idLive: ID_ENABLED }}>
+      (function () {
+        try {
+          if (!idLive) return;
+          var path = window.location.pathname;
+          var stored = null;
+          try { stored = window.localStorage.getItem('locale'); } catch (e) {}
+          var onId = path === '/id' || path.indexOf('/id/') === 0;
+          if (stored === 'id' && !onId) { window.location.replace('/id/'); return; }
+          if (stored === 'en' && onId) {
+            var back = path.replace(/^\/id(?=\/|$)/, '');
+            window.location.replace(back === '' ? '/' : back);
+            return;
+          }
+          if (!stored && path === '/' && (window.navigator.language || '').toLowerCase().indexOf('id') === 0) {
+            window.location.replace('/id/');
+          }
+        } catch (e) {}
+      })();
+    </script>
+
     <title>{title}</title>
   </head>
   <body>
-    <Nav />
+    <Nav lang={lang} />
 
     <main>
       <slot />
     </main>
 
-    <Footer />
+    <Footer lang={lang} />
 
     <script>
       const els = document.querySelectorAll('.reveal');

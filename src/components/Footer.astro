@@ -1,17 +1,28 @@
 ---
+import type { Locale } from '../i18n/config';
+import { dict } from '../i18n/dict';
+
+interface Props {
+  lang?: Locale;
+}
+
+const { lang = 'en' } = Astro.props;
+const t = dict[lang];
+const p = (href: string): string => (lang !== 'id' ? href : href === '/' ? '/id/' : `/id${href}`);
+
 const year = new Date().getFullYear();
 ---
 
 <footer class="footer">
   <div class="footer-card">
     <div class="footer-top">
-      <p class="footer-cta-title">Have a project? Let's ship it.</p>
-      <a href="/contacts" class="footer-cta">Say hello</a>
+      <p class="footer-cta-title">{t.footerCta}</p>
+      <a href={p('/contacts')} class="footer-cta">{t.sayHello}</a>
     </div>
     <div class="footer-bottom">
       <span class="footer-meta">© {year} Jiilan Nashrulloh Tanjung</span>
       <div class="footer-links">
-        <a href="/pricing">Pricing</a>
+        <a href={p('/pricing')}>{t.pricing}</a>
         <a href="https://github.com/JiilanTj" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="mailto:jiilannashrulloh@gmail.com">Email</a>
         <a href="/rss.xml">RSS</a>

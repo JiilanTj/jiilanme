@@ -3,6 +3,20 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Pricing — Jiilan Nashrulloh Tanjung" description="Starting prices for websites, mobile apps and AI automation. Fixed quotes, no hourly billing.">
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Jiilan Nashrulloh Tanjung — Full-Stack Development",
+    "url": "https://jiilan.me/pricing",
+    "priceRange": "$150+",
+    "areaServed": "Worldwide",
+    "makesOffer": [
+      { "@type": "Offer", "name": "Landing page", "price": "150", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "Company site", "price": "500", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "Mobile app", "price": "1500", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "AI automation", "price": "250", "priceCurrency": "USD" }
+    ]
+  })} />
   <section class="page">
     <header class="page-head reveal">
       <span class="kicker">Pricing</span>
