@@ -14,7 +14,7 @@
     "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^13.1.8",
+    "@astrojs/cloudflare": "^14.3.3",
     "@astrojs/rss": "^4.0.18",
     "@astrojs/sitemap": "^3.7.2",
     "@tailwindcss/vite": "^4.2.2",
@@ -23,8 +23,5 @@
   },
   "devDependencies": {
     "wrangler": "^4.81.1"
-  },
-  "overrides": {
-    "vite": "^7"
   }
 }

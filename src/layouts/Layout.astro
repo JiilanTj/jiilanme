@@ -8,7 +8,6 @@ interface Props {
   description?: string;
   ogType?: string;
   ogImage?: string;
-  hideFooter?: boolean;
 }
 
 const {
@@ -16,7 +15,6 @@ const {
   description = 'Software Engineer, Physicist and Researcher. I build systems and write about physics, computing and engineering.',
   ogType = 'website',
   ogImage = 'https://jiilan.me/jiilan.webp',
-  hideFooter = false,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -76,7 +74,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       <slot />
     </main>
 
-    {!hideFooter && <Footer />}
+    <Footer />
 
     <script>
       const els = document.querySelectorAll('.reveal');
